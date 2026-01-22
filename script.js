@@ -141,7 +141,7 @@
 
   window.clarifindSubmit = (event) => {
     event.preventDefault();
-    alert("Thanks! This is a demo form. To make it send, connect Formspree or Netlify Forms.");
+    alert("Thanks! This form is a demo. I can connect it with Formspree or Netlify.");
     return false;
   };
 })();
