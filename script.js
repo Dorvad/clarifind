@@ -899,9 +899,4 @@
     parallaxTarget.addEventListener("mouseleave", resetParallax);
   }
 
-  window.clarifindSubmit = (event) => {
-    event.preventDefault();
-    alert("Thanks! This form is a demo. I can connect it with Formspree or Netlify.");
-    return false;
-  };
 })();
