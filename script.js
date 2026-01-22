@@ -268,11 +268,20 @@
 
   const getPreferredLang = () => localStorage.getItem("lang") || "en";
 
+  const setToggleLabel = (toggle, text) => {
+    const label = toggle.querySelector(".toggle__label");
+    if (label) {
+      label.textContent = text;
+    } else {
+      toggle.textContent = text;
+    }
+  };
+
   const updateThemeToggleText = (theme, lang) => {
     const key = theme === "dark" ? "toggle.light" : "toggle.dark";
     const text = i18n[lang]?.[key] || i18n.en[key];
     themeToggles.forEach((toggle) => {
-      toggle.textContent = text;
+      setToggleLabel(toggle, text);
       toggle.setAttribute("aria-pressed", String(theme === "dark"));
     });
   };
@@ -280,7 +289,7 @@
   const updateLangToggleText = (lang) => {
     const label = lang === "he" ? "English" : "עברית";
     langToggles.forEach((toggle) => {
-      toggle.textContent = label;
+      setToggleLabel(toggle, label);
       toggle.setAttribute("aria-pressed", String(lang === "he"));
     });
   };
