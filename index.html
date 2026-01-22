@@ -47,8 +47,14 @@
       </nav>
 
       <div class="nav__actions">
-        <button class="toggle" id="themeToggle" type="button" aria-pressed="false" data-i18n="toggle.dark">Dark mode</button>
-        <button class="toggle toggle--lang" id="langToggle" type="button" aria-pressed="false">עברית</button>
+        <button class="toggle toggle--switch" id="themeToggle" type="button" aria-pressed="false">
+          <span class="toggle__label" data-i18n="toggle.dark">Dark mode</span>
+          <span class="toggle__track" aria-hidden="true"><span class="toggle__thumb"></span></span>
+        </button>
+        <button class="toggle toggle--switch toggle--lang" id="langToggle" type="button" aria-pressed="false">
+          <span class="toggle__label">עברית</span>
+          <span class="toggle__track" aria-hidden="true"><span class="toggle__thumb"></span></span>
+        </button>
         <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
           <span></span><span></span><span></span>
         </button>
@@ -63,8 +69,14 @@
         <a href="#about" data-i18n="nav.about">About</a>
         <a class="btn" href="#contact" data-i18n="nav.contact">Talk to me</a>
         <div class="mobileMenu__controls">
-          <button class="toggle" id="themeToggleMobile" type="button" aria-pressed="false" data-i18n="toggle.dark">Dark mode</button>
-          <button class="toggle toggle--lang" id="langToggleMobile" type="button" aria-pressed="false">עברית</button>
+          <button class="toggle toggle--switch" id="themeToggleMobile" type="button" aria-pressed="false">
+            <span class="toggle__label" data-i18n="toggle.dark">Dark mode</span>
+            <span class="toggle__track" aria-hidden="true"><span class="toggle__thumb"></span></span>
+          </button>
+          <button class="toggle toggle--switch toggle--lang" id="langToggleMobile" type="button" aria-pressed="false">
+            <span class="toggle__label">עברית</span>
+            <span class="toggle__track" aria-hidden="true"><span class="toggle__thumb"></span></span>
+          </button>
         </div>
       </div>
     </div>
