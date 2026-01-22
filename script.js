@@ -2,6 +2,7 @@
   const year = document.getElementById("year");
   const burger = document.getElementById("burger");
   const mobileMenu = document.getElementById("mobileMenu");
+  const header = document.querySelector(".header");
   const themeToggle = document.getElementById("themeToggle");
   const themeToggleMobile = document.getElementById("themeToggleMobile");
 
@@ -43,6 +44,9 @@
       const isOpen = burger.getAttribute("aria-expanded") === "true";
       burger.setAttribute("aria-expanded", String(!isOpen));
       mobileMenu.hidden = isOpen;
+      if (!isOpen) {
+        header?.classList.remove("header--hidden");
+      }
     });
 
     mobileMenu.addEventListener("click", (e) => {
@@ -61,6 +65,37 @@
   });
 
   setTheme(getPreferredTheme());
+
+  if (header) {
+    const mobileMedia = window.matchMedia("(max-width: 980px)");
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+
+    const updateHeaderVisibility = () => {
+      const currentScrollY = window.scrollY;
+      const isScrollingDown = currentScrollY > lastScrollY;
+      const shouldHide = mobileMedia.matches && isScrollingDown && currentScrollY > 80;
+
+      if (!burger || burger.getAttribute("aria-expanded") !== "true") {
+        header.classList.toggle("header--hidden", shouldHide);
+      }
+
+      lastScrollY = currentScrollY;
+      ticking = false;
+    };
+
+    window.addEventListener("scroll", () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateHeaderVisibility);
+        ticking = true;
+      }
+    });
+
+    mobileMedia.addEventListener("change", () => {
+      header.classList.remove("header--hidden");
+      lastScrollY = window.scrollY;
+    });
+  }
 
   const servicesRoot = document.querySelector("[data-services]");
   if (servicesRoot) {
