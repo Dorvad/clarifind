@@ -28,6 +28,12 @@
       "hero.visual.card3.label": "Delivery",
       "hero.visual.card3.value": "4 weeks",
       "hero.visual.card3.meta": "From discovery to launch",
+      "hero.visual.card4.label": "Retention",
+      "hero.visual.card4.meta": "After 6 weeks",
+      "hero.visual.card5.label": "Time saved",
+      "hero.visual.card5.meta": "Per cohort",
+      "hero.visual.card6.label": "CSAT",
+      "hero.visual.card6.meta": "Learner sentiment",
       "problem.title": "Most content exists. It just doesn’t work.",
       "problem.lead":
         "Most teams already have the content—docs, decks, knowledge bases. The real gap is clarity and structure, so learners feel confident and not overwhelmed.",
@@ -41,35 +47,53 @@
       "services.lead":
         "We pick the format based on your goal, your audience, and real-world context. The format is a tool—not the outcome.",
       "services.one.title": "🎥 Learning Videos",
+      "services.one.tab": "Learning Videos",
       "services.one.text": "Short, clear explainers for onboarding, processes, or key concepts.",
       "services.one.list.one": "Script & narrative structure",
       "services.one.list.two": "Storyboard guidance",
       "services.one.list.three": "Production-ready copy + visuals direction",
+      "services.one.media.title": "Storyboard preview",
+      "services.one.media.caption": "Animated lower-thirds and clarity cues",
       "services.two.title": "💻 eLearning & Interactive Modules",
+      "services.two.tab": "Interactive eLearning",
       "services.two.text": "Self-paced learning with practice, feedback, and clear progression.",
       "services.two.list.one": "Module architecture",
       "services.two.list.two": "UX-first learning flow",
       "services.two.list.three": "Assessments & micro-activities",
+      "services.two.media.title": "Interactive path",
+      "services.two.media.caption": "Micro-activities, feedback, and checkpoints",
       "services.three.title": "📚 Courses (online / hybrid)",
+      "services.three.tab": "Courses",
       "services.three.text": "Structured learning journeys for skills and deeper capability-building.",
       "services.three.list.one": "Curriculum design",
       "services.three.list.two": "Sequencing & pacing",
       "services.three.list.three": "Retention & reinforcement",
+      "services.three.media.title": "Course blueprint",
+      "services.three.media.caption": "Curriculum arcs with retention touchpoints",
       "services.four.title": "🧑‍🏫 Workshops & Live Training",
+      "services.four.tab": "Workshops",
       "services.four.text": "Facilitated sessions that create insight, practice, and behavior change.",
       "services.four.list.one": "Facilitation plan",
       "services.four.list.two": "Exercises & group flow",
       "services.four.list.three": "Trainer notes + participant handouts",
+      "services.four.media.title": "Live session flow",
+      "services.four.media.caption": "Breakout timing and interactive moments",
       "services.five.title": "🌐 Mini-sites & Knowledge Hubs",
+      "services.five.tab": "Mini-sites",
       "services.five.text": "Organized, navigable content for multiple audiences and needs.",
       "services.five.list.one": "Information architecture",
       "services.five.list.two": "Content structure & navigation",
       "services.five.list.three": "Mobile-first clarity",
+      "services.five.media.title": "Hub layout",
+      "services.five.media.caption": "Navigation tiles and content pathways",
       "services.six.title": "🤖 AI Agents for Learning & Support",
+      "services.six.tab": "AI Agents",
       "services.six.text": "Goal-driven agents for practice, guidance, and on-demand knowledge access.",
       "services.six.list.one": "Use-case design",
       "services.six.list.two": "Conversation & safety boundaries",
       "services.six.list.three": "Knowledge scaffolding & prompts",
+      "services.six.media.title": "Agent prompts",
+      "services.six.media.caption": "Guided conversations with guardrails",
       "process.title": "How it works",
       "process.lead": "A simple, focused process built around outcomes and practical deliverables.",
       "process.one.title": "1) Clarify the goal",
@@ -153,6 +177,12 @@
       "hero.visual.card3.label": "אספקה",
       "hero.visual.card3.value": "4 שבועות",
       "hero.visual.card3.meta": "מהגדרה להשקה",
+      "hero.visual.card4.label": "שימור",
+      "hero.visual.card4.meta": "אחרי 6 שבועות",
+      "hero.visual.card5.label": "חיסכון בזמן",
+      "hero.visual.card5.meta": "לכל קבוצה",
+      "hero.visual.card6.label": "CSAT",
+      "hero.visual.card6.meta": "שביעות רצון לומדים",
       "problem.title": "רוב התוכן כבר קיים. הוא פשוט לא עובד.",
       "problem.lead":
         "ברוב הארגונים כבר יש תוכן—מסמכים, מצגות ומאגרי ידע. הפער הוא בהירות ומבנה, כדי שהלומדים ירגישו בטוחים ולא מוצפים.",
@@ -165,35 +195,53 @@
       "services.title": "שירותים",
       "services.lead": "אנחנו בוחרים את הפורמט לפי המטרה, הקהל והמציאות בשטח. הפורמט הוא כלי—לא התוצאה.",
       "services.one.title": "🎥 סרטוני למידה",
+      "services.one.tab": "סרטוני למידה",
       "services.one.text": "הסברים קצרים וברורים להטמעה, תהליכים או מושגים מרכזיים.",
       "services.one.list.one": "תסריט ומבנה נרטיבי",
       "services.one.list.two": "הנחיית סטוריבורד",
       "services.one.list.three": "טקסטים מוכנים להפקה והכוונת ויזואל",
+      "services.one.media.title": "תצוגת סטוריבורד",
+      "services.one.media.caption": "אנימציות קצרות וסימני בהירות",
       "services.two.title": "💻 eLearning ומודולים אינטראקטיביים",
+      "services.two.tab": "eLearning אינטראקטיבי",
       "services.two.text": "למידה בקצב עצמי עם תרגול, משוב והתקדמות ברורה.",
       "services.two.list.one": "ארכיטקטורת מודולים",
       "services.two.list.two": "זרימת למידה UX-first",
       "services.two.list.three": "הערכות ופעילויות קצרות",
+      "services.two.media.title": "מסלול אינטראקטיבי",
+      "services.two.media.caption": "מיקרו-פעילויות, משוב ונקודות ציון",
       "services.three.title": "📚 קורסים (אונליין / היברידי)",
+      "services.three.tab": "קורסים",
       "services.three.text": "מסלולי למידה מובנים לפיתוח מיומנויות ועומק.",
       "services.three.list.one": "עיצוב סילבוס",
       "services.three.list.two": "תזמון וקצב",
       "services.three.list.three": "שימור וחיזוק",
+      "services.three.media.title": "שרטוט קורס",
+      "services.three.media.caption": "קשתות תוכן עם נקודות חיזוק",
       "services.four.title": "🧑‍🏫 סדנאות והדרכות",
+      "services.four.tab": "סדנאות",
       "services.four.text": "מפגשים מונחים שמייצרים תובנה, תרגול ושינוי התנהגות.",
       "services.four.list.one": "תוכנית הנחיה",
       "services.four.list.two": "תרגילים וזרימת קבוצה",
       "services.four.list.three": "הערות למנחה וחומרי משתתפים",
+      "services.four.media.title": "זרימת סשן חי",
+      "services.four.media.caption": "חלוקת זמן ורגעים אינטראקטיביים",
       "services.five.title": "🌐 מיני-אתרים ומרכזי ידע",
+      "services.five.tab": "מיני-אתרים",
       "services.five.text": "תוכן מסודר ונגיש למספר קהלים וצרכים.",
       "services.five.list.one": "ארכיטקטורת מידע",
       "services.five.list.two": "מבנה תוכן וניווט",
       "services.five.list.three": "בהירות מובייל-פירסט",
+      "services.five.media.title": "מבנה Hub",
+      "services.five.media.caption": "אריחי ניווט ומסלולי תוכן",
       "services.six.title": "🤖 סוכני AI ללמידה ותמיכה",
+      "services.six.tab": "סוכני AI",
       "services.six.text": "סוכנים ממוקדי מטרה לתרגול, הדרכה וגישה לידע בזמן אמת.",
       "services.six.list.one": "עיצוב מקרי שימוש",
       "services.six.list.two": "שיחות וגבולות בטיחות",
       "services.six.list.three": "סולמות ידע ופרומפטים",
+      "services.six.media.title": "פרומפטים לסוכן",
+      "services.six.media.caption": "שיחות מונחות עם גבולות ברורים",
       "process.title": "איך זה עובד",
       "process.lead": "תהליך פשוט וממוקד—מבוסס תוצאות ותוצרים שימושיים.",
       "process.one.title": "1) מגדירים את המטרה",
@@ -373,6 +421,48 @@
 
   setTheme(getPreferredTheme());
   setLang(getPreferredLang());
+
+  const servicesRoot = document.querySelector("[data-services]");
+  if (servicesRoot) {
+    const tabs = servicesRoot.querySelectorAll(".services__tab");
+    const panels = servicesRoot.querySelectorAll(".services__panel");
+
+    const activateService = (targetId) => {
+      tabs.forEach((tab) => {
+        const isActive = tab.dataset.service === targetId;
+        tab.classList.toggle("is-active", isActive);
+        tab.setAttribute("aria-selected", String(isActive));
+      });
+      panels.forEach((panel) => {
+        panel.classList.toggle("is-active", panel.id === targetId);
+      });
+    };
+
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        activateService(tab.dataset.service);
+      });
+    });
+  }
+
+  const revealItems = document.querySelectorAll(".reveal");
+  if ("IntersectionObserver" in window && revealItems.length) {
+    const observer = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            obs.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    revealItems.forEach((item) => observer.observe(item));
+  } else {
+    revealItems.forEach((item) => item.classList.add("is-visible"));
+  }
 
   window.clarifindSubmit = (event) => {
     event.preventDefault();
