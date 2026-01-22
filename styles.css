@@ -37,6 +37,7 @@
 
 *{ box-sizing:border-box; }
 html,body{ height:100%; }
+html{ overflow-x: hidden; }
 body{
   margin:0;
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
@@ -91,6 +92,10 @@ body[data-lang="he"] .hero__visual{
 body[data-lang="he"] .heroScene__header{
   text-align: right;
   align-items: flex-end;
+}
+body[data-lang="he"] .heroLoop__cards{
+  align-items:flex-end;
+  text-align:right;
 }
 body[data-lang="he"] .heroScene__footer{
   justify-content: flex-end;
@@ -394,88 +399,85 @@ h1{ font-size: clamp(34px, 3.6vw, 56px); margin:12px 0 10px; line-height:1.08; }
 }
 .heroScene__anim{
   display:grid;
-  grid-template-columns: minmax(180px, 1fr) minmax(200px, 1.2fr);
+  grid-template-columns: minmax(200px, 1fr) minmax(200px, 1.1fr);
   gap:24px;
   align-items:center;
 }
-.heroScene__orbit{
+.heroLoop{
   position:relative;
   min-height:220px;
   display:grid;
   place-items:center;
 }
-.heroScene__core{
-  width:70px;
-  height:70px;
-  border-radius:50%;
-  background: linear-gradient(135deg, rgba(37,99,235,.7), rgba(56,189,248,.85));
-  box-shadow: 0 0 35px rgba(37,99,235,.4);
-  animation: corePulse 4.5s ease-in-out infinite;
-}
-.heroScene__ring{
+.heroLoop__track{
   position:absolute;
+  inset:14px;
   border-radius:50%;
-  border:1px solid color-mix(in srgb, var(--line) 70%, transparent);
-  animation: ringSpin 12s linear infinite;
+  border:2px solid color-mix(in srgb, var(--line) 60%, transparent);
+  background: radial-gradient(circle at 30% 20%, rgba(37,99,235,.12), transparent 60%);
+  box-shadow: inset 0 0 0 1px rgba(37, 99, 235, 0.08);
 }
-.heroScene__ring--one{
-  width:140px;
-  height:140px;
-}
-.heroScene__ring--two{
-  width:190px;
-  height:190px;
-  animation-duration: 18s;
-}
-.heroScene__ring--three{
-  width:240px;
-  height:240px;
-  animation-duration: 24s;
-}
-.heroScene__spark{
+.heroLoop__orbiter{
   position:absolute;
-  width:16px;
-  height:16px;
-  border-radius:50%;
-  background: rgba(168,85,247,.7);
-  box-shadow: 0 0 20px rgba(168,85,247,.6);
-  animation: sparkOrbit 6s ease-in-out infinite;
+  inset:14px;
+  animation: loopSpin 9s linear infinite;
 }
-.heroScene__spark--one{ top:18px; right:64px; }
-.heroScene__spark--two{ bottom:40px; left:30px; animation-delay: 1.4s; }
-.heroScene__spark--three{ top:70px; left:18px; animation-delay: 2.2s; background: rgba(34,211,238,.7); }
-
-.heroScene__streams{
+.heroLoop__dot{
+  position:absolute;
+  inset-block-start:-6px;
+  inset-inline-start:50%;
+  transform: translateX(-50%);
+  width:12px;
+  height:12px;
+  border-radius:50%;
+  background: linear-gradient(120deg, var(--a2), var(--a3));
+  box-shadow: 0 0 18px rgba(56,189,248,.6);
+}
+.heroLoop__node{
+  position:absolute;
+  padding:8px 12px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  background: var(--surface);
+  font-weight:700;
+  font-size:12px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--muted);
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.08);
+}
+.heroLoop__node--one{
+  inset-block-start:-8px;
+  inset-inline-start:50%;
+  transform: translate(-50%, -50%);
+}
+.heroLoop__node--two{
+  inset-block-start:50%;
+  inset-inline-end:6px;
+  transform: translate(50%, -50%);
+}
+.heroLoop__node--three{
+  inset-block-end:-8px;
+  inset-inline-start:50%;
+  transform: translate(-50%, 50%);
+}
+.heroLoop__cards{
   display:grid;
-  gap:16px;
+  gap:12px;
 }
-.heroScene__stream{
+.heroLoop__card{
   border-radius:18px;
   border:1px solid var(--line);
   padding:14px 16px;
-  background: color-mix(in srgb, var(--surface-alt) 80%, transparent);
-  display:grid;
-  gap:10px;
+  background: color-mix(in srgb, var(--surface-alt) 85%, transparent);
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
 }
-.heroScene__stream span{
-  height:10px;
-  border-radius:999px;
-  background: linear-gradient(120deg, rgba(37,99,235,.35), rgba(56,189,248,.35));
-  animation: streamFlow 5s ease-in-out infinite;
+.heroLoop__card-label{
+  font-weight:700;
 }
-.heroScene__stream span:nth-child(2){
-  width:80%;
-  animation-delay: .6s;
-}
-.heroScene__stream span:nth-child(3){
-  width:60%;
-  animation-delay: 1.2s;
-}
-.heroScene__stream--alt span{
-  background: linear-gradient(120deg, rgba(168,85,247,.35), rgba(37,99,235,.35));
-}
-.heroScene__stream--soft span{
-  background: linear-gradient(120deg, rgba(34,211,238,.35), rgba(16,185,129,.35));
+.heroLoop__card-meta{
+  color:var(--muted);
+  font-size:13px;
 }
 .heroScene__footer{
   display:flex;
@@ -941,35 +943,15 @@ input:focus, textarea:focus{
   50%{ transform: translateY(-10px); }
 }
 
-@keyframes orbit{
-  0%, 100%{ transform: translateY(0px) translateX(0px); }
-  50%{ transform: translateY(-10px) translateX(-6px); }
-}
-
 @keyframes pulse{
   0%{ transform: scale(1); opacity:.6; }
   60%{ transform: scale(1.3); opacity:.2; }
   100%{ transform: scale(1); opacity:.6; }
 }
 
-@keyframes ringSpin{
+@keyframes loopSpin{
   from{ transform: rotate(0deg); }
   to{ transform: rotate(360deg); }
-}
-
-@keyframes sparkOrbit{
-  0%, 100%{ transform: translateY(0px); }
-  50%{ transform: translateY(-8px); }
-}
-
-@keyframes corePulse{
-  0%, 100%{ transform: scale(1); }
-  50%{ transform: scale(1.08); }
-}
-
-@keyframes streamFlow{
-  0%, 100%{ transform: translateX(0); }
-  50%{ transform: translateX(6px); }
 }
 
 @keyframes panelIn{
