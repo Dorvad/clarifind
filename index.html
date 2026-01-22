@@ -87,7 +87,7 @@
     <section class="hero" id="top">
       <div class="hero__bg" aria-hidden="true"></div>
       <div class="hero__grid container">
-        <div class="hero__copy">
+        <div class="hero__copy reveal">
           <p class="pill" data-i18n="hero.pill">Learning Design • Content • AI Enablement</p>
           <h1 data-i18n-html="hero.title">
             Don’t start with a format.<br/>
@@ -102,42 +102,43 @@
             <a class="btn" href="#contact" data-i18n="hero.ctaPrimary">Book a short intro call</a>
             <a class="btn btn--ghost" href="#services" data-i18n="hero.ctaSecondary">See services</a>
           </div>
-
-          <div class="hero__trust">
-            <div class="trustItem">
-              <div class="trustItem__num" data-i18n="hero.trust.one.title">UX-driven</div>
-              <div class="trustItem__text" data-i18n="hero.trust.one.text">Designed for frictionless learning</div>
-            </div>
-            <div class="trustItem">
-              <div class="trustItem__num" data-i18n="hero.trust.two.title">Goal-first</div>
-              <div class="trustItem__text" data-i18n="hero.trust.two.text">Format chosen based on outcomes</div>
-            </div>
-            <div class="trustItem">
-              <div class="trustItem__num" data-i18n="hero.trust.three.title">Fast & sharp</div>
-              <div class="trustItem__text" data-i18n="hero.trust.three.text">Clean deliverables, minimal noise</div>
-            </div>
-          </div>
         </div>
 
-        <div class="hero__visual" aria-hidden="true">
+        <div class="hero__visual reveal" aria-hidden="true">
           <div class="heroCard heroCard--primary">
             <div class="heroCard__label" data-i18n="hero.visual.card1.label">Clarity Score</div>
             <div class="heroCard__value">98%</div>
             <div class="heroCard__meta" data-i18n="hero.visual.card1.meta">Learner comprehension lift</div>
+          </div>
+          <div class="heroCard heroCard--primary heroCard--mini heroCard--primaryAlt">
+            <div class="heroCard__label" data-i18n="hero.visual.card4.label">Retention</div>
+            <div class="heroCard__value">+62%</div>
+            <div class="heroCard__meta" data-i18n="hero.visual.card4.meta">After 6 weeks</div>
           </div>
           <div class="heroCard heroCard--secondary">
             <div class="heroCard__label" data-i18n="hero.visual.card2.label">Engagement</div>
             <div class="heroCard__value">+4.6x</div>
             <div class="heroCard__meta" data-i18n="hero.visual.card2.meta">Completion in 30 days</div>
           </div>
+          <div class="heroCard heroCard--secondary heroCard--mini heroCard--secondaryAlt">
+            <div class="heroCard__label" data-i18n="hero.visual.card5.label">Time saved</div>
+            <div class="heroCard__value">14h</div>
+            <div class="heroCard__meta" data-i18n="hero.visual.card5.meta">Per cohort</div>
+          </div>
           <div class="heroCard heroCard--accent">
             <div class="heroCard__label" data-i18n="hero.visual.card3.label">Delivery</div>
             <div class="heroCard__value" data-i18n="hero.visual.card3.value">4 weeks</div>
             <div class="heroCard__meta" data-i18n="hero.visual.card3.meta">From discovery to launch</div>
           </div>
+          <div class="heroCard heroCard--accent heroCard--mini heroCard--accentAlt">
+            <div class="heroCard__label" data-i18n="hero.visual.card6.label">CSAT</div>
+            <div class="heroCard__value">4.9/5</div>
+            <div class="heroCard__meta" data-i18n="hero.visual.card6.meta">Learner sentiment</div>
+          </div>
           <div class="orb orb--one"></div>
           <div class="orb orb--two"></div>
           <div class="orb orb--three"></div>
+          <div class="orb orb--four"></div>
           <svg class="hero__gridlines" viewBox="0 0 420 420" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M15 90H405" stroke="url(#grid)" stroke-width="1" stroke-dasharray="6 12"/>
             <path d="M15 210H405" stroke="url(#grid)" stroke-width="1" stroke-dasharray="6 12"/>
@@ -154,10 +155,24 @@
           </svg>
         </div>
       </div>
+      <div class="hero__trust hero__trust--bar container reveal">
+        <div class="trustItem">
+          <div class="trustItem__num" data-i18n="hero.trust.one.title">UX-driven</div>
+          <div class="trustItem__text" data-i18n="hero.trust.one.text">Designed for frictionless learning</div>
+        </div>
+        <div class="trustItem">
+          <div class="trustItem__num" data-i18n="hero.trust.two.title">Goal-first</div>
+          <div class="trustItem__text" data-i18n="hero.trust.two.text">Format chosen based on outcomes</div>
+        </div>
+        <div class="trustItem">
+          <div class="trustItem__num" data-i18n="hero.trust.three.title">Fast & sharp</div>
+          <div class="trustItem__text" data-i18n="hero.trust.three.text">Clean deliverables, minimal noise</div>
+        </div>
+      </div>
     </section>
 
     <!-- PROBLEM -->
-    <section class="section">
+    <section class="section reveal">
       <div class="container">
         <div class="section__header">
           <h2 data-i18n="problem.title">Most content exists. It just doesn’t work.</h2>
@@ -186,7 +201,7 @@
     </section>
 
     <!-- SERVICES -->
-    <section class="section section--alt" id="services">
+    <section class="section section--alt reveal" id="services">
       <div class="container">
         <div class="section__header">
           <h2 data-i18n="services.title">Services</h2>
@@ -196,72 +211,185 @@
           </p>
         </div>
 
-        <div class="cards">
-          <article class="service">
-            <h3 data-i18n="services.one.title">🎥 Learning Videos</h3>
-            <p data-i18n="services.one.text">Short, clear explainers for onboarding, processes, or key concepts.</p>
-            <ul>
-              <li data-i18n="services.one.list.one">Script & narrative structure</li>
-              <li data-i18n="services.one.list.two">Storyboard guidance</li>
-              <li data-i18n="services.one.list.three">Production-ready copy + visuals direction</li>
-            </ul>
-          </article>
+        <div class="services__layout" data-services>
+          <div class="services__tabs" role="tablist" aria-label="Service categories">
+            <button class="services__tab is-active" role="tab" aria-selected="true" aria-controls="service-panel-1" id="service-tab-1" data-service="service-panel-1">
+              <span class="services__tab-icon">🎥</span>
+              <span data-i18n="services.one.tab">Learning Videos</span>
+            </button>
+            <button class="services__tab" role="tab" aria-selected="false" aria-controls="service-panel-2" id="service-tab-2" data-service="service-panel-2">
+              <span class="services__tab-icon">💻</span>
+              <span data-i18n="services.two.tab">Interactive eLearning</span>
+            </button>
+            <button class="services__tab" role="tab" aria-selected="false" aria-controls="service-panel-3" id="service-tab-3" data-service="service-panel-3">
+              <span class="services__tab-icon">📚</span>
+              <span data-i18n="services.three.tab">Courses</span>
+            </button>
+            <button class="services__tab" role="tab" aria-selected="false" aria-controls="service-panel-4" id="service-tab-4" data-service="service-panel-4">
+              <span class="services__tab-icon">🧑‍🏫</span>
+              <span data-i18n="services.four.tab">Workshops</span>
+            </button>
+            <button class="services__tab" role="tab" aria-selected="false" aria-controls="service-panel-5" id="service-tab-5" data-service="service-panel-5">
+              <span class="services__tab-icon">🌐</span>
+              <span data-i18n="services.five.tab">Mini-sites</span>
+            </button>
+            <button class="services__tab" role="tab" aria-selected="false" aria-controls="service-panel-6" id="service-tab-6" data-service="service-panel-6">
+              <span class="services__tab-icon">🤖</span>
+              <span data-i18n="services.six.tab">AI Agents</span>
+            </button>
+          </div>
 
-          <article class="service">
-            <h3 data-i18n="services.two.title">💻 eLearning & Interactive Modules</h3>
-            <p data-i18n="services.two.text">Self-paced learning with practice, feedback, and clear progression.</p>
-            <ul>
-              <li data-i18n="services.two.list.one">Module architecture</li>
-              <li data-i18n="services.two.list.two">UX-first learning flow</li>
-              <li data-i18n="services.two.list.three">Assessments & micro-activities</li>
-            </ul>
-          </article>
+          <div class="services__panels">
+            <article class="services__panel is-active" id="service-panel-1" role="tabpanel" aria-labelledby="service-tab-1">
+              <div class="services__panel-copy">
+                <h3 data-i18n="services.one.title">🎥 Learning Videos</h3>
+                <p data-i18n="services.one.text">Short, clear explainers for onboarding, processes, or key concepts.</p>
+                <ul>
+                  <li data-i18n="services.one.list.one">Script & narrative structure</li>
+                  <li data-i18n="services.one.list.two">Storyboard guidance</li>
+                  <li data-i18n="services.one.list.three">Production-ready copy + visuals direction</li>
+                </ul>
+              </div>
+              <div class="services__panel-media">
+                <div class="mediaCard mediaCard--video">
+                  <div class="mediaCard__label" data-i18n="services.one.media.title">Storyboard preview</div>
+                  <div class="mediaCard__window">
+                    <div class="mediaCard__frame">
+                      <div class="mediaCard__bar"></div>
+                      <div class="mediaCard__screen"></div>
+                    </div>
+                    <div class="mediaCard__pulse"></div>
+                  </div>
+                  <p class="mediaCard__caption" data-i18n="services.one.media.caption">Animated lower-thirds and clarity cues</p>
+                </div>
+              </div>
+            </article>
 
-          <article class="service">
-            <h3 data-i18n="services.three.title">📚 Courses (online / hybrid)</h3>
-            <p data-i18n="services.three.text">Structured learning journeys for skills and deeper capability-building.</p>
-            <ul>
-              <li data-i18n="services.three.list.one">Curriculum design</li>
-              <li data-i18n="services.three.list.two">Sequencing & pacing</li>
-              <li data-i18n="services.three.list.three">Retention & reinforcement</li>
-            </ul>
-          </article>
+            <article class="services__panel" id="service-panel-2" role="tabpanel" aria-labelledby="service-tab-2">
+              <div class="services__panel-copy">
+                <h3 data-i18n="services.two.title">💻 eLearning & Interactive Modules</h3>
+                <p data-i18n="services.two.text">Self-paced learning with practice, feedback, and clear progression.</p>
+                <ul>
+                  <li data-i18n="services.two.list.one">Module architecture</li>
+                  <li data-i18n="services.two.list.two">UX-first learning flow</li>
+                  <li data-i18n="services.two.list.three">Assessments & micro-activities</li>
+                </ul>
+              </div>
+              <div class="services__panel-media">
+                <div class="mediaCard mediaCard--learning">
+                  <div class="mediaCard__label" data-i18n="services.two.media.title">Interactive path</div>
+                  <div class="mediaCard__window">
+                    <div class="mediaCard__steps">
+                      <span></span><span></span><span></span>
+                    </div>
+                    <div class="mediaCard__node"></div>
+                  </div>
+                  <p class="mediaCard__caption" data-i18n="services.two.media.caption">Micro-activities, feedback, and checkpoints</p>
+                </div>
+              </div>
+            </article>
 
-          <article class="service">
-            <h3 data-i18n="services.four.title">🧑‍🏫 Workshops & Live Training</h3>
-            <p data-i18n="services.four.text">Facilitated sessions that create insight, practice, and behavior change.</p>
-            <ul>
-              <li data-i18n="services.four.list.one">Facilitation plan</li>
-              <li data-i18n="services.four.list.two">Exercises & group flow</li>
-              <li data-i18n="services.four.list.three">Trainer notes + participant handouts</li>
-            </ul>
-          </article>
+            <article class="services__panel" id="service-panel-3" role="tabpanel" aria-labelledby="service-tab-3">
+              <div class="services__panel-copy">
+                <h3 data-i18n="services.three.title">📚 Courses (online / hybrid)</h3>
+                <p data-i18n="services.three.text">Structured learning journeys for skills and deeper capability-building.</p>
+                <ul>
+                  <li data-i18n="services.three.list.one">Curriculum design</li>
+                  <li data-i18n="services.three.list.two">Sequencing & pacing</li>
+                  <li data-i18n="services.three.list.three">Retention & reinforcement</li>
+                </ul>
+              </div>
+              <div class="services__panel-media">
+                <div class="mediaCard mediaCard--course">
+                  <div class="mediaCard__label" data-i18n="services.three.media.title">Course blueprint</div>
+                  <div class="mediaCard__window">
+                    <div class="mediaCard__stack">
+                      <span></span><span></span><span></span>
+                    </div>
+                  </div>
+                  <p class="mediaCard__caption" data-i18n="services.three.media.caption">Curriculum arcs with retention touchpoints</p>
+                </div>
+              </div>
+            </article>
 
-          <article class="service">
-            <h3 data-i18n="services.five.title">🌐 Mini-sites & Knowledge Hubs</h3>
-            <p data-i18n="services.five.text">Organized, navigable content for multiple audiences and needs.</p>
-            <ul>
-              <li data-i18n="services.five.list.one">Information architecture</li>
-              <li data-i18n="services.five.list.two">Content structure & navigation</li>
-              <li data-i18n="services.five.list.three">Mobile-first clarity</li>
-            </ul>
-          </article>
+            <article class="services__panel" id="service-panel-4" role="tabpanel" aria-labelledby="service-tab-4">
+              <div class="services__panel-copy">
+                <h3 data-i18n="services.four.title">🧑‍🏫 Workshops & Live Training</h3>
+                <p data-i18n="services.four.text">Facilitated sessions that create insight, practice, and behavior change.</p>
+                <ul>
+                  <li data-i18n="services.four.list.one">Facilitation plan</li>
+                  <li data-i18n="services.four.list.two">Exercises & group flow</li>
+                  <li data-i18n="services.four.list.three">Trainer notes + participant handouts</li>
+                </ul>
+              </div>
+              <div class="services__panel-media">
+                <div class="mediaCard mediaCard--workshop">
+                  <div class="mediaCard__label" data-i18n="services.four.media.title">Live session flow</div>
+                  <div class="mediaCard__window">
+                    <div class="mediaCard__pulse"></div>
+                    <div class="mediaCard__avatars">
+                      <span></span><span></span><span></span>
+                    </div>
+                  </div>
+                  <p class="mediaCard__caption" data-i18n="services.four.media.caption">Breakout timing and interactive moments</p>
+                </div>
+              </div>
+            </article>
 
-          <article class="service">
-            <h3 data-i18n="services.six.title">🤖 AI Agents for Learning & Support</h3>
-            <p data-i18n="services.six.text">Goal-driven agents for practice, guidance, and on-demand knowledge access.</p>
-            <ul>
-              <li data-i18n="services.six.list.one">Use-case design</li>
-              <li data-i18n="services.six.list.two">Conversation & safety boundaries</li>
-              <li data-i18n="services.six.list.three">Knowledge scaffolding & prompts</li>
-            </ul>
-          </article>
+            <article class="services__panel" id="service-panel-5" role="tabpanel" aria-labelledby="service-tab-5">
+              <div class="services__panel-copy">
+                <h3 data-i18n="services.five.title">🌐 Mini-sites & Knowledge Hubs</h3>
+                <p data-i18n="services.five.text">Organized, navigable content for multiple audiences and needs.</p>
+                <ul>
+                  <li data-i18n="services.five.list.one">Information architecture</li>
+                  <li data-i18n="services.five.list.two">Content structure & navigation</li>
+                  <li data-i18n="services.five.list.three">Mobile-first clarity</li>
+                </ul>
+              </div>
+              <div class="services__panel-media">
+                <div class="mediaCard mediaCard--hub">
+                  <div class="mediaCard__label" data-i18n="services.five.media.title">Hub layout</div>
+                  <div class="mediaCard__window">
+                    <div class="mediaCard__grid">
+                      <span></span><span></span><span></span><span></span>
+                    </div>
+                  </div>
+                  <p class="mediaCard__caption" data-i18n="services.five.media.caption">Navigation tiles and content pathways</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="services__panel" id="service-panel-6" role="tabpanel" aria-labelledby="service-tab-6">
+              <div class="services__panel-copy">
+                <h3 data-i18n="services.six.title">🤖 AI Agents for Learning & Support</h3>
+                <p data-i18n="services.six.text">Goal-driven agents for practice, guidance, and on-demand knowledge access.</p>
+                <ul>
+                  <li data-i18n="services.six.list.one">Use-case design</li>
+                  <li data-i18n="services.six.list.two">Conversation & safety boundaries</li>
+                  <li data-i18n="services.six.list.three">Knowledge scaffolding & prompts</li>
+                </ul>
+              </div>
+              <div class="services__panel-media">
+                <div class="mediaCard mediaCard--agent">
+                  <div class="mediaCard__label" data-i18n="services.six.media.title">Agent prompts</div>
+                  <div class="mediaCard__window">
+                    <div class="mediaCard__chat">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+                  </div>
+                  <p class="mediaCard__caption" data-i18n="services.six.media.caption">Guided conversations with guardrails</p>
+                </div>
+              </div>
+            </article>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- PROCESS -->
-    <section class="section" id="process">
+    <section class="section reveal" id="process">
       <div class="container">
         <div class="section__header">
           <h2 data-i18n="process.title">How it works</h2>
@@ -290,7 +418,7 @@
     </section>
 
     <!-- USE CASES -->
-    <section class="section section--alt" id="work">
+    <section class="section section--alt reveal" id="work">
       <div class="container">
         <div class="section__header">
           <h2 data-i18n="work.title">Common use cases</h2>
@@ -319,7 +447,7 @@
     </section>
 
     <!-- ABOUT -->
-    <section class="section" id="about">
+    <section class="section reveal" id="about">
       <div class="container about">
         <div>
           <h2 data-i18n="about.title">About</h2>
@@ -350,7 +478,7 @@
     </section>
 
     <!-- CONTACT -->
-    <section class="section section--alt" id="contact">
+    <section class="section section--alt reveal" id="contact">
       <div class="container contact">
         <div class="contact__copy">
           <h2 data-i18n="contact.title">Let’s clarify what you need</h2>
