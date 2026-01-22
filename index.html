@@ -107,37 +107,41 @@
         <div class="hero__visual reveal" aria-hidden="true">
           <div class="heroScene">
             <div class="heroScene__header">
-              <div class="heroScene__eyebrow">Learning Blueprint</div>
-              <div class="heroScene__title">Signal-rich delivery, mapped to outcomes.</div>
+              <div class="heroScene__eyebrow" data-i18n="hero.visual.eyebrow">Client Success Loop</div>
+              <div class="heroScene__title" data-i18n="hero.visual.title">Aligned goals, clear delivery, measurable momentum.</div>
             </div>
 
-            <div class="heroScene__anim">
-              <div class="heroScene__orbit">
-                <span class="heroScene__core"></span>
-                <span class="heroScene__ring heroScene__ring--one"></span>
-                <span class="heroScene__ring heroScene__ring--two"></span>
-                <span class="heroScene__ring heroScene__ring--three"></span>
-                <span class="heroScene__spark heroScene__spark--one"></span>
-                <span class="heroScene__spark heroScene__spark--two"></span>
-                <span class="heroScene__spark heroScene__spark--three"></span>
+            <div class="heroScene__anim heroScene__anim--loop">
+              <div class="heroLoop">
+                <div class="heroLoop__track" aria-hidden="true"></div>
+                <div class="heroLoop__orbiter" aria-hidden="true">
+                  <span class="heroLoop__dot"></span>
+                </div>
+                <div class="heroLoop__node heroLoop__node--one" data-i18n="hero.visual.step1">Discover</div>
+                <div class="heroLoop__node heroLoop__node--two" data-i18n="hero.visual.step2">Design</div>
+                <div class="heroLoop__node heroLoop__node--three" data-i18n="hero.visual.step3">Deliver</div>
               </div>
-              <div class="heroScene__streams">
-                <div class="heroScene__stream">
-                  <span></span><span></span><span></span>
+
+              <div class="heroLoop__cards">
+                <div class="heroLoop__card">
+                  <div class="heroLoop__card-label" data-i18n="hero.visual.card1.label">Aligned outcomes</div>
+                  <div class="heroLoop__card-meta" data-i18n="hero.visual.card1.meta">Shared success signals</div>
                 </div>
-                <div class="heroScene__stream heroScene__stream--alt">
-                  <span></span><span></span><span></span>
+                <div class="heroLoop__card">
+                  <div class="heroLoop__card-label" data-i18n="hero.visual.card2.label">Structured delivery</div>
+                  <div class="heroLoop__card-meta" data-i18n="hero.visual.card2.meta">Clear paths & practice</div>
                 </div>
-                <div class="heroScene__stream heroScene__stream--soft">
-                  <span></span><span></span><span></span>
+                <div class="heroLoop__card">
+                  <div class="heroLoop__card-label" data-i18n="hero.visual.card3.label">Confident teams</div>
+                  <div class="heroLoop__card-meta" data-i18n="hero.visual.card3.meta">Ready to apply</div>
                 </div>
               </div>
             </div>
 
             <div class="heroScene__footer">
-              <div class="heroScene__pill">Discovery</div>
-              <div class="heroScene__pill">Structure</div>
-              <div class="heroScene__pill">Momentum</div>
+              <div class="heroScene__pill" data-i18n="hero.visual.pill1">Discovery</div>
+              <div class="heroScene__pill" data-i18n="hero.visual.pill2">Alignment</div>
+              <div class="heroScene__pill" data-i18n="hero.visual.pill3">Momentum</div>
             </div>
           </div>
         </div>
