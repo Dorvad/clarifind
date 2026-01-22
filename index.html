@@ -21,30 +21,38 @@
         <img class="brand__logo" src="assets/logo.svg" alt="Clarifind logo" />
         <div class="brand__text">
           <div class="brand__name">Clarifind</div>
-          <div class="brand__tag">Learning Solutions</div>
+          <div class="brand__tag" data-i18n="brand.tag">Learning Solutions</div>
         </div>
       </a>
 
       <nav class="menu" aria-label="Primary">
-        <a href="#services">Services</a>
-        <a href="#process">Process</a>
-        <a href="#work">Use Cases</a>
-        <a href="#about">About</a>
-        <a class="btn btn--small" href="#contact">Talk to me</a>
+        <a href="#services" data-i18n="nav.services">Services</a>
+        <a href="#process" data-i18n="nav.process">Process</a>
+        <a href="#work" data-i18n="nav.work">Use Cases</a>
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a class="btn btn--small" href="#contact" data-i18n="nav.contact">Talk to me</a>
       </nav>
 
-      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="nav__actions">
+        <button class="toggle" id="themeToggle" type="button" aria-pressed="false" data-i18n="toggle.dark">Dark mode</button>
+        <button class="toggle toggle--lang" id="langToggle" type="button" aria-pressed="false">עברית</button>
+        <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
 
     <div class="mobileMenu" id="mobileMenu" hidden>
       <div class="container mobileMenu__inner">
-        <a href="#services">Services</a>
-        <a href="#process">Process</a>
-        <a href="#work">Use Cases</a>
-        <a href="#about">About</a>
-        <a class="btn" href="#contact">Talk to me</a>
+        <a href="#services" data-i18n="nav.services">Services</a>
+        <a href="#process" data-i18n="nav.process">Process</a>
+        <a href="#work" data-i18n="nav.work">Use Cases</a>
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a class="btn" href="#contact" data-i18n="nav.contact">Talk to me</a>
+        <div class="mobileMenu__controls">
+          <button class="toggle" id="themeToggleMobile" type="button" aria-pressed="false" data-i18n="toggle.dark">Dark mode</button>
+          <button class="toggle toggle--lang" id="langToggleMobile" type="button" aria-pressed="false">עברית</button>
+        </div>
       </div>
     </div>
   </header>
@@ -52,65 +60,83 @@
   <main id="main">
     <!-- HERO -->
     <section class="hero" id="top">
-      <div class="container hero__grid">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="hero__grid container">
         <div class="hero__copy">
-          <p class="pill">Learning Design • Content • AI Enablement</p>
-          <h1>
+          <p class="pill" data-i18n="hero.pill">Learning Design • Content • AI Enablement</p>
+          <h1 data-i18n-html="hero.title">
             Don’t start with a format.<br/>
             Start with the learning goal.
           </h1>
-          <p class="lead">
+          <p class="lead" data-i18n="hero.lead">
             Clarifind builds the right learning solution for your audience—videos, eLearning, courses, workshops, mini-sites and AI agents—
             with clarity, structure, and real-world usability.
           </p>
 
           <div class="hero__cta">
-            <a class="btn" href="#contact">Book a short intro call</a>
-            <a class="btn btn--ghost" href="#services">See services</a>
+            <a class="btn" href="#contact" data-i18n="hero.ctaPrimary">Book a short intro call</a>
+            <a class="btn btn--ghost" href="#services" data-i18n="hero.ctaSecondary">See services</a>
           </div>
 
           <div class="hero__trust">
             <div class="trustItem">
-              <div class="trustItem__num">UX-driven</div>
-              <div class="trustItem__text">Designed for frictionless learning</div>
+              <div class="trustItem__num" data-i18n="hero.trust.one.title">UX-driven</div>
+              <div class="trustItem__text" data-i18n="hero.trust.one.text">Designed for frictionless learning</div>
             </div>
             <div class="trustItem">
-              <div class="trustItem__num">Goal-first</div>
-              <div class="trustItem__text">Format chosen based on outcomes</div>
+              <div class="trustItem__num" data-i18n="hero.trust.two.title">Goal-first</div>
+              <div class="trustItem__text" data-i18n="hero.trust.two.text">Format chosen based on outcomes</div>
             </div>
             <div class="trustItem">
-              <div class="trustItem__num">Fast & sharp</div>
-              <div class="trustItem__text">Clean deliverables, minimal noise</div>
+              <div class="trustItem__num" data-i18n="hero.trust.three.title">Fast & sharp</div>
+              <div class="trustItem__text" data-i18n="hero.trust.three.text">Clean deliverables, minimal noise</div>
             </div>
           </div>
         </div>
 
-        <div class="hero__card">
-          <div class="card">
-            <h2 class="card__title">What you get</h2>
-            <ul class="checklist">
-              <li>Clear learning objectives</li>
-              <li>Right content architecture</li>
-              <li>Production-ready deliverables</li>
-              <li>Iterative refinement until it works</li>
-            </ul>
-
-            <div class="card__note">
-              <strong>Typical engagement:</strong><br/>
-              A focused scope with a defined deliverable—no vague “hourly work”.
-            </div>
+        <div class="hero__visual" aria-hidden="true">
+          <div class="heroCard heroCard--primary">
+            <div class="heroCard__label" data-i18n="hero.visual.card1.label">Clarity Score</div>
+            <div class="heroCard__value">98%</div>
+            <div class="heroCard__meta" data-i18n="hero.visual.card1.meta">Learner comprehension lift</div>
           </div>
+          <div class="heroCard heroCard--secondary">
+            <div class="heroCard__label" data-i18n="hero.visual.card2.label">Engagement</div>
+            <div class="heroCard__value">+4.6x</div>
+            <div class="heroCard__meta" data-i18n="hero.visual.card2.meta">Completion in 30 days</div>
+          </div>
+          <div class="heroCard heroCard--accent">
+            <div class="heroCard__label" data-i18n="hero.visual.card3.label">Delivery</div>
+            <div class="heroCard__value" data-i18n="hero.visual.card3.value">4 weeks</div>
+            <div class="heroCard__meta" data-i18n="hero.visual.card3.meta">From discovery to launch</div>
+          </div>
+          <div class="orb orb--one"></div>
+          <div class="orb orb--two"></div>
+          <div class="orb orb--three"></div>
+          <svg class="hero__gridlines" viewBox="0 0 420 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 90H405" stroke="url(#grid)" stroke-width="1" stroke-dasharray="6 12"/>
+            <path d="M15 210H405" stroke="url(#grid)" stroke-width="1" stroke-dasharray="6 12"/>
+            <path d="M15 330H405" stroke="url(#grid)" stroke-width="1" stroke-dasharray="6 12"/>
+            <path d="M90 15V405" stroke="url(#grid)" stroke-width="1" stroke-dasharray="6 12"/>
+            <path d="M210 15V405" stroke="url(#grid)" stroke-width="1" stroke-dasharray="6 12"/>
+            <path d="M330 15V405" stroke="url(#grid)" stroke-width="1" stroke-dasharray="6 12"/>
+            <defs>
+              <linearGradient id="grid" x1="0" y1="0" x2="420" y2="420" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#63E6BE" stop-opacity="0.4"/>
+                <stop offset="1" stop-color="#60A5FA" stop-opacity="0.1"/>
+              </linearGradient>
+            </defs>
+          </svg>
         </div>
       </div>
-      <div class="hero__bg" aria-hidden="true"></div>
     </section>
 
     <!-- PROBLEM -->
     <section class="section">
       <div class="container">
         <div class="section__header">
-          <h2>Most content exists. It just doesn’t work.</h2>
-          <p>
+          <h2 data-i18n="problem.title">Most content exists. It just doesn’t work.</h2>
+          <p data-i18n="problem.lead">
             Organizations have documents, decks, knowledge bases and expert know-how—
             but learners still feel confused, overloaded, or disengaged.
             The issue is rarely “lack of content”. It’s clarity, structure, and fit.
@@ -119,16 +145,16 @@
 
         <div class="grid3">
           <div class="box">
-            <h3>Format-first thinking</h3>
-            <p>“We need a course” becomes the solution before the problem is defined.</p>
+            <h3 data-i18n="problem.one.title">Format-first thinking</h3>
+            <p data-i18n="problem.one.text">“We need a course” becomes the solution before the problem is defined.</p>
           </div>
           <div class="box">
-            <h3>Cognitive overload</h3>
-            <p>Too much information, not enough signal—learners drop off.</p>
+            <h3 data-i18n="problem.two.title">Cognitive overload</h3>
+            <p data-i18n="problem.two.text">Too much information, not enough signal—learners drop off.</p>
           </div>
           <div class="box">
-            <h3>Low adoption</h3>
-            <p>Even high-quality materials fail when they don’t match reality.</p>
+            <h3 data-i18n="problem.three.title">Low adoption</h3>
+            <p data-i18n="problem.three.text">Even high-quality materials fail when they don’t match reality.</p>
           </div>
         </div>
       </div>
@@ -138,8 +164,8 @@
     <section class="section section--alt" id="services">
       <div class="container">
         <div class="section__header">
-          <h2>Services</h2>
-          <p>
+          <h2 data-i18n="services.title">Services</h2>
+          <p data-i18n="services.lead">
             I develop different content types based on learning goals, audience, and context.
             Formats are tools—not the product.
           </p>
@@ -147,62 +173,62 @@
 
         <div class="cards">
           <article class="service">
-            <h3>🎥 Learning Videos</h3>
-            <p>Short, clear explainers for onboarding, processes, or key concepts.</p>
+            <h3 data-i18n="services.one.title">🎥 Learning Videos</h3>
+            <p data-i18n="services.one.text">Short, clear explainers for onboarding, processes, or key concepts.</p>
             <ul>
-              <li>Script & narrative structure</li>
-              <li>Storyboard guidance</li>
-              <li>Production-ready copy + visuals direction</li>
+              <li data-i18n="services.one.list.one">Script & narrative structure</li>
+              <li data-i18n="services.one.list.two">Storyboard guidance</li>
+              <li data-i18n="services.one.list.three">Production-ready copy + visuals direction</li>
             </ul>
           </article>
 
           <article class="service">
-            <h3>💻 eLearning & Interactive Modules</h3>
-            <p>Self-paced learning with practice, feedback, and clear progression.</p>
+            <h3 data-i18n="services.two.title">💻 eLearning & Interactive Modules</h3>
+            <p data-i18n="services.two.text">Self-paced learning with practice, feedback, and clear progression.</p>
             <ul>
-              <li>Module architecture</li>
-              <li>UX-first learning flow</li>
-              <li>Assessments & micro-activities</li>
+              <li data-i18n="services.two.list.one">Module architecture</li>
+              <li data-i18n="services.two.list.two">UX-first learning flow</li>
+              <li data-i18n="services.two.list.three">Assessments & micro-activities</li>
             </ul>
           </article>
 
           <article class="service">
-            <h3>📚 Courses (online / hybrid)</h3>
-            <p>Structured learning journeys for skills and deeper capability-building.</p>
+            <h3 data-i18n="services.three.title">📚 Courses (online / hybrid)</h3>
+            <p data-i18n="services.three.text">Structured learning journeys for skills and deeper capability-building.</p>
             <ul>
-              <li>Curriculum design</li>
-              <li>Sequencing & pacing</li>
-              <li>Retention & reinforcement</li>
+              <li data-i18n="services.three.list.one">Curriculum design</li>
+              <li data-i18n="services.three.list.two">Sequencing & pacing</li>
+              <li data-i18n="services.three.list.three">Retention & reinforcement</li>
             </ul>
           </article>
 
           <article class="service">
-            <h3>🧑‍🏫 Workshops & Live Training</h3>
-            <p>Facilitated sessions that create insight, practice, and behavior change.</p>
+            <h3 data-i18n="services.four.title">🧑‍🏫 Workshops & Live Training</h3>
+            <p data-i18n="services.four.text">Facilitated sessions that create insight, practice, and behavior change.</p>
             <ul>
-              <li>Facilitation plan</li>
-              <li>Exercises & group flow</li>
-              <li>Trainer notes + participant handouts</li>
+              <li data-i18n="services.four.list.one">Facilitation plan</li>
+              <li data-i18n="services.four.list.two">Exercises & group flow</li>
+              <li data-i18n="services.four.list.three">Trainer notes + participant handouts</li>
             </ul>
           </article>
 
           <article class="service">
-            <h3>🌐 Mini-sites & Knowledge Hubs</h3>
-            <p>Organized, navigable content for multiple audiences and needs.</p>
+            <h3 data-i18n="services.five.title">🌐 Mini-sites & Knowledge Hubs</h3>
+            <p data-i18n="services.five.text">Organized, navigable content for multiple audiences and needs.</p>
             <ul>
-              <li>Information architecture</li>
-              <li>Content structure & navigation</li>
-              <li>Mobile-first clarity</li>
+              <li data-i18n="services.five.list.one">Information architecture</li>
+              <li data-i18n="services.five.list.two">Content structure & navigation</li>
+              <li data-i18n="services.five.list.three">Mobile-first clarity</li>
             </ul>
           </article>
 
           <article class="service">
-            <h3>🤖 AI Agents for Learning & Support</h3>
-            <p>Goal-driven agents for practice, guidance, and on-demand knowledge access.</p>
+            <h3 data-i18n="services.six.title">🤖 AI Agents for Learning & Support</h3>
+            <p data-i18n="services.six.text">Goal-driven agents for practice, guidance, and on-demand knowledge access.</p>
             <ul>
-              <li>Use-case design</li>
-              <li>Conversation & safety boundaries</li>
-              <li>Knowledge scaffolding & prompts</li>
+              <li data-i18n="services.six.list.one">Use-case design</li>
+              <li data-i18n="services.six.list.two">Conversation & safety boundaries</li>
+              <li data-i18n="services.six.list.three">Knowledge scaffolding & prompts</li>
             </ul>
           </article>
         </div>
@@ -213,26 +239,26 @@
     <section class="section" id="process">
       <div class="container">
         <div class="section__header">
-          <h2>How it works</h2>
-          <p>A clear, lightweight process—focused on outcomes and usable deliverables.</p>
+          <h2 data-i18n="process.title">How it works</h2>
+          <p data-i18n="process.lead">A clear, lightweight process—focused on outcomes and usable deliverables.</p>
         </div>
 
         <ol class="steps">
           <li>
-            <div class="step__title">1) Clarify the goal</div>
-            <div class="step__text">Define outcomes, audience, constraints, and success signals.</div>
+            <div class="step__title" data-i18n="process.one.title">1) Clarify the goal</div>
+            <div class="step__text" data-i18n="process.one.text">Define outcomes, audience, constraints, and success signals.</div>
           </li>
           <li>
-            <div class="step__title">2) Choose the right format</div>
-            <div class="step__text">Video? eLearning? Workshop? Hub? AI agent? We pick what fits reality.</div>
+            <div class="step__title" data-i18n="process.two.title">2) Choose the right format</div>
+            <div class="step__text" data-i18n="process.two.text">Video? eLearning? Workshop? Hub? AI agent? We pick what fits reality.</div>
           </li>
           <li>
-            <div class="step__title">3) Build the content</div>
-            <div class="step__text">Structure, narrative, UX, activities—developed with clarity and precision.</div>
+            <div class="step__title" data-i18n="process.three.title">3) Build the content</div>
+            <div class="step__text" data-i18n="process.three.text">Structure, narrative, UX, activities—developed with clarity and precision.</div>
           </li>
           <li>
-            <div class="step__title">4) Refine until it works</div>
-            <div class="step__text">Iterate based on feedback and practical usability.</div>
+            <div class="step__title" data-i18n="process.four.title">4) Refine until it works</div>
+            <div class="step__text" data-i18n="process.four.text">Iterate based on feedback and practical usability.</div>
           </li>
         </ol>
       </div>
@@ -242,26 +268,26 @@
     <section class="section section--alt" id="work">
       <div class="container">
         <div class="section__header">
-          <h2>Common use cases</h2>
-          <p>Examples of when Clarifind is a strong fit.</p>
+          <h2 data-i18n="work.title">Common use cases</h2>
+          <p data-i18n="work.lead">Examples of when Clarifind is a strong fit.</p>
         </div>
 
         <div class="grid2">
           <div class="box">
-            <h3>Onboarding & role readiness</h3>
-            <p>Reduce ramp-up time with clear, structured training—without overwhelming new hires.</p>
+            <h3 data-i18n="work.one.title">Onboarding & role readiness</h3>
+            <p data-i18n="work.one.text">Reduce ramp-up time with clear, structured training—without overwhelming new hires.</p>
           </div>
           <div class="box">
-            <h3>Knowledge that’s “stuck” in experts</h3>
-            <p>Turn tacit know-how into usable learning artifacts that others can actually apply.</p>
+            <h3 data-i18n="work.two.title">Knowledge that’s “stuck” in experts</h3>
+            <p data-i18n="work.two.text">Turn tacit know-how into usable learning artifacts that others can actually apply.</p>
           </div>
           <div class="box">
-            <h3>Process & compliance training</h3>
-            <p>Create practical learning and reinforcement that people will follow in real workflows.</p>
+            <h3 data-i18n="work.three.title">Process & compliance training</h3>
+            <p data-i18n="work.three.text">Create practical learning and reinforcement that people will follow in real workflows.</p>
           </div>
           <div class="box">
-            <h3>Scaling facilitation with AI</h3>
-            <p>Use agents for practice, Q&A and guidance—designed responsibly and goal-first.</p>
+            <h3 data-i18n="work.four.title">Scaling facilitation with AI</h3>
+            <p data-i18n="work.four.text">Use agents for practice, Q&A and guidance—designed responsibly and goal-first.</p>
           </div>
         </div>
       </div>
@@ -271,28 +297,28 @@
     <section class="section" id="about">
       <div class="container about">
         <div>
-          <h2>About</h2>
-          <p>
+          <h2 data-i18n="about.title">About</h2>
+          <p data-i18n-html="about.lead">
             I design learning experiences at the intersection of <strong>content</strong>, <strong>UX</strong>, and <strong>human understanding</strong>.
             My work focuses on turning complex knowledge into clear, actionable learning—built to be used in the real world.
           </p>
-          <p class="muted">
+          <p class="muted" data-i18n="about.sub">
             Based in Israel • Working with organizations, NGOs, educators, and teams.
           </p>
         </div>
 
         <div class="about__highlights">
           <div class="stat">
-            <div class="stat__k">Strength</div>
-            <div class="stat__v">Clarity & structure</div>
+            <div class="stat__k" data-i18n="about.stat.one.label">Strength</div>
+            <div class="stat__v" data-i18n="about.stat.one.value">Clarity & structure</div>
           </div>
           <div class="stat">
-            <div class="stat__k">Approach</div>
-            <div class="stat__v">Goal-first learning design</div>
+            <div class="stat__k" data-i18n="about.stat.two.label">Approach</div>
+            <div class="stat__v" data-i18n="about.stat.two.value">Goal-first learning design</div>
           </div>
           <div class="stat">
-            <div class="stat__k">Deliverables</div>
-            <div class="stat__v">Defined scope, production-ready</div>
+            <div class="stat__k" data-i18n="about.stat.three.label">Deliverables</div>
+            <div class="stat__v" data-i18n="about.stat.three.value">Defined scope, production-ready</div>
           </div>
         </div>
       </div>
@@ -302,43 +328,46 @@
     <section class="section section--alt" id="contact">
       <div class="container contact">
         <div class="contact__copy">
-          <h2>Let’s clarify what you need</h2>
-          <p>
+          <h2 data-i18n="contact.title">Let’s clarify what you need</h2>
+          <p data-i18n="contact.lead">
             If you have important knowledge that isn’t landing—let’s do a short discovery call.
             We’ll clarify the goal and the best format to deliver it.
           </p>
+          <p class="muted" data-i18n="contact.pricing">
+            Pricing is discounted for small businesses, non-profits, and reserve veterans’ businesses.
+          </p>
 
           <div class="contact__chips">
-            <span>Onboarding</span>
-            <span>Workshops</span>
-            <span>eLearning</span>
-            <span>Mini-sites</span>
-            <span>AI agents</span>
+            <span data-i18n="contact.tag.one">Onboarding</span>
+            <span data-i18n="contact.tag.two">Workshops</span>
+            <span data-i18n="contact.tag.three">eLearning</span>
+            <span data-i18n="contact.tag.four">Mini-sites</span>
+            <span data-i18n="contact.tag.five">AI agents</span>
           </div>
 
-          <p class="muted">
+          <p class="muted" data-i18n-html="contact.note">
             Prefer email? <a href="mailto:hello@clarifind.com">hello@clarifind.com</a> (replace with your real email)
           </p>
         </div>
 
         <form class="form" action="#" method="post" onsubmit="return window.clarifindSubmit(event)">
           <label>
-            Name
-            <input name="name" type="text" placeholder="Your name" required />
+            <span data-i18n="form.name.label">Name</span>
+            <input name="name" type="text" placeholder="Your name" data-i18n-placeholder="form.name.placeholder" required />
           </label>
 
           <label>
-            Email
-            <input name="email" type="email" placeholder="name@company.com" required />
+            <span data-i18n="form.email.label">Email</span>
+            <input name="email" type="email" placeholder="name@company.com" data-i18n-placeholder="form.email.placeholder" required />
           </label>
 
           <label>
-            What do you need help with?
-            <textarea name="message" rows="5" placeholder="A short description of your content / audience / goal" required></textarea>
+            <span data-i18n="form.message.label">What do you need help with?</span>
+            <textarea name="message" rows="5" placeholder="A short description of your content / audience / goal" data-i18n-placeholder="form.message.placeholder" required></textarea>
           </label>
 
-          <button class="btn" type="submit">Send</button>
-          <p class="form__hint">
+          <button class="btn" type="submit" data-i18n="form.submit">Send</button>
+          <p class="form__hint" data-i18n="form.hint">
             This demo form doesn’t send anywhere yet. I’ll show you two easy options to make it send (Formspree / Netlify).
           </p>
         </form>
@@ -348,10 +377,10 @@
 
   <footer class="footer">
     <div class="container footer__inner">
-      <div>© <span id="year"></span> Clarifind. All rights reserved.</div>
+      <div data-i18n-html="footer.rights">© <span id="year"></span> Clarifind. All rights reserved.</div>
       <div class="footer__links">
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
+        <a href="#services" data-i18n="nav.services">Services</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
       </div>
     </div>
   </footer>
