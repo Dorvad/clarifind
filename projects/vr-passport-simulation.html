@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VR Passport Simulation | Clarifind Projects</title>
+  <meta name="description" content="Immersive practice flows that let learners rehearse critical steps in a risk-free, monitored environment." />
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+  <link rel="apple-touch-icon" href="../assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="../index.html" aria-label="Clarifind home">
+        <img class="brand__logo" src="../assets/logo.svg" alt="Clarifind logo" />
+        <div class="brand__text">
+          <div class="brand__name">Clarifind</div>
+          <div class="brand__tag">Learning Solutions</div>
+        </div>
+      </a>
+
+      <nav class="menu" aria-label="Primary">
+        <a href="../index.html#services">Services</a>
+        <a href="../index.html#process">Process</a>
+        <a href="../index.html#work">Use Cases</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#about">About</a>
+        <a class="btn btn--small" href="../index.html#contact">Talk to me</a>
+      </nav>
+
+      <div class="nav__actions">
+        <button class="toggle toggle--switch" id="themeToggle" type="button" aria-pressed="false">
+          <span class="toggle__label">Dark mode</span>
+          <span class="toggle__track" aria-hidden="true"><span class="toggle__thumb"></span></span>
+        </button>
+        <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobileMenu" id="mobileMenu" hidden>
+      <div class="container mobileMenu__inner">
+        <a href="../index.html#services">Services</a>
+        <a href="../index.html#process">Process</a>
+        <a href="../index.html#work">Use Cases</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#about">About</a>
+        <a class="btn" href="../index.html#contact">Talk to me</a>
+        <div class="mobileMenu__controls">
+          <button class="toggle toggle--switch" id="themeToggleMobile" type="button" aria-pressed="false">
+            <span class="toggle__label">Dark mode</span>
+            <span class="toggle__track" aria-hidden="true"><span class="toggle__thumb"></span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="projectHero">
+      <div class="container projectHero__grid">
+        <div class="projectHero__copy">
+          <p class="pill">Immersive learning</p>
+          <h1>VR Passport Simulation</h1>
+          <p class="lead">
+            Immersive practice flows that let learners rehearse critical steps in a risk-free, monitored environment.
+          </p>
+          <div class="projectHero__meta">
+            <span>Simulation</span>
+            <span>Immersive learning</span>
+            <span>Risk-free practice</span>
+          </div>
+          <div class="projectHero__actions">
+            <a class="btn btn--ghost" href="../index.html#projects">Back to projects</a>
+          </div>
+        </div>
+        <div class="projectHero__media">
+          <img src="../assets/AirBrush_20250718124440.jpg" alt="Immersive training environment preview" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section__header">
+          <h2>Simulation highlights</h2>
+          <p>Layered guidance, spatial cues, and repeatable scenarios build confidence before real-world execution.</p>
+        </div>
+        <div class="projectGallery">
+          <figure class="projectGallery__item">
+            <img src="../assets/AirBrush_20250318185008.jpg" alt="Scenario prompt within the simulation" />
+            <figcaption>Scenario prompts keep learners focused on critical steps.</figcaption>
+          </figure>
+          <figure class="projectGallery__item">
+            <img src="../assets/IMG20250219123026.jpg" alt="VR learning checklist" />
+            <figcaption>Checklists make each step easy to repeat and refine.</figcaption>
+          </figure>
+          <figure class="projectGallery__item">
+            <img src="../assets/SmartSelect_20250429_221108_YouTube.jpg" alt="Immersive practice moment" />
+            <figcaption>Immersive practice helps learners rehearse under realistic conditions.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>© <span id="year"></span> Clarifind. All rights reserved.</div>
+      <div class="footer__links">
+        <a href="../index.html#services">Services</a>
+        <a href="../index.html#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
