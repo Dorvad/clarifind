@@ -461,6 +461,152 @@ h1{ font-size: clamp(36px, 4vw, 60px); margin:14px 0 10px; line-height:1.05; }
   grid-template-columns: repeat(2, 1fr);
   gap:18px;
 }
+.projects__grid{
+  margin-top:24px;
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap:20px;
+}
+.projectCard{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:var(--radius-md);
+  overflow:hidden;
+  display:grid;
+  grid-template-rows: auto 1fr;
+  box-shadow: 0 18px 38px rgba(15, 23, 42, 0.08);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.projectCard:hover{
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+  border-color: rgba(92, 99, 255, 0.3);
+}
+.projectCard__media{
+  position:relative;
+  background: var(--surface-alt);
+  border-bottom:1px solid var(--line);
+  min-height:200px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+.projectCard__media--art{
+  color:#f5f6ff;
+}
+.projectCard__art{
+  width:100%;
+  height:100%;
+  min-height:200px;
+  display:flex;
+  align-items:flex-end;
+  justify-content:flex-start;
+  padding:22px;
+  font-weight:700;
+  letter-spacing:.02em;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,0.18), transparent 50%),
+    radial-gradient(circle at 80% 10%, rgba(255,255,255,0.18), transparent 45%),
+    linear-gradient(140deg, rgba(92, 99, 255, 0.85), rgba(76, 201, 240, 0.7));
+}
+.projectCard__art span{
+  display:inline-flex;
+  padding:8px 12px;
+  border-radius:999px;
+  background: rgba(11, 15, 29, 0.55);
+  border:1px solid rgba(255,255,255,0.25);
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  font-size:12px;
+}
+.projectCard__media--map .projectCard__art{
+  background:
+    radial-gradient(circle at 30% 40%, rgba(255,255,255,0.22), transparent 55%),
+    linear-gradient(135deg, rgba(76, 201, 240, 0.85), rgba(92, 99, 255, 0.75));
+}
+.projectCard__media--dashboard .projectCard__art{
+  background:
+    linear-gradient(120deg, rgba(92, 99, 255, 0.85), rgba(160, 97, 255, 0.7)),
+    radial-gradient(circle at 70% 20%, rgba(255,255,255,0.22), transparent 55%);
+}
+.projectCard__media--kit .projectCard__art{
+  background:
+    linear-gradient(145deg, rgba(249, 178, 76, 0.85), rgba(160, 97, 255, 0.65)),
+    radial-gradient(circle at 20% 80%, rgba(255,255,255,0.22), transparent 55%);
+}
+.projectCard__media--keynote .projectCard__art{
+  background:
+    radial-gradient(circle at 20% 20%, rgba(173, 255, 47, 0.25), transparent 55%),
+    linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(17, 24, 39, 0.85));
+}
+.projectCard__media--embed{
+  min-height:280px;
+  background: #0b0f1d;
+}
+.projectCard__media--embed iframe{
+  width:100%;
+  height:100%;
+  border:0;
+  filter: saturate(1.05);
+}
+.projectCard__overlay{
+  position:absolute;
+  right:16px;
+  bottom:16px;
+  background: rgba(11, 15, 29, 0.65);
+  color:#f5f6ff;
+  padding:8px 12px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  border:1px solid rgba(255,255,255,.2);
+}
+.projectCard__body{
+  padding:20px;
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  justify-content:space-between;
+}
+.projectCard__body h3{
+  margin:0 0 8px;
+}
+.projectCard__body p{
+  margin:0;
+  color:var(--muted);
+}
+.projectCard__tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+.projectCard__tags span{
+  padding:6px 10px;
+  border-radius:999px;
+  background: color-mix(in srgb, var(--surface-alt) 85%, transparent);
+  border:1px solid var(--line);
+  font-weight:600;
+  font-size:12px;
+  color:var(--muted);
+}
+.projectCard__actions{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+.projectCard--feature{
+  grid-column: span 2;
+  display:grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+}
+.projectCard--feature .projectCard__media{
+  min-height:100%;
+  border-right:1px solid var(--line);
+  border-bottom:0;
+}
 .box{
   background:var(--surface);
   border:1px solid var(--line);
@@ -816,6 +962,15 @@ input:focus, textarea:focus{
   .heroArt__timeline{ grid-template-columns: 1fr; }
   .grid3{ grid-template-columns: 1fr; }
   .grid2{ grid-template-columns: 1fr; }
+  .projects__grid{ grid-template-columns: 1fr; }
+  .projectCard--feature{
+    grid-column: auto;
+    grid-template-columns: 1fr;
+  }
+  .projectCard--feature .projectCard__media{
+    border-right:0;
+    border-bottom:1px solid var(--line);
+  }
   .steps{ grid-template-columns: 1fr; }
   .about{ grid-template-columns: 1fr; }
   .contact{ grid-template-columns: 1fr; }
