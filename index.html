@@ -1,654 +1,328 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title data-i18n="meta.title">Clarifind | Learning Solutions</title>
-  <meta name="description" content="Clarifind develops tailored learning solutions—videos, eLearning, courses, workshops, mini-sites and AI agents—based on your learning goals." data-i18n-attr="content:meta.description" />
-  <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#0B1220" />
-  <link rel="canonical" href="https://clarifind.com" />
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-  <link rel="apple-touch-icon" href="assets/favicon.svg" />
-  <meta property="og:title" content="Clarifind | Learning Solutions" data-i18n-attr="content:meta.title" />
-  <meta property="og:description" content="Clarifind builds goal-first learning solutions, from videos and eLearning to workshops, mini-sites, and AI agents." data-i18n-attr="content:meta.ogDescription" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://clarifind.com" />
-  <meta property="og:image" content="https://clarifind.com/assets/logo.svg" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Clarifind | Learning Solutions" data-i18n-attr="content:meta.title" />
-  <meta name="twitter:description" content="Clarifind builds goal-first learning solutions, from videos and eLearning to workshops, mini-sites, and AI agents." data-i18n-attr="content:meta.ogDescription" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Clarifind",
-      "url": "https://clarifind.com",
-      "logo": "https://clarifind.com/assets/logo.svg",
-      "description": "Goal-first learning design, content, and AI enablement.",
-      "email": "hello@clarifind.com",
-      "sameAs": []
-    }
-  </script>
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Clarifind | Learning made clear for small teams</title>
+    <meta
+      name="description"
+      content="Clarifind helps small businesses turn complex knowledge into clear, usable learning products, workshops, and tools."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0F172A" />
+    <link rel="canonical" href="https://clarifind.com" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-<body>
-  <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+    <header class="site-header" id="top">
+      <div class="container nav">
+        <a class="brand" href="#top" aria-label="Clarifind home">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-text">Clarifind</span>
+        </a>
 
-  <header class="header">
-    <div class="container nav">
-      <a class="brand" href="#top" aria-label="Clarifind home" data-i18n-attr="aria-label:brand.home">
-        <img class="brand__logo" src="assets/logo.svg" alt="Clarifind logo" data-i18n-attr="alt:brand.logoAlt" />
-        <div class="brand__text">
-          <div class="brand__name">Clarifind</div>
-          <div class="brand__tag" data-i18n="brand.tag">Learning Solutions</div>
-        </div>
-      </a>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="#services">Services</a>
+          <a href="#how">How it works</a>
+          <a href="#examples">Examples</a>
+          <a href="#contact">Contact</a>
+          <a class="btn btn-primary" href="mailto:hello@clarifind.com">Start a conversation</a>
+        </nav>
 
-      <nav class="menu" aria-label="Primary" data-i18n-attr="aria-label:nav.label">
-        <a href="#services" data-i18n="nav.services">Services</a>
-        <a href="#process" data-i18n="nav.process">Process</a>
-        <a href="#work" data-i18n="nav.useCases">Use Cases</a>
-        <a href="#projects" data-i18n="nav.projects">Projects</a>
-        <a href="#about" data-i18n="nav.about">About</a>
-        <a class="btn btn--small" href="#contact" data-i18n="nav.contact">Contact</a>
-      </nav>
-
-      <div class="nav__actions">
-        <button class="toggle toggle--switch" id="themeToggle" type="button" aria-pressed="false">
-          <span class="toggle__label" data-i18n="theme.dark">Dark mode</span>
-          <span class="toggle__track" aria-hidden="true"><span class="toggle__thumb"></span></span>
-        </button>
-        <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu" data-i18n-attr="aria-label:nav.openMenu">
-          <span></span><span></span><span></span>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobileMenu">
+          <span class="sr-only">Open menu</span>
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
       </div>
-    </div>
 
-    <div class="mobileMenu" id="mobileMenu" hidden>
-      <div class="container mobileMenu__inner">
-        <a href="#services" data-i18n="nav.services">Services</a>
-        <a href="#process" data-i18n="nav.process">Process</a>
-        <a href="#work" data-i18n="nav.useCases">Use Cases</a>
-        <a href="#projects" data-i18n="nav.projects">Projects</a>
-        <a href="#about" data-i18n="nav.about">About</a>
-        <a class="btn" href="#contact" data-i18n="nav.contact">Contact</a>
-        <div class="mobileMenu__controls">
-          <button class="toggle toggle--switch" id="themeToggleMobile" type="button" aria-pressed="false">
-            <span class="toggle__label" data-i18n="theme.dark">Dark mode</span>
-            <span class="toggle__track" aria-hidden="true"><span class="toggle__thumb"></span></span>
-          </button>
+      <div class="mobile-menu" id="mobileMenu" hidden>
+        <div class="container">
+          <a href="#services">Services</a>
+          <a href="#how">How it works</a>
+          <a href="#examples">Examples</a>
+          <a href="#contact">Contact</a>
+          <a class="btn btn-primary" href="mailto:hello@clarifind.com">Start a conversation</a>
         </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <main id="main">
-    <!-- HERO -->
-    <section class="hero" id="top">
-      <div class="hero__bg" aria-hidden="true"></div>
-      <div class="hero__grid hero__grid--split container">
-        <div class="hero__copy reveal">
-          <p class="pill" data-i18n="hero.pill">Learning Design • Training Content • AI Support</p>
-          <h1 data-i18n="hero.title">Clear training people can actually use.</h1>
-          <p class="lead" data-i18n="hero.lead">
-            Clarifind builds learning tools for teams—videos, eLearning, workshops, mini-sites, and AI support.
-            We start with your goal, choose the right format, and deliver training people can apply right away.
-          </p>
-          <div class="hero__cta">
-            <a class="btn" href="#contact" data-i18n="hero.ctaPrimary">Schedule a short call</a>
-            <a class="btn btn--ghost" href="#services" data-i18n="hero.ctaSecondary">Explore services</a>
+    <main id="main">
+      <section class="hero section">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="badge">Learning clarity for small businesses</p>
+            <h1>Make training and knowledge feel clear, usable, and calm.</h1>
+            <p class="lead">
+              Clarifind designs learning products, workshops, and AI-assisted tools that help small teams
+              share what they know—without the mess. You get structure, content, and delivery that people
+              can actually use.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="mailto:hello@clarifind.com">Start a conversation</a>
+              <a class="btn btn-secondary" href="#services">See services</a>
+            </div>
+            <p class="trust-line">Fast, practical, and built to be used.</p>
           </div>
-          <div class="hero__metrics">
+          <div class="hero-visual">
+            <img
+              src="assets/clarity-graphic.svg"
+              alt="Abstract diagram showing connected steps and clarity."
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="services">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Services</p>
+            <h2>Clear learning solutions, sized for real teams.</h2>
+            <p class="section-lead text-narrow">
+              Pick the format that fits your goal. I handle structure, content, and delivery so your team
+              gets something they can use right away.
+            </p>
+          </div>
+
+          <div class="card-grid">
+            <article class="card">
+              <h3>Learning products</h3>
+              <p>
+                Courses, onboarding, and structured learning hubs that make complex knowledge feel simple
+                and easy to follow.
+              </p>
+              <p class="card-label">Typical outputs:</p>
+              <ul>
+                <li>Curriculum map + content outline</li>
+                <li>Modules, lessons, and assessments</li>
+                <li>Launch-ready assets</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>Workshops & facilitation</h3>
+              <p>
+                Practical sessions that move people from confusion to shared understanding—without theory
+                overload.
+              </p>
+              <p class="card-label">Typical outputs:</p>
+              <ul>
+                <li>Facilitation guide + materials</li>
+                <li>Interactive activities</li>
+                <li>Actionable takeaways</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>AI-assisted learning tools</h3>
+              <p>
+                Responsible, realistic AI helpers that make knowledge easier to access, practice, and
+                apply.
+              </p>
+              <p class="card-label">Typical outputs:</p>
+              <ul>
+                <li>Structured prompts and scripts</li>
+                <li>Lightweight prototypes</li>
+                <li>Adoption guidance</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>Content clarity & structure</h3>
+              <p>
+                Turn messy docs into clear systems: naming, navigation, and content people can find and
+                trust.
+              </p>
+              <p class="card-label">Typical outputs:</p>
+              <ul>
+                <li>Content audit + prioritization</li>
+                <li>Information architecture</li>
+                <li>Rewrite + polish</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-divider" id="how">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">How it works</p>
+            <h2>Simple steps, no fuss.</h2>
+          </div>
+
+          <div class="how-grid">
+            <ol class="steps">
+              <li>
+                <span class="step-number">1</span>
+                <div>
+                  <h3>Quick call</h3>
+                  <p>We get clear on the goal, audience, timeline, and constraints.</p>
+                </div>
+              </li>
+              <li>
+                <span class="step-number">2</span>
+                <div>
+                  <h3>Clear plan</h3>
+                  <p>You receive a short plan with scope, format, and next steps.</p>
+                </div>
+              </li>
+              <li>
+                <span class="step-number">3</span>
+                <div>
+                  <h3>Build + iterate</h3>
+                  <p>I design and build, then iterate with tight feedback loops.</p>
+                </div>
+              </li>
+              <li>
+                <span class="step-number">4</span>
+                <div>
+                  <h3>Deliver something usable</h3>
+                  <p>You get polished materials ready for your team to use.</p>
+                </div>
+              </li>
+            </ol>
+
+            <aside class="panel">
+              <h3>What you’ll get</h3>
+              <ul>
+                <li>Clear scope and timeline</li>
+                <li>Simple, usable materials</li>
+                <li>Content your team can adopt quickly</li>
+                <li>Lightweight documentation</li>
+              </ul>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="examples">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Examples</p>
+            <h2>Recent types of problems solved</h2>
+            <p class="section-lead text-narrow">
+              All examples are anonymized. Ask for relevant examples if you want to see something similar
+              to your case.
+            </p>
+          </div>
+
+          <div class="tile-grid">
+            <div class="tile">Turned a 50-page handbook into a 4-module onboarding path.</div>
+            <div class="tile">Designed a client-facing course that reduced support tickets.</div>
+            <div class="tile">Built a workshop for sales teams to practice new product demos.</div>
+            <div class="tile">Created an AI assistant for quick policy lookups and training prompts.</div>
+            <div class="tile">Reorganized internal docs so staff could find answers in minutes.</div>
+            <div class="tile">Translated complex workflows into simple, step-by-step guides.</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-divider" id="why">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Why Clarifind</p>
+            <h2>UX thinking + learning design + hands-on building.</h2>
+            <p class="section-lead text-narrow">
+              I focus on clarity, usability, and respect for learners. No fluff—just clean structure,
+              clear language, and practical delivery.
+            </p>
+          </div>
+
+          <div class="why-grid">
             <div>
-              <span class="metric__value" data-i18n="hero.metrics.goals.value">Defined goals</span>
-              <span class="metric__label" data-i18n="hero.metrics.goals.label">We align on outcomes and success metrics.</span>
+              <p class="callout">
+                <strong>No-fluff promise:</strong> you’ll get a calm, usable learning experience that
+                respects your audience’s time.
+              </p>
+              <p>
+                I work best with small teams who want to reduce confusion and create a shared source of
+                truth. If you care about clarity, we’ll work well together.
+              </p>
             </div>
-            <div>
-              <span class="metric__value" data-i18n="hero.metrics.formats.value">Practical formats</span>
-              <span class="metric__label" data-i18n="hero.metrics.formats.label">Choose videos, eLearning, workshops, or hubs.</span>
-            </div>
-            <div>
-              <span class="metric__value" data-i18n="hero.metrics.adoption.value">Adoption focus</span>
-              <span class="metric__label" data-i18n="hero.metrics.adoption.label">Built for real workflows, not slide decks.</span>
+            <div class="chips">
+              <span class="chip">Clarity</span>
+              <span class="chip">Practicality</span>
+              <span class="chip">Usability</span>
+              <span class="chip">Respect</span>
             </div>
           </div>
         </div>
-        <div class="hero__visual reveal" aria-hidden="true">
-          <div class="hero__visualArt">
-            <img class="hero__visualImage" src="assets/IMG_20250425_030339.jpg" alt="" />
-            <div class="hero__visualGlow"></div>
-            <div class="hero__visualOrbit"></div>
-          </div>
-          <div class="hero__visualCard hero__visualCard--one">
-            <span>Warm onboarding</span>
-            <strong>Human-first training</strong>
-          </div>
-          <div class="hero__visualCard hero__visualCard--two">
-            <span>AI practice</span>
-            <strong>Coachable moments</strong>
-          </div>
-          <div class="hero__visualMini hero__visualMini--one">
-            <img src="assets/IMG_20250314_005922_207.jpg" alt="" />
-            <span>Workshop energy</span>
-          </div>
-          <div class="hero__visualMini hero__visualMini--two">
-            <img src="assets/SmartSelect_20250429_221108_YouTube.jpg" alt="" />
-            <span>Progress clarity</span>
-          </div>
-        </div>
-      </div>
-      <div class="hero__trust container reveal">
-        <div class="trustItem">
-          <div class="trustItem__num" data-i18n="hero.trust.teams.title">Built for teams</div>
-          <div class="trustItem__text" data-i18n="hero.trust.teams.text">Practical learning for education, nonprofit, and public teams.</div>
-        </div>
-        <div class="trustItem">
-          <div class="trustItem__num" data-i18n="hero.trust.process.title">Simple process</div>
-          <div class="trustItem__text" data-i18n="hero.trust.process.text">Clear steps from discovery to delivery.</div>
-        </div>
-        <div class="trustItem">
-          <div class="trustItem__num" data-i18n="hero.trust.results.title">Measurable results</div>
-          <div class="trustItem__text" data-i18n="hero.trust.results.text">We track progress and improve based on feedback.</div>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- LOGO STRIP -->
-    <section class="section section--tight reveal">
-      <div class="container">
-        <div class="logoStrip" aria-label="Trusted by teams in education, nonprofits, and enterprise" data-i18n-attr="aria-label:logoStrip.label">
-          <div class="logoStrip__track">
-            <span data-i18n="logoStrip.items.nonprofits">Nonprofits</span>
-            <span data-i18n="logoStrip.items.education">Education</span>
-            <span data-i18n="logoStrip.items.healthcare">Healthcare</span>
-            <span data-i18n="logoStrip.items.publicSector">Public Sector</span>
-            <span data-i18n="logoStrip.items.techTeams">Tech Teams</span>
-            <span data-i18n="logoStrip.items.ngos">NGOs</span>
-            <span data-i18n="logoStrip.items.compliance">Compliance</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROBLEM -->
-    <section class="section reveal">
-      <div class="container">
-        <div class="section__header">
-          <h2 data-i18n="problem.title">Training often exists, but it isn’t working.</h2>
-          <p data-i18n="problem.lead">
-            Teams already have documents and decks, but learners still feel lost or disengaged.
-            Without structure, practice, and feedback, the content doesn’t stick.
-          </p>
-        </div>
-
-        <div class="grid3">
-          <div class="box">
-            <h3 data-i18n="problem.items.solution.title">Solution before the problem</h3>
-            <p data-i18n="problem.items.solution.text">“We need a course” shows up before goals, audience, and constraints are clear.</p>
-          </div>
-          <div class="box">
-            <h3 data-i18n="problem.items.content.title">Too much content</h3>
-            <p data-i18n="problem.items.content.text">Important details get buried, so learners tune out.</p>
-          </div>
-          <div class="box">
-            <h3 data-i18n="problem.items.adoption.title">Low adoption</h3>
-            <p data-i18n="problem.items.adoption.text">Even good content fails when it doesn’t match day-to-day work.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SERVICES -->
-    <section class="section section--alt reveal" id="services">
-      <div class="container">
-        <div class="section__header">
-          <h2 data-i18n="services.title">Services</h2>
-          <p data-i18n="services.lead">
-            Choose the format that fits your goal, audience, and timeline.
-            I help you design the right solution and deliver it end to end.
-          </p>
-        </div>
-
-        <div class="services__layout" data-services>
-          <div class="services__tabs" role="tablist" aria-label="Service categories" data-i18n-attr="aria-label:services.tabsLabel">
-            <button class="services__tab is-active" role="tab" aria-selected="true" aria-controls="service-panel-1" id="service-tab-1" data-service="service-panel-1">
-              <span data-i18n="services.tabs.videos">Learning Videos</span>
-            </button>
-            <button class="services__tab" role="tab" aria-selected="false" aria-controls="service-panel-2" id="service-tab-2" data-service="service-panel-2">
-              <span data-i18n="services.tabs.elearning">Interactive eLearning</span>
-            </button>
-            <button class="services__tab" role="tab" aria-selected="false" aria-controls="service-panel-3" id="service-tab-3" data-service="service-panel-3">
-              <span data-i18n="services.tabs.courses">Courses</span>
-            </button>
-            <button class="services__tab" role="tab" aria-selected="false" aria-controls="service-panel-4" id="service-tab-4" data-service="service-panel-4">
-              <span data-i18n="services.tabs.workshops">Workshops</span>
-            </button>
-            <button class="services__tab" role="tab" aria-selected="false" aria-controls="service-panel-5" id="service-tab-5" data-service="service-panel-5">
-              <span data-i18n="services.tabs.minisites">Mini-sites</span>
-            </button>
-            <button class="services__tab" role="tab" aria-selected="false" aria-controls="service-panel-6" id="service-tab-6" data-service="service-panel-6">
-              <span data-i18n="services.tabs.ai">AI Agents</span>
-            </button>
+      <section class="section" id="fit">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Fit check</p>
+            <h2>Who this is for (and not for).</h2>
           </div>
 
-          <div class="services__panels">
-            <article class="services__panel is-active" id="service-panel-1" role="tabpanel" aria-labelledby="service-tab-1">
-              <div class="services__panel-copy">
-                <h3 data-i18n="services.videos.title">Learning Videos</h3>
-                <p data-i18n="services.videos.lead">Short, clear explainers for onboarding, processes, or key concepts.</p>
-                <ul>
-                  <li data-i18n="services.videos.items.script">Script and narrative structure</li>
-                  <li data-i18n="services.videos.items.storyboard">Storyboard guidance</li>
-                  <li data-i18n="services.videos.items.production">Production-ready copy and visuals direction</li>
-                </ul>
-              </div>
-              <div class="services__panel-media">
-                <div class="mediaCard mediaCard--video">
-                  <div class="mediaCard__label" data-i18n="services.videos.media.label">Storyboard preview</div>
-                  <div class="mediaCard__window">
-                    <div class="mediaCard__frame">
-                      <div class="mediaCard__bar"></div>
-                      <div class="mediaCard__screen"></div>
-                    </div>
-                    <div class="mediaCard__pulse"></div>
-                  </div>
-                  <p class="mediaCard__caption" data-i18n="services.videos.media.caption">Animated lower-thirds and clarity cues</p>
-                </div>
-              </div>
-            </article>
-
-            <article class="services__panel" id="service-panel-2" role="tabpanel" aria-labelledby="service-tab-2">
-              <div class="services__panel-copy">
-                <h3 data-i18n="services.elearning.title">eLearning & Interactive Modules</h3>
-                <p data-i18n="services.elearning.lead">Self-paced learning with practice, feedback, and clear progression.</p>
-                <ul>
-                  <li data-i18n="services.elearning.items.architecture">Module architecture</li>
-                  <li data-i18n="services.elearning.items.flow">UX-first learning flow</li>
-                  <li data-i18n="services.elearning.items.assessments">Assessments and micro-activities</li>
-                </ul>
-              </div>
-              <div class="services__panel-media">
-                <div class="mediaCard mediaCard--learning">
-                  <div class="mediaCard__label" data-i18n="services.elearning.media.label">Interactive path</div>
-                  <div class="mediaCard__window">
-                    <div class="mediaCard__steps">
-                      <span></span><span></span><span></span>
-                    </div>
-                    <div class="mediaCard__node"></div>
-                  </div>
-                  <p class="mediaCard__caption" data-i18n="services.elearning.media.caption">Micro-activities, feedback, and checkpoints</p>
-                </div>
-              </div>
-            </article>
-
-            <article class="services__panel" id="service-panel-3" role="tabpanel" aria-labelledby="service-tab-3">
-              <div class="services__panel-copy">
-                <h3 data-i18n="services.courses.title">Courses (online / hybrid)</h3>
-                <p data-i18n="services.courses.lead">Structured learning journeys for skills and deeper capability-building.</p>
-                <ul>
-                  <li data-i18n="services.courses.items.curriculum">Curriculum design</li>
-                  <li data-i18n="services.courses.items.sequencing">Sequencing and pacing</li>
-                  <li data-i18n="services.courses.items.retention">Retention and reinforcement</li>
-                </ul>
-              </div>
-              <div class="services__panel-media">
-                <div class="mediaCard mediaCard--course">
-                  <div class="mediaCard__label" data-i18n="services.courses.media.label">Course blueprint</div>
-                  <div class="mediaCard__window">
-                    <div class="mediaCard__stack">
-                      <span></span><span></span><span></span>
-                    </div>
-                  </div>
-                  <p class="mediaCard__caption" data-i18n="services.courses.media.caption">Curriculum arcs with retention touchpoints</p>
-                </div>
-              </div>
-            </article>
-
-            <article class="services__panel" id="service-panel-4" role="tabpanel" aria-labelledby="service-tab-4">
-              <div class="services__panel-copy">
-                <h3 data-i18n="services.workshops.title">Workshops & Live Training</h3>
-                <p data-i18n="services.workshops.lead">Facilitated sessions that create insight, practice, and behavior change.</p>
-                <ul>
-                  <li data-i18n="services.workshops.items.plan">Facilitation plan</li>
-                  <li data-i18n="services.workshops.items.exercises">Exercises and group flow</li>
-                  <li data-i18n="services.workshops.items.materials">Trainer notes and participant handouts</li>
-                </ul>
-              </div>
-              <div class="services__panel-media">
-                <div class="mediaCard mediaCard--workshop">
-                  <div class="mediaCard__label" data-i18n="services.workshops.media.label">Live session flow</div>
-                  <div class="mediaCard__window">
-                    <div class="mediaCard__pulse"></div>
-                    <div class="mediaCard__avatars">
-                      <span></span><span></span><span></span>
-                    </div>
-                  </div>
-                  <p class="mediaCard__caption" data-i18n="services.workshops.media.caption">Breakout timing and interactive moments</p>
-                </div>
-              </div>
-            </article>
-
-            <article class="services__panel" id="service-panel-5" role="tabpanel" aria-labelledby="service-tab-5">
-              <div class="services__panel-copy">
-                <h3 data-i18n="services.minisites.title">Mini-sites & Knowledge Hubs</h3>
-                <p data-i18n="services.minisites.lead">Organized, navigable content for multiple audiences and needs.</p>
-                <ul>
-                  <li data-i18n="services.minisites.items.architecture">Information architecture</li>
-                  <li data-i18n="services.minisites.items.navigation">Content structure and navigation</li>
-                  <li data-i18n="services.minisites.items.mobile">Mobile-first clarity</li>
-                </ul>
-              </div>
-              <div class="services__panel-media">
-                <div class="mediaCard mediaCard--hub">
-                  <div class="mediaCard__label" data-i18n="services.minisites.media.label">Hub layout</div>
-                  <div class="mediaCard__window">
-                    <div class="mediaCard__grid">
-                      <span></span><span></span><span></span><span></span>
-                    </div>
-                  </div>
-                  <p class="mediaCard__caption" data-i18n="services.minisites.media.caption">Navigation tiles and content pathways</p>
-                </div>
-              </div>
-            </article>
-
-            <article class="services__panel" id="service-panel-6" role="tabpanel" aria-labelledby="service-tab-6">
-              <div class="services__panel-copy">
-                <h3 data-i18n="services.ai.title">AI Agents for Learning & Support</h3>
-                <p data-i18n="services.ai.lead">Goal-driven agents for practice, guidance, and on-demand knowledge access.</p>
-                <ul>
-                  <li data-i18n="services.ai.items.usecase">Use-case design</li>
-                  <li data-i18n="services.ai.items.safety">Conversation and safety boundaries</li>
-                  <li data-i18n="services.ai.items.scaffolding">Knowledge scaffolding and prompts</li>
-                </ul>
-              </div>
-              <div class="services__panel-media">
-                <div class="mediaCard mediaCard--agent">
-                  <div class="mediaCard__label" data-i18n="services.ai.media.label">Agent prompts</div>
-                  <div class="mediaCard__window">
-                    <div class="mediaCard__chat">
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </div>
-                  </div>
-                  <p class="mediaCard__caption" data-i18n="services.ai.media.caption">Guided conversations with guardrails</p>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- UX PRINCIPLES -->
-    <section class="section reveal" id="process">
-      <div class="container">
-        <div class="section__header">
-          <h2 data-i18n="process.title">How we work</h2>
-          <p data-i18n="process.lead">A simple process with clear milestones and regular check-ins.</p>
-        </div>
-
-        <ol class="steps">
-          <li>
-            <div class="step__title" data-i18n="process.steps.one.title">1) Set goals and audience</div>
-            <div class="step__text" data-i18n="process.steps.one.text">Define outcomes, constraints, and what success looks like.</div>
-          </li>
-          <li>
-            <div class="step__title" data-i18n="process.steps.two.title">2) Pick the best format</div>
-            <div class="step__text" data-i18n="process.steps.two.text">Video, eLearning, workshop, or hub—based on real needs.</div>
-          </li>
-          <li>
-            <div class="step__title" data-i18n="process.steps.three.title">3) Design and build</div>
-            <div class="step__text" data-i18n="process.steps.three.text">Structure the content, write it, and design the experience.</div>
-          </li>
-          <li>
-            <div class="step__title" data-i18n="process.steps.four.title">4) Test and improve</div>
-            <div class="step__text" data-i18n="process.steps.four.text">Refine based on usability, comprehension, and real feedback.</div>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <section class="section section--alt reveal">
-      <div class="container">
-        <div class="section__header">
-          <h2 data-i18n="principles.title">Design principles that help people learn</h2>
-          <p data-i18n="principles.lead">
-            Clear structure and gentle guidance keep learners focused and confident.
-          </p>
-        </div>
-        <div class="grid3">
-          <div class="box box--accent">
-            <h3 data-i18n="principles.items.clarity.title">Clarity and feedback</h3>
-            <p data-i18n="principles.items.clarity.text">Every step shows what to do next and how progress is going.</p>
-          </div>
-          <div class="box box--accent">
-            <h3 data-i18n="principles.items.structure.title">Consistent structure</h3>
-            <p data-i18n="principles.items.structure.text">Predictable layout and language help people move faster.</p>
-          </div>
-          <div class="box box--accent">
-            <h3 data-i18n="principles.items.practice.title">Guided practice</h3>
-            <p data-i18n="principles.items.practice.text">Examples and cues reduce effort and build confidence.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- USE CASES -->
-    <section class="section reveal" id="work">
-      <div class="container">
-        <div class="section__header">
-          <h2 data-i18n="useCases.title">Where this helps most</h2>
-          <p data-i18n="useCases.lead">Common situations where teams ask for support.</p>
-        </div>
-
-        <div class="grid2">
-          <div class="box">
-            <h3 data-i18n="useCases.items.onboarding.title">Onboarding & role readiness</h3>
-            <p data-i18n="useCases.items.onboarding.text">Reduce ramp-up time with clear, structured training that respects busy schedules.</p>
-          </div>
-          <div class="box">
-            <h3 data-i18n="useCases.items.knowledge.title">Knowledge stuck in experts</h3>
-            <p data-i18n="useCases.items.knowledge.text">Turn tacit know-how into tools other people can use quickly.</p>
-          </div>
-          <div class="box">
-            <h3 data-i18n="useCases.items.compliance.title">Process & compliance training</h3>
-            <p data-i18n="useCases.items.compliance.text">Create practical training and reinforcement that people will follow on the job.</p>
-          </div>
-          <div class="box">
-            <h3 data-i18n="useCases.items.ai.title">Scaling facilitation with AI</h3>
-            <p data-i18n="useCases.items.ai.text">Use AI for practice, Q&A, and guidance with clear boundaries.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section class="section section--alt reveal" id="projects">
-      <div class="container">
-        <div class="section__header">
-          <h2 data-i18n="projects.title">Projects</h2>
-          <p data-i18n="projects.lead">
-            A short look at recent work. Explore the full list for more examples.
-          </p>
-        </div>
-
-        <div class="projects__grid">
-          <article class="projectCard">
-            <div class="projectCard__media">
-              <img class="projectCard__image" src="assets/Bass%20clef%20trainer.png" alt="Preview of the Bass Clef Trainer practice tool" data-i18n-attr="alt:projects.items.bass.alt" />
+          <div class="fit-grid">
+            <div class="fit-card">
+              <h3>Great fit</h3>
+              <ul>
+                <li>Small businesses with complex knowledge to share</li>
+                <li>Teams who need clarity fast</li>
+                <li>Leaders who value practical learning over hype</li>
+                <li>Organizations ready to ship something usable</li>
+              </ul>
             </div>
-            <div class="projectCard__body">
-              <div>
-                <h3>Bass Clef Trainer</h3>
-                <p data-i18n="projects.items.bass.text">
-                  A practice tool that helps learners build bass-clef sight-reading skills quickly.
-                </p>
-              </div>
-              <div class="projectCard__tags">
-                <span data-i18n="projects.items.bass.tags.tool">Practice tool</span>
-                <span data-i18n="projects.items.bass.tags.music">Music learning</span>
-              </div>
-              <div class="projectCard__actions">
-                <a class="btn btn--ghost" href="projects/bass-clef-trainer.html" data-i18n="projects.actions.view">View project</a>
-                <a class="btn btn--ghost" href="https://dorvad.github.io/bass-clef-trainer/" target="_blank" rel="noreferrer" data-i18n="projects.actions.visit">Visit project</a>
-              </div>
+            <div class="fit-card fit-card-muted">
+              <h3>Not the best fit</h3>
+              <ul>
+                <li>Projects needing heavy custom software builds</li>
+                <li>Teams that want a long, slow strategy phase</li>
+                <li>Programs focused only on theory or academia</li>
+                <li>Anyone looking for “flashy” training</li>
+              </ul>
             </div>
-          </article>
-
-          <article class="projectCard">
-            <div class="projectCard__media">
-              <img class="projectCard__image" src="assets/Aliyah%20learning%20platform.png" alt="Preview of the Aliyah learning platform" data-i18n-attr="alt:projects.items.aliyah.alt" />
-            </div>
-            <div class="projectCard__body">
-              <div>
-                <h3>Aliyah Learning Platform</h3>
-                <p data-i18n="projects.items.aliyah.text">
-                  A bilingual learning hub that guides new immigrants through essential steps and resources.
-                </p>
-              </div>
-              <div class="projectCard__tags">
-                <span data-i18n="projects.items.aliyah.tags.platform">Learning platform</span>
-                <span data-i18n="projects.items.aliyah.tags.ux">UX writing</span>
-              </div>
-              <div class="projectCard__actions">
-                <a class="btn btn--ghost" href="projects/aliyah-learning-platform.html" data-i18n="projects.actions.view">View project</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="projectCard">
-            <div class="projectCard__media">
-              <img class="projectCard__image" src="assets/Ai%20training%20partner.png" alt="Preview of the JAFI AI training partner interface" data-i18n-attr="alt:projects.items.jafi.alt" />
-            </div>
-            <div class="projectCard__body">
-              <div>
-                <h3>JAFI AI Training Partner</h3>
-                <p data-i18n="projects.items.jafi.text">
-                  A guided practice experience that pairs learners with an AI coach before real conversations.
-                </p>
-              </div>
-              <div class="projectCard__tags">
-                <span data-i18n="projects.items.jafi.tags.ai">AI coaching</span>
-                <span data-i18n="projects.items.jafi.tags.practice">Skill practice</span>
-              </div>
-              <div class="projectCard__actions">
-                <a class="btn btn--ghost" href="projects/jafi-ai-training-partner.html" data-i18n="projects.actions.view">View project</a>
-              </div>
-            </div>
-          </article>
+          </div>
         </div>
-        <div class="section__actions">
-          <a class="btn btn--ghost" href="projects/index.html" data-i18n="projects.actions.viewAll">View all projects</a>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ABOUT -->
-    <section class="section section--alt reveal" id="about">
-      <div class="container about">
+      <section class="section final-cta" id="contact">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Want this to feel clearer?</h2>
+            <p class="section-lead text-narrow">
+              Share a few details and we’ll schedule a short call. You’ll get a straightforward plan and
+              an honest recommendation.
+            </p>
+          </div>
+          <div class="cta-actions">
+            <a class="btn btn-primary" href="mailto:hello@clarifind.com">Email hello@clarifind.com</a>
+            <a class="btn btn-secondary" href="https://calendly.com/clarifind/intro">Calendar link (placeholder)</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
         <div>
-          <h2 data-i18n="about.title">About</h2>
-          <p data-i18n="about.lead">
-            I help teams turn complex knowledge into clear, usable learning.
-            My work blends content strategy, UX, and practical training design.
-          </p>
-          <p class="muted" data-i18n="about.location">
-            Based in Israel • Working with organizations, NGOs, educators, and teams.
-          </p>
+          <p class="footer-brand">Clarifind</p>
+          <p>Learning, made clear.</p>
         </div>
-
-        <div class="about__right">
-          <div class="about__highlights">
-            <div class="stat">
-              <div class="stat__k" data-i18n="about.stats.strength.title">Strength</div>
-              <div class="stat__v" data-i18n="about.stats.strength.value">Clarity and structure</div>
-            </div>
-            <div class="stat">
-              <div class="stat__k" data-i18n="about.stats.approach.title">Approach</div>
-              <div class="stat__v" data-i18n="about.stats.approach.value">Goal-first learning design</div>
-            </div>
-            <div class="stat">
-              <div class="stat__k" data-i18n="about.stats.deliverables.title">Deliverables</div>
-              <div class="stat__v" data-i18n="about.stats.deliverables.value">Clear scope, delivery-ready assets</div>
-            </div>
-          </div>
-          <figure class="about__photo">
-            <img src="assets/IMG20250219123026.jpg" alt="Facilitator guiding a collaborative learning session." />
-            <figcaption>Warm facilitation, thoughtful structure, and clear learning flow.</figcaption>
-          </figure>
+        <div>
+          <p><a href="mailto:hello@clarifind.com">hello@clarifind.com</a></p>
+          <p><a href="https://www.linkedin.com">LinkedIn (placeholder)</a></p>
+        </div>
+        <div>
+          <p>© <span id="year"></span> Clarifind. All rights reserved.</p>
         </div>
       </div>
-    </section>
+    </footer>
 
-    <!-- CONTACT -->
-    <section class="section reveal" id="contact">
-      <div class="container contact">
-        <div class="contact__copy">
-          <h2 data-i18n="contact.title">Tell me what you need</h2>
-          <p data-i18n="contact.lead">
-            If training isn’t landing, let’s talk.
-            We’ll clarify the goal, audience, and the right format for your team.
-          </p>
-          <p class="muted" data-i18n="contact.discounts">
-            Discounts are available for small businesses, nonprofits, and reserve veterans’ businesses.
-          </p>
+    <a class="floating-cta" href="mailto:hello@clarifind.com">Let’s talk</a>
 
-          <div class="contact__chips">
-            <span data-i18n="contact.chips.onboarding">Onboarding</span>
-            <span data-i18n="contact.chips.workshops">Workshops</span>
-            <span data-i18n="contact.chips.elearning">eLearning</span>
-            <span data-i18n="contact.chips.minisites">Mini-sites</span>
-            <span data-i18n="contact.chips.ai">AI agents</span>
-          </div>
-
-          <p class="muted">
-            <span data-i18n="contact.email.prefix">Prefer email?</span> <a href="mailto:hello@clarifind.com">hello@clarifind.com</a>
-          </p>
-        </div>
-
-        <form class="form" action="https://formspree.io/f/meeaobnr" method="post">
-          <label>
-            <span data-i18n="contact.form.nameLabel">Name</span>
-            <input name="name" type="text" placeholder="Your name" required data-i18n-attr="placeholder:contact.form.namePlaceholder" />
-          </label>
-
-          <label>
-            <span data-i18n="contact.form.emailLabel">Email</span>
-            <input name="email" type="email" placeholder="name@company.com" required data-i18n-attr="placeholder:contact.form.emailPlaceholder" />
-          </label>
-
-          <label>
-            <span data-i18n="contact.form.messageLabel">What do you need help with?</span>
-            <textarea name="message" rows="5" placeholder="Tell me about your audience, topic, and goal." required data-i18n-attr="placeholder:contact.form.messagePlaceholder"></textarea>
-          </label>
-
-          <button class="btn" type="submit" data-i18n="contact.form.submit">Send</button>
-          <p class="form__hint">I'll reply within 2 business days.</p>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container footer__inner">
-      <div class="footer__rights">
-        <span data-i18n="footer.rights.prefix">©</span>
-        <span id="year"></span>
-        <span data-i18n="footer.rights.suffix">Clarifind. All rights reserved.</span>
-      </div>
-      <div class="footer__links">
-        <a href="#services" data-i18n="nav.services">Services</a>
-        <a href="#contact" data-i18n="nav.contact">Contact</a>
-      </div>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

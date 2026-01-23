@@ -1,23 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 96 96" fill="none">
-  <defs>
-    <linearGradient id="g" x1="10" y1="14" x2="86" y2="82" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#1F6FEB"/>
-      <stop offset="0.38" stop-color="#2DD4BF"/>
-      <stop offset="0.68" stop-color="#A3E635"/>
-      <stop offset="1" stop-color="#F59E0B"/>
-    </linearGradient>
-  </defs>
-
-  <!-- outer ring -->
-  <circle cx="48" cy="48" r="34" stroke="url(#g)" stroke-width="10" stroke-linecap="round"/>
-  <!-- compass pointers (simple) -->
-  <path d="M48 6 L56 20 L40 20 Z" fill="#2DD4BF" opacity="0.85"/>
-  <path d="M90 48 L76 56 L76 40 Z" fill="#F59E0B" opacity="0.85"/>
-  <path d="M48 90 L40 76 L56 76 Z" fill="#F59E0B" opacity="0.75"/>
-  <path d="M6 48 L20 40 L20 56 Z" fill="#1F6FEB" opacity="0.85"/>
-
-  <!-- bulb -->
-  <circle cx="48" cy="48" r="22" fill="white"/>
-  <path d="M48 30c-7 0-12 5-12 12 0 5 2 8 6 11 1 1 2 3 2 4h8c0-1 1-3 2-4 4-3 6-6 6-11 0-7-5-12-12-12Z" fill="#F59E0B"/>
-  <rect x="42" y="60" width="12" height="6" rx="3" fill="#2C3550" opacity="0.9"/>
+<svg width="120" height="28" viewBox="0 0 120 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="120" height="28" rx="14" fill="#E8EEFF"/>
+  <path d="M16 20C20.4183 20 24 16.4183 24 12C24 7.58172 20.4183 4 16 4C11.5817 4 8 7.58172 8 12C8 16.4183 11.5817 20 16 20Z" fill="#2F6FED"/>
+  <path d="M30 18.5V9.5H32.6L37.2 15.3V9.5H39.8V18.5H37.2L32.6 12.7V18.5H30Z" fill="#1A1F2E"/>
+  <path d="M41.9 18.5V9.5H44.5V18.5H41.9Z" fill="#1A1F2E"/>
+  <path d="M46.8 18.5V9.5H53.4V11.6H49.4V13.2H52.9V15.2H49.4V18.5H46.8Z" fill="#1A1F2E"/>
+  <path d="M54.9 18.5V9.5H61.7V11.6H57.5V13.1H61.4V15.1H57.5V16.4H61.7V18.5H54.9Z" fill="#1A1F2E"/>
+  <path d="M63.3 18.5V9.5H66V16.4H69.7V18.5H63.3Z" fill="#1A1F2E"/>
+  <path d="M71.2 18.5V9.5H77.2V11.6H73.8V13.2H76.9V15.2H73.8V18.5H71.2Z" fill="#1A1F2E"/>
+  <path d="M79 18.5V9.5H81.7V16.4H85.4V18.5H79Z" fill="#1A1F2E"/>
+  <path d="M86.9 18.5V9.5H89.5V18.5H86.9Z" fill="#1A1F2E"/>
 </svg>
