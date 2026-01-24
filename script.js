@@ -35,6 +35,7 @@ if (!prefersReducedMotion) {
 const sections = document.querySelectorAll("main section[id]");
 const desktopLinks = document.querySelectorAll(".nav-links a[href^='#']");
 const revealElements = document.querySelectorAll(".reveal");
+const contactForm = document.querySelector(".contact-form");
 
 const observer = new IntersectionObserver(
   (entries) => {
@@ -69,4 +70,45 @@ if (revealElements.length) {
 
     revealElements.forEach((element) => revealObserver.observe(element));
   }
+}
+
+if (contactForm) {
+  const statusMessage = contactForm.querySelector(".form-status");
+
+  contactForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    if (!contactForm.checkValidity()) {
+      contactForm.reportValidity();
+      return;
+    }
+
+    if (statusMessage) {
+      statusMessage.textContent = "Sending...";
+      statusMessage.hidden = false;
+    }
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: "POST",
+        body: new FormData(contactForm),
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (response.ok) {
+        contactForm.reset();
+        if (statusMessage) {
+          statusMessage.textContent = "Thanks! Your message has been sent.";
+        }
+      } else if (statusMessage) {
+        statusMessage.textContent = "Something went wrong. Please try again.";
+      }
+    } catch (error) {
+      if (statusMessage) {
+        statusMessage.textContent = "Unable to send right now. Please try again later.";
+      }
+    }
+  });
 }
