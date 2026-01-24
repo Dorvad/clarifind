@@ -234,7 +234,8 @@ if (contactForm) {
       if (response.ok) {
         contactForm.reset();
         if (statusMessage) {
-          statusMessage.textContent = "Thanks! Your message has been sent.";
+          statusMessage.textContent =
+            "Thanks — I got it. I’ll reply within 2 business days with next steps.";
         }
       } else if (statusMessage) {
         statusMessage.textContent = "Something went wrong. Please try again.";
