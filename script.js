@@ -1,28 +1,113 @@
 const menuToggle = document.querySelector(".menu-toggle");
 const mobileMenu = document.querySelector(".mobile-menu");
-const navLinks = document.querySelectorAll(".nav-links a[href^='#'], .mobile-menu a[href^='#']");
+const burgerToggle = document.querySelector(".burger");
+const projectMobileMenu = document.querySelector(".mobileMenu");
+const menuLinks = document.querySelectorAll(".mobile-menu a, .mobileMenu a");
 const year = document.getElementById("year");
+const menuInstances = [];
+const focusableSelector =
+  "a[href], button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex='-1'])";
 
 if (year) {
   year.textContent = new Date().getFullYear();
 }
 
-const setMenuState = (isOpen) => {
-  if (!menuToggle || !mobileMenu) return;
-  menuToggle.setAttribute("aria-expanded", String(isOpen));
-  mobileMenu.hidden = !isOpen;
+const createMenuController = ({ toggle, menu, openLabel, closeLabel }) => {
+  if (!toggle || !menu) return null;
+  let isOpen = false;
+  let previousFocus = null;
+
+  const updateLabel = () => {
+    if (openLabel && closeLabel) {
+      toggle.setAttribute("aria-label", isOpen ? closeLabel : openLabel);
+      const srLabel = toggle.querySelector(".sr-only");
+      if (srLabel) {
+        srLabel.textContent = isOpen ? closeLabel : openLabel;
+      }
+    }
+  };
+
+  const setState = (nextState) => {
+    isOpen = nextState;
+    toggle.setAttribute("aria-expanded", String(isOpen));
+    menu.hidden = !isOpen;
+    updateLabel();
+
+    if (isOpen) {
+      previousFocus = document.activeElement;
+      const focusable = menu.querySelectorAll(focusableSelector);
+      if (focusable.length) {
+        focusable[0].focus();
+      }
+      document.addEventListener("keydown", handleKeydown);
+    } else {
+      document.removeEventListener("keydown", handleKeydown);
+      if (previousFocus && typeof previousFocus.focus === "function") {
+        previousFocus.focus();
+      } else {
+        toggle.focus();
+      }
+    }
+  };
+
+  const handleKeydown = (event) => {
+    if (!isOpen) return;
+
+    if (event.key === "Escape") {
+      event.preventDefault();
+      setState(false);
+      return;
+    }
+
+    if (event.key !== "Tab") return;
+
+    const focusable = Array.from(menu.querySelectorAll(focusableSelector));
+    if (!focusable.length) return;
+
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  };
+
+  toggle.addEventListener("click", () => {
+    setState(!isOpen);
+  });
+
+  return { close: () => setState(false) };
 };
 
-if (menuToggle) {
-  menuToggle.addEventListener("click", () => {
-    const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
-    setMenuState(!isOpen);
-  });
+const primaryMenu = createMenuController({
+  toggle: menuToggle,
+  menu: mobileMenu,
+  openLabel: "Open menu",
+  closeLabel: "Close menu",
+});
+
+if (primaryMenu) {
+  menuInstances.push(primaryMenu);
 }
 
-navLinks.forEach((link) => {
+const projectMenu = createMenuController({
+  toggle: burgerToggle,
+  menu: projectMobileMenu,
+  openLabel: "Open menu",
+  closeLabel: "Close menu",
+});
+
+if (projectMenu) {
+  menuInstances.push(projectMenu);
+}
+
+menuLinks.forEach((link) => {
   link.addEventListener("click", () => {
-    setMenuState(false);
+    menuInstances.forEach((instance) => instance.close());
   });
 });
 
@@ -74,14 +159,63 @@ if (revealElements.length) {
 
 if (contactForm) {
   const statusMessage = contactForm.querySelector(".form-status");
+  const fields = Array.from(contactForm.querySelectorAll("input, textarea"));
+
+  const getErrorMessage = (field) => {
+    if (field.validity.valueMissing) {
+      return `Please enter your ${field.getAttribute("data-label") || "information"}.`;
+    }
+    if (field.validity.typeMismatch && field.type === "email") {
+      return "Please enter a valid email address.";
+    }
+    return "Please check this field for errors.";
+  };
+
+  const showFieldError = (field) => {
+    const errorId = field.getAttribute("aria-describedby");
+    if (!errorId) return;
+    const errorElement = contactForm.querySelector(`#${errorId}`);
+    if (!errorElement) return;
+    if (field.checkValidity()) {
+      errorElement.hidden = true;
+      field.removeAttribute("aria-invalid");
+      return;
+    }
+    errorElement.textContent = getErrorMessage(field);
+    errorElement.hidden = false;
+    field.setAttribute("aria-invalid", "true");
+  };
+
+  const validateForm = () => {
+    let firstInvalid = null;
+    fields.forEach((field) => {
+      if (!field.checkValidity()) {
+        showFieldError(field);
+        if (!firstInvalid) firstInvalid = field;
+      } else {
+        showFieldError(field);
+      }
+    });
+    if (firstInvalid) {
+      firstInvalid.focus();
+      return false;
+    }
+    return true;
+  };
+
+  fields.forEach((field) => {
+    field.addEventListener("blur", () => showFieldError(field));
+    field.addEventListener("input", () => {
+      if (field.checkValidity()) {
+        showFieldError(field);
+      }
+    });
+  });
 
   contactForm.addEventListener("submit", async (event) => {
     event.preventDefault();
 
-    if (!contactForm.checkValidity()) {
-      contactForm.reportValidity();
-      return;
-    }
+    if (!validateForm()) return;
 
     if (statusMessage) {
       statusMessage.textContent = "Sending...";

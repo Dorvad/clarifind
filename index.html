@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <a class="skip-link" href="#main">Skip to content</a>
+    <a class="skip-link" href="#main">Skip to main content</a>
 
     <header class="site-header" id="top">
       <div class="container nav">
@@ -374,32 +374,56 @@
               Share a few details and I’ll send back a straightforward plan and an honest recommendation.
             </p>
           </div>
-          <form class="contact-form" action="https://formspree.io/f/mzdekkwp" method="post">
-            <label>
-              Full name
-              <input type="text" name="name" placeholder="Jane Doe" required />
-            </label>
-            <label>
-              Work email
-              <input type="email" name="email" placeholder="you@company.com" required />
-            </label>
-            <label>
-              Team size
-              <input type="text" name="team-size" placeholder="6-12 people" />
-            </label>
-            <label>
-              Project focus
-              <input type="text" name="focus" placeholder="Onboarding, enablement, AI help..." />
-            </label>
-            <label class="form-full">
-              Tell me what you need
+          <form class="contact-form" action="https://formspree.io/f/mzdekkwp" method="post" novalidate>
+            <div class="form-field">
+              <label for="name">Full name <span class="required">(required)</span></label>
+              <input
+                id="name"
+                type="text"
+                name="name"
+                placeholder="Jane Doe"
+                autocomplete="name"
+                required
+                aria-describedby="name-error"
+                data-label="full name"
+              />
+              <p class="form-error" id="name-error" role="alert" hidden></p>
+            </div>
+            <div class="form-field">
+              <label for="email">Work email <span class="required">(required)</span></label>
+              <input
+                id="email"
+                type="email"
+                name="email"
+                placeholder="you@company.com"
+                autocomplete="email"
+                required
+                aria-describedby="email-error"
+                data-label="email address"
+              />
+              <p class="form-error" id="email-error" role="alert" hidden></p>
+            </div>
+            <div class="form-field">
+              <label for="team-size">Team size</label>
+              <input id="team-size" type="text" name="team-size" placeholder="6-12 people" />
+            </div>
+            <div class="form-field">
+              <label for="focus">Project focus</label>
+              <input id="focus" type="text" name="focus" placeholder="Onboarding, enablement, AI help..." />
+            </div>
+            <div class="form-field form-full">
+              <label for="message">Tell me what you need <span class="required">(required)</span></label>
               <textarea
+                id="message"
                 name="message"
                 rows="4"
                 placeholder="Share your goals, timeline, and any constraints."
                 required
+                aria-describedby="message-error"
+                data-label="project details"
               ></textarea>
-            </label>
+              <p class="form-error" id="message-error" role="alert" hidden></p>
+            </div>
             <div class="form-actions form-full">
               <button class="btn btn-primary" type="submit">Send message</button>
               <p class="form-note">I reply within 2 business days with next steps.</p>
@@ -426,6 +450,7 @@
           <p>
             <a href="https://dorthepm.com/" target="_blank" rel="noopener noreferrer">dorthepm.com</a>
           </p>
+          <p><a href="accessibility.html">Accessibility Statement / הצהרת נגישות</a></p>
         </div>
         <div>
           <p>© <span id="year"></span> Clarifind. All rights reserved.</p>

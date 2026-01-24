@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Accessibility Statement | Clarifind</title>
+    <meta
+      name="description"
+      content="Clarifind accessibility statement aligned with Israeli Standard ת״י 5568 and WCAG 2.0 Level AA."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0F172A" />
+    <link rel="canonical" href="https://clarifind.com/accessibility.html" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header" id="top">
+      <div class="container nav">
+        <a class="brand" href="index.html" aria-label="Clarifind home">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-text">Clarifind</span>
+        </a>
+
+        <nav class="nav-links" aria-label="Primary">
+          <a href="index.html#services">Services</a>
+          <a href="index.html#how">How it works</a>
+          <a href="index.html#examples">Examples</a>
+          <a href="index.html#contact">Contact</a>
+          <a class="btn btn-primary" href="mailto:Dor1612@gmail.com">Start a conversation</a>
+        </nav>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobileMenu">
+          <span class="sr-only">Open menu</span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <div class="mobile-menu" id="mobileMenu" hidden>
+        <div class="container">
+          <a href="index.html#services">Services</a>
+          <a href="index.html#how">How it works</a>
+          <a href="index.html#examples">Examples</a>
+          <a href="index.html#contact">Contact</a>
+          <a class="btn btn-primary" href="mailto:Dor1612@gmail.com">Start a conversation</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="section">
+        <div class="container text-narrow">
+          <h1>Accessibility Statement / <span lang="he" dir="rtl">הצהרת נגישות</span></h1>
+          <p>
+            Clarifind is committed to providing an accessible, inclusive experience for all visitors,
+            including people with disabilities. We aim to meet the requirements of Israeli Standard ת״י 5568
+            in alignment with WCAG 2.0 Level AA.
+          </p>
+          <p lang="he" dir="rtl">
+            קלריפיינד מחויבת לספק חוויית שימוש נגישה ושוויונית לכל המבקרים, לרבות אנשים עם מוגבלויות. אנו
+            פועלים לעמידה בדרישות התקן הישראלי ת״י 5568 ובהתאמה לרמת WCAG 2.0 AA.
+          </p>
+
+          <h2>What we did to improve accessibility</h2>
+          <ul>
+            <li>Added skip links, landmarks, and a consistent heading hierarchy.</li>
+            <li>Ensured full keyboard navigation with visible focus indicators.</li>
+            <li>Improved form labels, error messaging, and live status updates.</li>
+            <li>Checked color contrast and reduced motion for users who prefer it.</li>
+          </ul>
+
+          <h2>Supported environments</h2>
+          <p>
+            The site is designed to work on modern browsers (Chrome, Edge, Firefox, and Safari) on desktop
+            and mobile devices, with responsive layouts supporting 200% zoom.
+          </p>
+
+          <h2>Known limitations</h2>
+          <p>
+            We are not aware of any remaining accessibility barriers. If you encounter an issue, please
+            let us know and we will address it.
+          </p>
+
+          <h2>Third-party services</h2>
+          <p>
+            The contact form is powered by Formspree for secure submissions. Some project links open
+            external sites that may have their own accessibility policies. If you encounter issues with a
+            third-party service, contact us and we will provide an alternative.
+          </p>
+
+          <h2>Contact for accessibility issues</h2>
+          <address>
+            <p><strong>Dor Vadai</strong>, Owner</p>
+            <p>Email: <a href="mailto:Dor1612@gmail.com">Dor1612@gmail.com</a></p>
+            <p>Phone: Not currently available; please email for assistance.</p>
+          </address>
+          <p>We respond within 7 business days.</p>
+
+          <h2>Last updated</h2>
+          <p>January 24, 2026</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <p class="footer-brand">Clarifind</p>
+          <p>Learning, made clear.</p>
+        </div>
+        <div>
+          <p><a href="mailto:Dor1612@gmail.com">Dor1612@gmail.com</a></p>
+          <p>
+            <a href="https://www.linkedin.com/in/dor-vadai-071102240/" target="_blank" rel="noopener noreferrer"
+              >LinkedIn</a
+            >
+          </p>
+          <p>
+            <a href="https://dorthepm.com/" target="_blank" rel="noopener noreferrer">dorthepm.com</a>
+          </p>
+          <p><a href="accessibility.html">Accessibility Statement / הצהרת נגישות</a></p>
+        </div>
+        <div>
+          <p>© <span id="year"></span> Clarifind. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
