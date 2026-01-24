@@ -146,6 +146,16 @@ img {
   font-weight: 600;
 }
 
+.site-header .btn-primary {
+  background: #1e4ed8;
+  box-shadow: 0 10px 20px rgba(30, 78, 216, 0.25);
+}
+
+.site-header .btn-primary:hover {
+  background: #1a46c2;
+  color: #fff;
+}
+
 .menu-toggle {
   display: none;
   background: none;
