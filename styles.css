@@ -215,9 +215,16 @@ img {
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
-  margin-bottom: var(--space-2);
   color: var(--muted);
   font-size: 0.95rem;
+}
+
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-2);
 }
 
 .hero-portrait img {
@@ -1148,10 +1155,12 @@ img {
     align-items: stretch;
   }
 
-  .hero-portrait {
-    justify-content: center;
+  .hero-meta {
+    flex-direction: column;
+    align-items: center;
   }
 
+  .hero-portrait,
   .hero-link {
     justify-content: center;
   }
