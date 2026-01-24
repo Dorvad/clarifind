@@ -191,6 +191,10 @@ img {
   margin-bottom: var(--space-3);
 }
 
+.accent-text {
+  color: var(--accent);
+}
+
 .lead {
   font-size: 1.1rem;
   color: var(--muted);
@@ -213,6 +217,64 @@ img {
   border-radius: var(--radius);
   padding: var(--space-4);
   box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(47, 111, 237, 0.15), transparent 60%);
+  opacity: 0.8;
+  pointer-events: none;
+  animation: hero-glow 12s ease-in-out infinite;
+}
+
+.hero-visual-frame {
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.hero-graphic {
+  width: min(100%, 420px);
+  margin: 0 auto;
+  animation: hero-float 8s ease-in-out infinite;
+}
+
+.hero-float {
+  position: absolute;
+  width: 80px;
+  height: auto;
+  filter: drop-shadow(0 12px 20px rgba(15, 23, 42, 0.16));
+  animation: hero-orbit 9s ease-in-out infinite;
+}
+
+.hero-float--one {
+  top: -6%;
+  right: 6%;
+  animation-delay: 0.4s;
+}
+
+.hero-float--two {
+  bottom: -10%;
+  left: 4%;
+  width: 88px;
+  animation-delay: 0.8s;
+}
+
+.hero-float--three {
+  top: 55%;
+  left: -6%;
+  width: 68px;
+  animation-delay: 1.2s;
+}
+
+.hero-caption {
+  margin: var(--space-3) 0 0;
+  font-size: 0.95rem;
+  color: var(--muted);
 }
 
 .badge {
@@ -422,6 +484,7 @@ img {
   color: #2f2a22;
   position: relative;
   box-shadow: 0 18px 32px rgba(81, 58, 24, 0.12);
+  animation: receipt-float 7s ease-in-out infinite;
 }
 
 .receipt::before,
@@ -589,6 +652,22 @@ img {
   box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
 }
 
+.why-visuals {
+  margin-top: var(--space-4);
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.why-visuals img {
+  width: clamp(140px, 28vw, 200px);
+  border-radius: 16px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  background: #fff;
+  padding: var(--space-2);
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
+}
+
 .why-signature ul {
   margin: var(--space-2) 0 0;
   padding-left: var(--space-3);
@@ -636,6 +715,48 @@ img {
 
 .final-cta {
   background: linear-gradient(135deg, rgba(45, 99, 226, 0.12), rgba(20, 184, 166, 0.12));
+}
+
+.pricing-grid {
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.pricing-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--space-4);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+}
+
+.pricing-card ul {
+  padding-left: var(--space-3);
+  margin: var(--space-2) 0 0;
+  color: var(--muted);
+}
+
+.pricing-card-accent {
+  background: linear-gradient(135deg, rgba(45, 99, 226, 0.12), rgba(249, 115, 22, 0.12));
+  border-color: rgba(45, 99, 226, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.pricing-card-accent img {
+  width: 120px;
+  position: absolute;
+  bottom: var(--space-3);
+  right: var(--space-3);
+  opacity: 0.9;
+}
+
+.pricing-note {
+  font-weight: 600;
+  color: var(--text);
+  margin-top: var(--space-2);
+  max-width: 360px;
 }
 
 .cta-actions {
@@ -776,6 +897,17 @@ img {
   outline-offset: 3px;
 }
 
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @keyframes card-float {
   0%,
   100% {
@@ -783,6 +915,46 @@ img {
   }
   50% {
     transform: translateY(-4px);
+  }
+}
+
+@keyframes hero-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes hero-orbit {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(2deg);
+  }
+}
+
+@keyframes hero-glow {
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+
+@keyframes receipt-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
   }
 }
 
@@ -806,6 +978,14 @@ img {
   .hero {
     padding-top: var(--space-6);
   }
+
+  .hero-float {
+    width: 64px;
+  }
+
+  .hero-float--two {
+    width: 72px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -825,6 +1005,20 @@ img {
 
   .contact-form {
     grid-template-columns: 1fr;
+  }
+
+  .hero-visual {
+    padding: var(--space-3);
+  }
+
+  .hero-float {
+    display: none;
+  }
+
+  .pricing-card-accent img {
+    position: static;
+    width: 96px;
+    margin-top: var(--space-3);
   }
 }
 
