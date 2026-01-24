@@ -677,10 +677,20 @@ img {
   overflow: hidden;
 }
 
+.about-portrait {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
 .about-visual-frame::before,
 .about-visual-frame::after {
   content: "";
   position: absolute;
+  z-index: 0;
   border-radius: 50%;
   background: radial-gradient(circle, rgba(45, 99, 226, 0.18), transparent 60%);
   width: 160px;
