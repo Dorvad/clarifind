@@ -111,7 +111,7 @@ img {
 }
 
 .brand-logo {
-  width: 40px;
+  width: 64px;
   height: auto;
   display: block;
 }
@@ -898,14 +898,8 @@ img {
   color: var(--muted);
 }
 
-.footer-brand {
-  font-weight: 600;
-  color: var(--text);
-  margin-bottom: var(--space-1);
-}
-
 .footer-logo {
-  width: 56px;
+  width: 88px;
   height: auto;
   display: block;
   margin-bottom: var(--space-2);
