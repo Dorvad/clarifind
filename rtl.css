@@ -6,6 +6,14 @@
   content: "←";
 }
 
+[dir="rtl"] .example-link::after {
+  content: "←";
+}
+
+[dir="rtl"] .example-visual__arrow {
+  transform: scaleX(-1);
+}
+
 [dir="rtl"] .receipt-list li,
 [dir="rtl"] .receipt-total {
   flex-direction: row-reverse;

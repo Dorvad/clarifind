@@ -139,6 +139,20 @@
               I help small organizations turn messy knowledge into calm, usable training—so people understand it, use
               it, and stop getting stuck.
             </p>
+            <ul class="hero-flow" aria-label="Clarity path" data-i18n-attr="aria-label:hero.flow.aria">
+              <li>
+                <span class="hero-flow__dot" aria-hidden="true"></span>
+                <span data-i18n="hero.flow.steps.0">Messy inputs</span>
+              </li>
+              <li>
+                <span class="hero-flow__dot" aria-hidden="true"></span>
+                <span data-i18n="hero.flow.steps.1">Clear structure</span>
+              </li>
+              <li>
+                <span class="hero-flow__dot" aria-hidden="true"></span>
+                <span data-i18n="hero.flow.steps.2">Confident action</span>
+              </li>
+            </ul>
             <div class="hero-actions">
               <a
                 class="btn btn-primary"
@@ -175,6 +189,8 @@
                 data-i18n-attr="alt:hero.graphicAlt"
               />
               <img class="hero-float hero-float--one" src="/assets/Light bulb.png" alt="" loading="lazy" />
+              <img class="hero-float hero-float--two" src="/assets/Cogwheels.png" alt="" loading="lazy" />
+              <img class="hero-float hero-float--three" src="/assets/Tablet app.png" alt="" loading="lazy" />
             </div>
             <p class="hero-caption" data-i18n="sectionDivider.tagline">Structured learning, delivered calmly.</p>
           </div>
@@ -202,6 +218,7 @@
                 </svg>
               </div>
               <h3 data-i18n="services.items.learning.title">Learning products</h3>
+              <p class="service-chip" data-i18n="services.items.learning.chip">Faster onboarding</p>
               <p data-i18n="services.items.learning.body">
                 Courses, onboarding, and learning hubs that make complex knowledge simple and easy to follow.
               </p>
@@ -229,6 +246,7 @@
                 </svg>
               </div>
               <h3 data-i18n="services.items.workshops.title">Workshops & facilitation</h3>
+              <p class="service-chip service-chip--warm" data-i18n="services.items.workshops.chip">Aligned teams</p>
               <p data-i18n="services.items.workshops.body">
                 Practical sessions that move people from confusion to shared understanding—without overload.
               </p>
@@ -255,6 +273,7 @@
                 </svg>
               </div>
               <h3 data-i18n="services.items.ai.title">AI-assisted learning tools</h3>
+              <p class="service-chip service-chip--mint" data-i18n="services.items.ai.chip">Faster answers</p>
               <p data-i18n="services.items.ai.body">
                 Responsible AI helpers that make knowledge easier to access, practice, and apply.
               </p>
@@ -281,6 +300,7 @@
                 </svg>
               </div>
               <h3 data-i18n="services.items.clarity.title">Content clarity & structure</h3>
+              <p class="service-chip service-chip--lilac" data-i18n="services.items.clarity.chip">Trusted docs</p>
               <p data-i18n="services.items.clarity.body">
                 Turn messy docs into clear systems with naming, navigation, and content people can trust.
               </p>
@@ -396,7 +416,7 @@
         </div>
       </section>
 
-      <section class="section reveal" id="examples">
+      <section class="section reveal examples-section" id="examples">
         <div class="container">
           <div class="section-heading">
             <p class="eyebrow" data-i18n="examples.eyebrow">Examples</p>
@@ -407,51 +427,96 @@
             </p>
           </div>
 
+          <div class="examples-strip" role="list" aria-label="Example focus areas" data-i18n-attr="aria-label:examples.strip.aria">
+            <span class="examples-strip__item" role="listitem" data-i18n="examples.strip.items.0">Onboarding</span>
+            <span class="examples-strip__item" role="listitem" data-i18n="examples.strip.items.1">Customer training</span>
+            <span class="examples-strip__item" role="listitem" data-i18n="examples.strip.items.2">Sales enablement</span>
+            <span class="examples-strip__item" role="listitem" data-i18n="examples.strip.items.3">AI assistant</span>
+            <span class="examples-strip__item" role="listitem" data-i18n="examples.strip.items.4">Knowledge base</span>
+            <span class="examples-strip__item" role="listitem" data-i18n="examples.strip.items.5">Workflow clarity</span>
+          </div>
+
           <div class="examples-grid">
-            <article class="example-card example-card--sky reveal">
+            <article class="example-card example-card--sky reveal" style="--delay: 0ms;">
               <span class="example-tag" data-i18n="examples.items.0.tag">Onboarding</span>
+              <div class="example-visual" aria-hidden="true">
+                <span data-i18n="examples.flow.before">Messy inputs</span>
+                <span class="example-visual__arrow" aria-hidden="true"></span>
+                <span data-i18n="examples.flow.after">Clear outcomes</span>
+              </div>
               <h3 data-i18n="examples.items.0.title">Turned a 50-page handbook into a 4-module onboarding path.</h3>
               <p data-i18n="examples.items.0.body">Reduced overwhelm and helped new hires find answers in week one.</p>
+              <span class="example-metric" data-i18n="examples.items.0.metric">-45% time to confident ramp-up</span>
               <a class="example-link" href="#contact" data-i18n="examples.items.0.link">Discuss this scenario</a>
             </article>
-            <article class="example-card example-card--sunset reveal">
+            <article class="example-card example-card--sunset reveal" style="--delay: 120ms;">
               <span class="example-tag" data-i18n="examples.items.1.tag">Customer training</span>
+              <div class="example-visual" aria-hidden="true">
+                <span data-i18n="examples.flow.before">Messy inputs</span>
+                <span class="example-visual__arrow" aria-hidden="true"></span>
+                <span data-i18n="examples.flow.after">Clear outcomes</span>
+              </div>
               <h3 data-i18n="examples.items.1.title">
                 Designed a client-facing course that reduced support tickets.
               </h3>
               <p data-i18n="examples.items.1.body">Short, guided lessons replaced endless back-and-forth.</p>
+              <span class="example-metric" data-i18n="examples.items.1.metric">-30% support load</span>
               <a class="example-link" href="#contact" data-i18n="examples.items.1.link">Discuss this scenario</a>
             </article>
-            <article class="example-card example-card--mint reveal">
+            <article class="example-card example-card--mint reveal" style="--delay: 240ms;">
               <span class="example-tag" data-i18n="examples.items.2.tag">Sales enablement</span>
+              <div class="example-visual" aria-hidden="true">
+                <span data-i18n="examples.flow.before">Messy inputs</span>
+                <span class="example-visual__arrow" aria-hidden="true"></span>
+                <span data-i18n="examples.flow.after">Clear outcomes</span>
+              </div>
               <h3 data-i18n="examples.items.2.title">Built a workshop for sales teams to practice new product demos.</h3>
               <p data-i18n="examples.items.2.body">
                 Interactive sessions replaced static scripts and boosted confidence.
               </p>
+              <span class="example-metric" data-i18n="examples.items.2.metric">+2x demo confidence</span>
               <a class="example-link" href="#contact" data-i18n="examples.items.2.link">Discuss this scenario</a>
             </article>
-            <article class="example-card example-card--lavender reveal">
+            <article class="example-card example-card--lavender reveal" style="--delay: 360ms;">
               <span class="example-tag" data-i18n="examples.items.3.tag">AI assistant</span>
+              <div class="example-visual" aria-hidden="true">
+                <span data-i18n="examples.flow.before">Messy inputs</span>
+                <span class="example-visual__arrow" aria-hidden="true"></span>
+                <span data-i18n="examples.flow.after">Clear outcomes</span>
+              </div>
               <h3 data-i18n="examples.items.3.title">
                 Created an AI assistant for quick policy lookups and training prompts.
               </h3>
               <p data-i18n="examples.items.3.body">Made policy guidance faster without losing compliance.</p>
+              <span class="example-metric" data-i18n="examples.items.3.metric">24/7 guided prompts</span>
               <a class="example-link" href="#contact" data-i18n="examples.items.3.link">Discuss this scenario</a>
             </article>
-            <article class="example-card example-card--peach reveal">
+            <article class="example-card example-card--peach reveal" style="--delay: 480ms;">
               <span class="example-tag" data-i18n="examples.items.4.tag">Knowledge base</span>
+              <div class="example-visual" aria-hidden="true">
+                <span data-i18n="examples.flow.before">Messy inputs</span>
+                <span class="example-visual__arrow" aria-hidden="true"></span>
+                <span data-i18n="examples.flow.after">Clear outcomes</span>
+              </div>
               <h3 data-i18n="examples.items.4.title">
                 Reorganized internal docs so staff could find answers in minutes.
               </h3>
               <p data-i18n="examples.items.4.body">Information architecture cut search time dramatically.</p>
+              <span class="example-metric" data-i18n="examples.items.4.metric">-60% time searching</span>
               <a class="example-link" href="#contact" data-i18n="examples.items.4.link">Discuss this scenario</a>
             </article>
-            <article class="example-card example-card--ocean reveal">
+            <article class="example-card example-card--ocean reveal" style="--delay: 600ms;">
               <span class="example-tag" data-i18n="examples.items.5.tag">Workflow clarity</span>
+              <div class="example-visual" aria-hidden="true">
+                <span data-i18n="examples.flow.before">Messy inputs</span>
+                <span class="example-visual__arrow" aria-hidden="true"></span>
+                <span data-i18n="examples.flow.after">Clear outcomes</span>
+              </div>
               <h3 data-i18n="examples.items.5.title">
                 Translated complex workflows into simple, step-by-step guides.
               </h3>
               <p data-i18n="examples.items.5.body">Process playbooks became usable across teams.</p>
+              <span class="example-metric" data-i18n="examples.items.5.metric">+1 shared source of truth</span>
               <a class="example-link" href="#contact" data-i18n="examples.items.5.link">Discuss this scenario</a>
             </article>
           </div>
@@ -498,6 +563,9 @@
                   >
                 </p>
                 <p class="proof-metric-label" data-i18n="proof.metrics.0.label">Shorter onboarding ramp time</p>
+                <div class="proof-metric-bar" style="--bar: 0.7;">
+                  <span aria-hidden="true"></span>
+                </div>
               </div>
               <div class="proof-metric">
                 <p class="proof-metric-value">
@@ -512,6 +580,9 @@
                   >
                 </p>
                 <p class="proof-metric-label" data-i18n="proof.metrics.1.label">Faster access to trusted answers</p>
+                <div class="proof-metric-bar" style="--bar: 0.62;">
+                  <span aria-hidden="true"></span>
+                </div>
               </div>
               <div class="proof-metric">
                 <p class="proof-metric-value">
@@ -526,6 +597,9 @@
                   >
                 </p>
                 <p class="proof-metric-label" data-i18n="proof.metrics.2.label">Hours saved per team per month</p>
+                <div class="proof-metric-bar" style="--bar: 0.58;">
+                  <span aria-hidden="true"></span>
+                </div>
               </div>
             </div>
           </div>
