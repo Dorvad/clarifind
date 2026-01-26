@@ -1,0 +1,277 @@
+{
+  "meta": {
+    "title": "Clarifind | Clear training & learning for small teams",
+    "description": "Clarity-first digital training and learning design for small organizations. Get a straightforward recommendation and next steps.",
+    "ogTitle": "Clarifind | Clear training & learning for small teams",
+    "ogDescription": "Clarity-first digital training and learning design for small organizations. Get a straightforward recommendation and next steps."
+  },
+  "nav": {
+    "skip": "Skip to main content",
+    "brandLabel": "Clarifind home",
+    "services": "Services",
+    "how": "How it works",
+    "examples": "Examples",
+    "contact": "Contact",
+    "cta": "Request a clarity call",
+    "primaryLabel": "Primary",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "languageLabel": "Language",
+    "switchToEnglish": "Switch language to English",
+    "switchToHebrew": "Switch language to Hebrew"
+  },
+  "brand": {
+    "logoAlt": "Clarifind logo",
+    "portraitAlt": "Dor Vadai",
+    "aboutPortraitAlt": "Portrait of Dor"
+  },
+  "hero": {
+    "badge": "Clarity-first training for small teams",
+    "title": "Training should be clear, not confusing.",
+    "lead": "I help small organizations turn messy knowledge into calm, usable training—so people understand it, use it, and stop getting stuck.",
+    "ctaPrimary": "Request a clarity call",
+    "microcopy": "15 minutes, no obligation. I reply within 2 business days.",
+    "name": "Dor Vadai",
+    "ctaSecondary": "Browse services",
+    "trustLine": "Practical, human, and ready to put to work.",
+    "graphicAlt": "Abstract diagram showing connected steps and clarity."
+  },
+  "sectionDivider": {
+    "tagline": "Structured learning, delivered calmly."
+  },
+  "services": {
+    "eyebrow": "Services",
+    "heading": "Learning solutions that feel clear and doable.",
+    "lead": "Choose what fits your goal. I handle structure, content, and delivery so your team can learn faster and apply it immediately.",
+    "outcomesLabel": "Outcomes:",
+    "outputsLabel": "Typical outputs:",
+    "learnMore": "Learn more",
+    "items": {
+      "learning": {
+        "title": "Learning products",
+        "body": "Courses, onboarding, and learning hubs that make complex knowledge simple and easy to follow.",
+        "outcomes": [
+          "Onboard new people faster",
+          "Reduce repeat questions",
+          "Make learning stick"
+        ],
+        "outputs": [
+          "Curriculum map + content outline",
+          "Modules, lessons, and assessments",
+          "Launch-ready assets"
+        ]
+      },
+      "workshops": {
+        "title": "Workshops & facilitation",
+        "body": "Practical sessions that move people from confusion to shared understanding—without overload.",
+        "outcomes": [
+          "Turn confusion into alignment",
+          "Leave with usable takeaways",
+          "Increase adoption"
+        ],
+        "outputs": [
+          "Facilitation guide + materials",
+          "Interactive activities",
+          "Actionable takeaways"
+        ]
+      },
+      "ai": {
+        "title": "AI-assisted learning tools",
+        "body": "Responsible AI helpers that make knowledge easier to access, practice, and apply.",
+        "outcomes": [
+          "Faster answers, less searching",
+          "Guided prompts people actually use",
+          "Support without added workload"
+        ],
+        "outputs": [
+          "Structured prompts and scripts",
+          "Lightweight prototypes",
+          "Adoption guidance"
+        ]
+      },
+      "clarity": {
+        "title": "Content clarity & structure",
+        "body": "Turn messy docs into clear systems with naming, navigation, and content people can trust.",
+        "outcomes": [
+          "Simplify complex workflows",
+          "Improve findability",
+          "Create docs people trust"
+        ],
+        "outputs": [
+          "Content audit + prioritization",
+          "Information architecture",
+          "Rewrite + polish"
+        ]
+      }
+    }
+  },
+  "ctaBlock": {
+    "title": "Not sure where to start?",
+    "body": "Describe your situation and I’ll suggest a clear, realistic next step.",
+    "note": "15 minutes, no obligation.",
+    "cta": "Request a clarity call",
+    "ariaServices": "Services call to action",
+    "ariaExamples": "Examples call to action"
+  },
+  "how": {
+    "eyebrow": "How it works",
+    "heading": "A clear, calm process.",
+    "steps": [
+      {
+        "eyebrow": "Align",
+        "title": "Short kickoff",
+        "body": "We align on your goal, audience, and what “done” looks like."
+      },
+      {
+        "eyebrow": "Create",
+        "title": "Build the essentials",
+        "body": "I design the content and flow, then refine with quick feedback."
+      },
+      {
+        "eyebrow": "Launch",
+        "title": "Deliver and support",
+        "body": "You get polished materials and guidance to roll them out smoothly."
+      }
+    ],
+    "receipt": {
+      "aria": "What you will get",
+      "title": "Clarifind Receipt",
+      "meta": "Issue #082 · Paid in clarity",
+      "heading": "What you’ll get",
+      "items": [
+        "Clear scope and milestones",
+        "Simple, usable materials",
+        "Friendly guidance for adoption",
+        "Lightweight documentation"
+      ],
+      "totalLabel": "Total value",
+      "totalValue": "Calm + clarity",
+      "footer": "Thank you for choosing practical learning."
+    }
+  },
+  "examples": {
+    "eyebrow": "Examples",
+    "heading": "Examples of problems I help solve",
+    "lead": "Examples are anonymized. Ask for relevant references if you want to see something similar to your situation.",
+    "items": [
+      {
+        "tag": "Onboarding",
+        "title": "Turned a 50-page handbook into a 4-module onboarding path.",
+        "body": "Reduced overwhelm and helped new hires find answers in week one."
+      },
+      {
+        "tag": "Customer training",
+        "title": "Designed a client-facing course that reduced support tickets.",
+        "body": "Short, guided lessons replaced endless back-and-forth."
+      },
+      {
+        "tag": "Sales enablement",
+        "title": "Built a workshop for sales teams to practice new product demos.",
+        "body": "Interactive sessions replaced static scripts and boosted confidence."
+      },
+      {
+        "tag": "AI assistant",
+        "title": "Created an AI assistant for quick policy lookups and training prompts.",
+        "body": "Made policy guidance faster without losing compliance."
+      },
+      {
+        "tag": "Knowledge base",
+        "title": "Reorganized internal docs so staff could find answers in minutes.",
+        "body": "Information architecture cut search time dramatically."
+      },
+      {
+        "tag": "Workflow clarity",
+        "title": "Translated complex workflows into simple, step-by-step guides.",
+        "body": "Process playbooks became usable across teams."
+      }
+    ]
+  },
+  "proof": {
+    "eyebrow": "Proof",
+    "heading": "Trust, without the fluff.",
+    "lead": "I’ll happily share relevant references when we talk. Here are the kinds of results these projects typically aim for:",
+    "items": [
+      "Fewer support tickets and repeat questions",
+      "Faster onboarding and clearer handoffs",
+      "Higher adoption of tools and processes"
+    ],
+    "note": "Have a specific goal? Tell me—I'll suggest the simplest path."
+  },
+  "about": {
+    "eyebrow": "About the person behind Clarifind",
+    "heading": "About me",
+    "intro": "Hi, I’m Dor.",
+    "paragraphs": [
+      "I design clear, human-centered learning and digital experiences that help people actually understand things — not just get through them. My background combines UX, instructional design, and hands-on content development, with years of experience building training programs, digital learning products, and interactive tools for real users, under real constraints.",
+      "I’ve led and developed learning experiences for educational organizations, nonprofits, and public institutions — from concept and structure, through content, UX, and delivery. I’m especially focused on clarity, usability, and making complex ideas feel simple, grounded, and useful.",
+      "Clarifind is where I bring that approach to clients who want learning solutions that are thoughtful, practical, and built to work — not just to look good."
+    ],
+    "skills": "UX • Learning Design • Digital Training • Content Systems"
+  },
+  "pricing": {
+    "eyebrow": "Pricing & flexibility",
+    "heading": "Approachable, transparent, and sized for small teams.",
+    "lead": "You will always get a clear scope and a straightforward recommendation before any work starts. I keep projects flexible so they can meet real-world budgets and timelines.",
+    "smallTeams": {
+      "title": "Small teams welcome",
+      "body": "Clarifind specializes in right-sized projects that stay light, clear, and realistic for busy teams.",
+      "items": [
+        "Scaled scope options to match your time and capacity.",
+        "Collaborative planning with no surprise complexity.",
+        "Flexible pacing when your team is in a busy season."
+      ]
+    },
+    "special": {
+      "title": "Special consideration",
+      "body": "Discounts and adjusted packages are available for small businesses, non-profits, and organizations in arts, education, and social work.",
+      "note": "Share your context and I’ll suggest a plan that feels respectful and doable."
+    },
+    "lightbulbAlt": "Light bulb illustration."
+  },
+  "contact": {
+    "heading": "Ready to make learning feel clearer?",
+    "lead": "Share a few details and I’ll reply with a straightforward recommendation and next steps.",
+    "form": {
+      "fullName": "Full name",
+      "email": "Email",
+      "organization": "Organization",
+      "message": "What are you trying to achieve?",
+      "required": "(required)",
+      "optional": "(optional)",
+      "submit": "Get my recommendation",
+      "note": "I reply within 2 business days.",
+      "privacy": "Your details are only used to reply. No spam, ever.",
+      "placeholders": {
+        "name": "Jane Doe",
+        "email": "you@company.com",
+        "organization": "Your organization",
+        "message": "Share your goal, audience, and what feels messy right now."
+      },
+      "dataLabels": {
+        "name": "full name",
+        "email": "email address",
+        "message": "message"
+      },
+      "errors": {
+        "required": "Please enter your {field}.",
+        "invalidEmail": "Please enter a valid email address.",
+        "generic": "Please check this field for errors.",
+        "genericField": "information"
+      },
+      "status": {
+        "sending": "Sending...",
+        "success": "Thanks — I got it. I’ll reply within 2 business days with next steps.",
+        "error": "Something went wrong. Please try again.",
+        "network": "Unable to send right now. Please try again later."
+      }
+    }
+  },
+  "footer": {
+    "tagline": "Learning, made clear.",
+    "cta": "Request a clarity call",
+    "linkedin": "LinkedIn",
+    "accessibility": "Accessibility Statement / הצהרת נגישות",
+    "copyrightPrefix": "©",
+    "copyrightSuffix": "Clarifind. All rights reserved."
+  }
+}

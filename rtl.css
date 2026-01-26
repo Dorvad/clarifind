@@ -1,0 +1,21 @@
+[dir="rtl"] body {
+  text-align: right;
+}
+
+[dir="rtl"] .hero-link::after {
+  content: "←";
+}
+
+[dir="rtl"] .receipt-list li,
+[dir="rtl"] .receipt-total {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .hero-visual::after,
+[dir="rtl"] .service-card::after {
+  background: radial-gradient(circle at top left, rgba(47, 111, 237, 0.15), transparent 60%);
+}
+
+[dir="rtl"] .service-card::after {
+  background: radial-gradient(circle at top left, rgba(47, 111, 237, 0.12), transparent 55%);
+}
