@@ -246,6 +246,81 @@ const init = async () => {
     }
   }
 
+  const proofSection = document.querySelector(".proof-section");
+  if (proofSection) {
+    const metricsBand = proofSection.querySelector("[data-proof-metrics]");
+    const countItems = proofSection.querySelectorAll("[data-count-target]");
+
+    const animateCount = (element) => {
+      if (element.dataset.counted === "true") return;
+
+      const startValue = Number.parseFloat(element.dataset.countStart || "0");
+      const targetValue = Number.parseFloat(element.dataset.countTarget || "0");
+      const duration = Number.parseInt(element.dataset.countDuration || "600", 10);
+      const prefix = element.dataset.countPrefix || "";
+      const suffix = element.dataset.countSuffix || "";
+      const decimals = Number.parseInt(element.dataset.countDecimals || "0", 10);
+
+      if (Number.isNaN(targetValue)) return;
+
+      const startTime = performance.now();
+      const range = targetValue - startValue;
+
+      const step = (now) => {
+        const elapsed = now - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const value = startValue + range * progress;
+        element.textContent = `${prefix}${value.toFixed(decimals)}${suffix}`;
+
+        if (progress < 1) {
+          requestAnimationFrame(step);
+        } else {
+          element.dataset.counted = "true";
+        }
+      };
+
+      requestAnimationFrame(step);
+    };
+
+    if (prefersReducedMotion) {
+      proofSection.classList.add("is-visible");
+      if (metricsBand) {
+        metricsBand.classList.add("is-visible");
+      }
+    } else {
+      const proofObserver = new IntersectionObserver(
+        (entries, observerInstance) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              proofSection.classList.add("is-visible");
+              observerInstance.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+
+      proofObserver.observe(proofSection);
+
+      if (metricsBand) {
+        const metricsObserver = new IntersectionObserver(
+          (entries, observerInstance) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                metricsBand.classList.add("is-visible");
+                countItems.forEach((item) => animateCount(item));
+                observerInstance.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.6 }
+        );
+
+        metricsObserver.observe(metricsBand);
+      }
+    }
+  }
+
   if (contactForm) {
     const statusMessage = contactForm.querySelector(".form-status");
     const fields = Array.from(contactForm.querySelectorAll("input, textarea"));
