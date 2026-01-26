@@ -35,7 +35,15 @@
     "name": "Dor Vadai",
     "ctaSecondary": "Browse services",
     "trustLine": "Practical, human, and ready to put to work.",
-    "graphicAlt": "Abstract diagram showing connected steps and clarity."
+    "graphicAlt": "Abstract diagram showing connected steps and clarity.",
+    "flow": {
+      "aria": "Clarity path",
+      "steps": [
+        "Messy inputs",
+        "Clear structure",
+        "Confident action"
+      ]
+    }
   },
   "sectionDivider": {
     "tagline": "Structured learning, delivered calmly."
@@ -50,6 +58,7 @@
     "items": {
       "learning": {
         "title": "Learning products",
+        "chip": "Faster onboarding",
         "body": "Courses, onboarding, and learning hubs that make complex knowledge simple and easy to follow.",
         "outcomes": [
           "Onboard new people faster",
@@ -64,6 +73,7 @@
       },
       "workshops": {
         "title": "Workshops & facilitation",
+        "chip": "Aligned teams",
         "body": "Practical sessions that move people from confusion to shared understanding—without overload.",
         "outcomes": [
           "Turn confusion into alignment",
@@ -78,6 +88,7 @@
       },
       "ai": {
         "title": "AI-assisted learning tools",
+        "chip": "Faster answers",
         "body": "Responsible AI helpers that make knowledge easier to access, practice, and apply.",
         "outcomes": [
           "Faster answers, less searching",
@@ -92,6 +103,7 @@
       },
       "clarity": {
         "title": "Content clarity & structure",
+        "chip": "Trusted docs",
         "body": "Turn messy docs into clear systems with naming, navigation, and content people can trust.",
         "outcomes": [
           "Simplify complex workflows",
@@ -154,41 +166,62 @@
     "eyebrow": "Examples",
     "heading": "Examples of problems I help solve",
     "lead": "Examples are anonymized. Ask for relevant references if you want to see something similar to your situation.",
+    "strip": {
+      "aria": "Example focus areas",
+      "items": [
+        "Onboarding",
+        "Customer training",
+        "Sales enablement",
+        "AI assistant",
+        "Knowledge base",
+        "Workflow clarity"
+      ]
+    },
+    "flow": {
+      "before": "Messy inputs",
+      "after": "Clear outcomes"
+    },
     "items": [
       {
         "tag": "Onboarding",
         "title": "Turned a 50-page handbook into a 4-module onboarding path.",
         "body": "Reduced overwhelm and helped new hires find answers in week one.",
+        "metric": "-45% time to confident ramp-up",
         "link": "Discuss this scenario"
       },
       {
         "tag": "Customer training",
         "title": "Designed a client-facing course that reduced support tickets.",
         "body": "Short, guided lessons replaced endless back-and-forth.",
+        "metric": "-30% support load",
         "link": "Discuss this scenario"
       },
       {
         "tag": "Sales enablement",
         "title": "Built a workshop for sales teams to practice new product demos.",
         "body": "Interactive sessions replaced static scripts and boosted confidence.",
+        "metric": "+2x demo confidence",
         "link": "Discuss this scenario"
       },
       {
         "tag": "AI assistant",
         "title": "Created an AI assistant for quick policy lookups and training prompts.",
         "body": "Made policy guidance faster without losing compliance.",
+        "metric": "24/7 guided prompts",
         "link": "Discuss this scenario"
       },
       {
         "tag": "Knowledge base",
         "title": "Reorganized internal docs so staff could find answers in minutes.",
         "body": "Information architecture cut search time dramatically.",
+        "metric": "-60% time searching",
         "link": "Discuss this scenario"
       },
       {
         "tag": "Workflow clarity",
         "title": "Translated complex workflows into simple, step-by-step guides.",
         "body": "Process playbooks became usable across teams.",
+        "metric": "+1 shared source of truth",
         "link": "Discuss this scenario"
       }
     ]

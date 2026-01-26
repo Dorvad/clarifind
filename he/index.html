@@ -139,6 +139,20 @@
             <p class="lead" data-i18n="hero.lead">
               אני עוזר לארגונים קטנים להפוך ידע מבולגן להכשרה רגועה ושימושית — כדי שאנשים יבינו, ישתמשו, ויפסיקו להיתקע.
             </p>
+            <ul class="hero-flow" aria-label="מסלול בהירות" data-i18n-attr="aria-label:hero.flow.aria">
+              <li>
+                <span class="hero-flow__dot" aria-hidden="true"></span>
+                <span data-i18n="hero.flow.steps.0">קלט מבולגן</span>
+              </li>
+              <li>
+                <span class="hero-flow__dot" aria-hidden="true"></span>
+                <span data-i18n="hero.flow.steps.1">מבנה ברור</span>
+              </li>
+              <li>
+                <span class="hero-flow__dot" aria-hidden="true"></span>
+                <span data-i18n="hero.flow.steps.2">פעולה בטוחה</span>
+              </li>
+            </ul>
             <div class="hero-actions">
               <a
                 class="btn btn-primary"
@@ -148,6 +162,9 @@
                 data-i18n="hero.ctaPrimary"
               >
                 לתאם שיחת בהירות
+              </a>
+              <a class="btn btn-secondary" href="#examples" data-cta="secondary" data-cta-location="hero" data-i18n="hero.ctaSecondaryAlt">
+                לצפייה בתוצאות לדוגמה
               </a>
             </div>
             <p class="cta-kicker" data-i18n="hero.microcopy">15 דקות, בלי התחייבות. אני חוזר תוך עד שני ימי עסקים.</p>
@@ -198,6 +215,7 @@
                 </svg>
               </div>
               <h3 data-i18n="services.items.learning.title">מוצרי למידה</h3>
+              <p class="service-chip" data-i18n="services.items.learning.chip">אונבורדינג מהיר</p>
               <p data-i18n="services.items.learning.body">
                 קורסים, תהליכי אונבורדינג ומרכזי למידה שהופכים ידע מורכב לפשוט וקל למעקב.
               </p>
@@ -225,6 +243,7 @@
                 </svg>
               </div>
               <h3 data-i18n="services.items.workshops.title">סדנאות והנחיה</h3>
+              <p class="service-chip service-chip--warm" data-i18n="services.items.workshops.chip">יישור קו בצוות</p>
               <p data-i18n="services.items.workshops.body">
                 מפגשים פרקטיים שמובילים אנשים מבלבול להבנה משותפת — בלי עומס.
               </p>
@@ -251,6 +270,7 @@
                 </svg>
               </div>
               <h3 data-i18n="services.items.ai.title">כלי למידה בסיוע AI</h3>
+              <p class="service-chip service-chip--mint" data-i18n="services.items.ai.chip">תשובות מהירות</p>
               <p data-i18n="services.items.ai.body">
                 עוזרי AI אחראיים שמקלים על גישה לידע, תרגול ויישום.
               </p>
@@ -277,6 +297,7 @@
                 </svg>
               </div>
               <h3 data-i18n="services.items.clarity.title">בהירות ומבנה לתוכן</h3>
+              <p class="service-chip service-chip--lilac" data-i18n="services.items.clarity.chip">מסמכים אמינים</p>
               <p data-i18n="services.items.clarity.body">
                 להפוך מסמכים מבולגנים למערכות ברורות עם שמות, ניווט ותוכן שאפשר לסמוך עליו.
               </p>
@@ -392,7 +413,7 @@
         </div>
       </section>
 
-      <section class="section reveal" id="examples">
+      <section class="section reveal examples-section" id="examples">
         <div class="container">
           <div class="section-heading">
             <p class="eyebrow" data-i18n="examples.eyebrow">דוגמאות</p>
@@ -402,38 +423,89 @@
             </p>
           </div>
 
+          <div class="examples-strip" role="list" aria-label="תחומי מיקוד לדוגמא" data-i18n-attr="aria-label:examples.strip.aria">
+            <span class="examples-strip__item" role="listitem" data-i18n="examples.strip.items.0">אונבורדינג</span>
+            <span class="examples-strip__item" role="listitem" data-i18n="examples.strip.items.1">הכשרת לקוחות</span>
+            <span class="examples-strip__item" role="listitem" data-i18n="examples.strip.items.2">העצמת מכירות</span>
+            <span class="examples-strip__item" role="listitem" data-i18n="examples.strip.items.3">עוזר AI</span>
+            <span class="examples-strip__item" role="listitem" data-i18n="examples.strip.items.4">מאגר ידע</span>
+            <span class="examples-strip__item" role="listitem" data-i18n="examples.strip.items.5">בהירות תהליכים</span>
+          </div>
+
           <div class="examples-grid">
-            <article class="example-card example-card--sky reveal">
+            <article class="example-card example-card--sky reveal" style="--delay: 0ms;">
               <span class="example-tag" data-i18n="examples.items.0.tag">אונבורדינג</span>
+              <div class="example-visual" aria-hidden="true">
+                <span data-i18n="examples.flow.before">קלט מבולגן</span>
+                <span class="example-visual__arrow" aria-hidden="true"></span>
+                <span data-i18n="examples.flow.after">תוצאה ברורה</span>
+              </div>
               <h3 data-i18n="examples.items.0.title">הפכתי מדריך של 50 עמודים למסלול אונבורדינג של 4 מודולים.</h3>
               <p data-i18n="examples.items.0.body">הפחתתי עומס ועזרתי לעובדים חדשים למצוא תשובות כבר בשבוע הראשון.</p>
+              <span class="example-metric" data-i18n="examples.items.0.metric">-45% זמן עד לביטחון</span>
+              <a class="example-link" href="#contact" data-i18n="examples.items.0.link">לדבר על תרחיש כזה</a>
             </article>
-            <article class="example-card example-card--sunset reveal">
+            <article class="example-card example-card--sunset reveal" style="--delay: 120ms;">
               <span class="example-tag" data-i18n="examples.items.1.tag">הכשרת לקוחות</span>
+              <div class="example-visual" aria-hidden="true">
+                <span data-i18n="examples.flow.before">קלט מבולגן</span>
+                <span class="example-visual__arrow" aria-hidden="true"></span>
+                <span data-i18n="examples.flow.after">תוצאה ברורה</span>
+              </div>
               <h3 data-i18n="examples.items.1.title">עיצבתי קורס ללקוחות שהפחית פניות תמיכה.</h3>
               <p data-i18n="examples.items.1.body">שיעורים קצרים ומונחים החליפו אינסוף התכתבויות.</p>
+              <span class="example-metric" data-i18n="examples.items.1.metric">-30% עומס תמיכה</span>
+              <a class="example-link" href="#contact" data-i18n="examples.items.1.link">לדבר על תרחיש כזה</a>
             </article>
-            <article class="example-card example-card--mint reveal">
+            <article class="example-card example-card--mint reveal" style="--delay: 240ms;">
               <span class="example-tag" data-i18n="examples.items.2.tag">העצמת מכירות</span>
+              <div class="example-visual" aria-hidden="true">
+                <span data-i18n="examples.flow.before">קלט מבולגן</span>
+                <span class="example-visual__arrow" aria-hidden="true"></span>
+                <span data-i18n="examples.flow.after">תוצאה ברורה</span>
+              </div>
               <h3 data-i18n="examples.items.2.title">בניתי סדנה לצוותי מכירות לתרגול דמו למוצר חדש.</h3>
               <p data-i18n="examples.items.2.body">מפגשים אינטראקטיביים החליפו תסריטים סטטיים והעלו ביטחון.</p>
+              <span class="example-metric" data-i18n="examples.items.2.metric">פי 2 ביטחון בדמו</span>
+              <a class="example-link" href="#contact" data-i18n="examples.items.2.link">לדבר על תרחיש כזה</a>
             </article>
-            <article class="example-card example-card--lavender reveal">
+            <article class="example-card example-card--lavender reveal" style="--delay: 360ms;">
               <span class="example-tag" data-i18n="examples.items.3.tag">עוזר AI</span>
+              <div class="example-visual" aria-hidden="true">
+                <span data-i18n="examples.flow.before">קלט מבולגן</span>
+                <span class="example-visual__arrow" aria-hidden="true"></span>
+                <span data-i18n="examples.flow.after">תוצאה ברורה</span>
+              </div>
               <h3 data-i18n="examples.items.3.title">יצרתי עוזר AI לחיפוש מהיר במדיניות ולפרומפטים להכשרה.</h3>
               <p data-i18n="examples.items.3.body">הפכתי הנחיות מדיניות למהירות יותר בלי לפגוע בעמידה בדרישות.</p>
+              <span class="example-metric" data-i18n="examples.items.3.metric">פרומפטים מונחים 24/7</span>
+              <a class="example-link" href="#contact" data-i18n="examples.items.3.link">לדבר על תרחיש כזה</a>
             </article>
-            <article class="example-card example-card--peach reveal">
+            <article class="example-card example-card--peach reveal" style="--delay: 480ms;">
               <span class="example-tag" data-i18n="examples.items.4.tag">מאגר ידע</span>
+              <div class="example-visual" aria-hidden="true">
+                <span data-i18n="examples.flow.before">קלט מבולגן</span>
+                <span class="example-visual__arrow" aria-hidden="true"></span>
+                <span data-i18n="examples.flow.after">תוצאה ברורה</span>
+              </div>
               <h3 data-i18n="examples.items.4.title">
                 ארגנתי מחדש מסמכים פנימיים כדי שהצוות ימצא תשובות בתוך דקות.
               </h3>
               <p data-i18n="examples.items.4.body">ארכיטקטורת מידע קיצרה דרמטית את זמן החיפוש.</p>
+              <span class="example-metric" data-i18n="examples.items.4.metric">-60% זמן חיפוש</span>
+              <a class="example-link" href="#contact" data-i18n="examples.items.4.link">לדבר על תרחיש כזה</a>
             </article>
-            <article class="example-card example-card--ocean reveal">
+            <article class="example-card example-card--ocean reveal" style="--delay: 600ms;">
               <span class="example-tag" data-i18n="examples.items.5.tag">בהירות תהליכים</span>
+              <div class="example-visual" aria-hidden="true">
+                <span data-i18n="examples.flow.before">קלט מבולגן</span>
+                <span class="example-visual__arrow" aria-hidden="true"></span>
+                <span data-i18n="examples.flow.after">תוצאה ברורה</span>
+              </div>
               <h3 data-i18n="examples.items.5.title">תרגמתי תהליכים מורכבים למדריכים פשוטים, שלב אחר שלב.</h3>
               <p data-i18n="examples.items.5.body">ספרי תהליכים הפכו לשימושיים עבור צוותים שונים.</p>
+              <span class="example-metric" data-i18n="examples.items.5.metric">מקור אמת אחד לצוות</span>
+              <a class="example-link" href="#contact" data-i18n="examples.items.5.link">לדבר על תרחיש כזה</a>
             </article>
           </div>
         </div>
@@ -478,6 +550,9 @@
                   >
                 </p>
                 <p class="proof-metric-label" data-i18n="proof.metrics.0.label">זמן התאקלמות קצר יותר באונבורדינג</p>
+                <div class="proof-metric-bar" style="--bar: 0.7;">
+                  <span aria-hidden="true"></span>
+                </div>
               </div>
               <div class="proof-metric">
                 <p class="proof-metric-value">
@@ -492,6 +567,9 @@
                   >
                 </p>
                 <p class="proof-metric-label" data-i18n="proof.metrics.1.label">גישה מהירה יותר לתשובות אמינות</p>
+                <div class="proof-metric-bar" style="--bar: 0.62;">
+                  <span aria-hidden="true"></span>
+                </div>
               </div>
               <div class="proof-metric">
                 <p class="proof-metric-value">
@@ -506,6 +584,9 @@
                   >
                 </p>
                 <p class="proof-metric-label" data-i18n="proof.metrics.2.label">שעות שנחסכות לצוות בכל חודש</p>
+                <div class="proof-metric-bar" style="--bar: 0.58;">
+                  <span aria-hidden="true"></span>
+                </div>
               </div>
             </div>
           </div>

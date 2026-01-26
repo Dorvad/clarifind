@@ -232,6 +232,30 @@ svg {
   margin: var(--space-4) 0 var(--space-2);
 }
 
+.hero-flow {
+  list-style: none;
+  display: grid;
+  gap: 8px;
+  padding: 0;
+  margin: var(--space-3) 0 var(--space-2);
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+.hero-flow li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero-flow__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(45, 99, 226, 0.9), rgba(20, 184, 166, 0.9));
+  box-shadow: 0 4px 10px rgba(45, 99, 226, 0.3);
+}
+
 .cta-kicker {
   margin: 0 0 var(--space-3);
   font-size: 0.95rem;
@@ -335,6 +359,25 @@ svg {
   display: none;
 }
 
+@media (min-width: 900px) {
+  .hero-float--two,
+  .hero-float--three {
+    display: block;
+  }
+
+  .hero-float--two {
+    inset-inline-start: 4%;
+    bottom: 6%;
+    animation-delay: 0.8s;
+  }
+
+  .hero-float--three {
+    inset-inline-end: 16%;
+    bottom: -4%;
+    animation-delay: 1.2s;
+  }
+}
+
 .hero-caption {
   margin: var(--space-3) 0 0;
   font-size: 0.95rem;
@@ -389,6 +432,38 @@ svg {
 
 .card h3 {
   margin-top: 0;
+}
+
+.service-chip {
+  width: fit-content;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 6px 12px;
+  border-radius: 999px;
+  color: #1e3a8a;
+  background: rgba(45, 99, 226, 0.12);
+  border: 1px solid rgba(45, 99, 226, 0.2);
+  margin: 4px 0 var(--space-2);
+}
+
+.service-chip--warm {
+  color: #9a3412;
+  background: rgba(249, 115, 22, 0.12);
+  border-color: rgba(249, 115, 22, 0.25);
+}
+
+.service-chip--mint {
+  color: #0f766e;
+  background: rgba(20, 184, 166, 0.12);
+  border-color: rgba(20, 184, 166, 0.25);
+}
+
+.service-chip--lilac {
+  color: #6b21a8;
+  background: rgba(168, 85, 247, 0.12);
+  border-color: rgba(168, 85, 247, 0.25);
 }
 
 .card-label {
@@ -644,6 +719,40 @@ svg {
   grid-template-columns: repeat(12, minmax(0, 1fr));
 }
 
+.examples-section {
+  position: relative;
+}
+
+.examples-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: var(--space-4);
+}
+
+.examples-strip__item {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.examples-strip__item::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(45, 99, 226, 0.9), rgba(168, 85, 247, 0.9));
+  box-shadow: 0 4px 8px rgba(45, 99, 226, 0.3);
+}
+
 .example-card {
   grid-column: span 4;
   padding: var(--space-4);
@@ -655,6 +764,57 @@ svg {
   gap: var(--space-2);
   grid-template-rows: auto auto 1fr auto;
   min-height: 210px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.example-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(45, 99, 226, 0.12), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.example-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 38px rgba(15, 23, 42, 0.12);
+}
+
+.example-card:hover::after {
+  opacity: 1;
+}
+
+.example-visual {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.example-visual__arrow {
+  width: 34px;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(45, 99, 226, 0.3), rgba(45, 99, 226, 0.9));
+  position: relative;
+  overflow: hidden;
+}
+
+.example-visual__arrow::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.7), transparent);
+  transform: translateX(-100%);
+  animation: example-flow 2.6s ease-in-out infinite;
 }
 
 .example-card h3 {
@@ -665,6 +825,17 @@ svg {
 .example-card p {
   margin: 0;
   color: var(--muted);
+}
+
+.example-metric {
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  border-radius: 12px;
+  padding: 6px 12px;
+  width: fit-content;
 }
 
 .example-link {
@@ -874,6 +1045,28 @@ svg {
   margin: 0;
   color: var(--muted);
   font-size: 0.98rem;
+}
+
+.proof-metric-bar {
+  margin-top: 12px;
+  background: rgba(45, 99, 226, 0.08);
+  border-radius: 999px;
+  height: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.proof-metric-bar span {
+  display: block;
+  height: 100%;
+  width: 0;
+  border-radius: inherit;
+  background: linear-gradient(90deg, rgba(45, 99, 226, 0.6), rgba(20, 184, 166, 0.8));
+  transition: width 0.8s ease;
+}
+
+.proof-metrics-band.is-visible .proof-metric-bar span {
+  width: calc(var(--bar, 0) * 100%);
 }
 
 .proof-testimonials {
@@ -1337,6 +1530,7 @@ svg {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.6s ease, transform 0.6s ease;
+  transition-delay: var(--delay, 0ms);
 }
 
 .reveal.is-visible {
@@ -1388,6 +1582,18 @@ svg {
   }
   50% {
     transform: translateY(-4px);
+  }
+}
+
+@keyframes example-flow {
+  0% {
+    transform: translateX(-120%);
+  }
+  60% {
+    transform: translateX(120%);
+  }
+  100% {
+    transform: translateX(120%);
   }
 }
 
