@@ -30,6 +30,7 @@
     "title": "Training should be clear, not confusing.",
     "lead": "I help small organizations turn messy knowledge into calm, usable training—so people understand it, use it, and stop getting stuck.",
     "ctaPrimary": "Request a clarity call",
+    "ctaSecondaryAlt": "See example outcomes",
     "microcopy": "15 minutes, no obligation. I reply within 2 business days.",
     "name": "Dor Vadai",
     "ctaSecondary": "Browse services",
@@ -109,7 +110,7 @@
     "title": "Not sure where to start?",
     "body": "Describe your situation and I’ll suggest a clear, realistic next step.",
     "note": "15 minutes, no obligation.",
-    "cta": "Request a clarity call",
+    "cta": "See example outcomes",
     "ariaServices": "Services call to action",
     "ariaExamples": "Examples call to action"
   },
@@ -157,32 +158,38 @@
       {
         "tag": "Onboarding",
         "title": "Turned a 50-page handbook into a 4-module onboarding path.",
-        "body": "Reduced overwhelm and helped new hires find answers in week one."
+        "body": "Reduced overwhelm and helped new hires find answers in week one.",
+        "link": "Discuss this scenario"
       },
       {
         "tag": "Customer training",
         "title": "Designed a client-facing course that reduced support tickets.",
-        "body": "Short, guided lessons replaced endless back-and-forth."
+        "body": "Short, guided lessons replaced endless back-and-forth.",
+        "link": "Discuss this scenario"
       },
       {
         "tag": "Sales enablement",
         "title": "Built a workshop for sales teams to practice new product demos.",
-        "body": "Interactive sessions replaced static scripts and boosted confidence."
+        "body": "Interactive sessions replaced static scripts and boosted confidence.",
+        "link": "Discuss this scenario"
       },
       {
         "tag": "AI assistant",
         "title": "Created an AI assistant for quick policy lookups and training prompts.",
-        "body": "Made policy guidance faster without losing compliance."
+        "body": "Made policy guidance faster without losing compliance.",
+        "link": "Discuss this scenario"
       },
       {
         "tag": "Knowledge base",
         "title": "Reorganized internal docs so staff could find answers in minutes.",
-        "body": "Information architecture cut search time dramatically."
+        "body": "Information architecture cut search time dramatically.",
+        "link": "Discuss this scenario"
       },
       {
         "tag": "Workflow clarity",
         "title": "Translated complex workflows into simple, step-by-step guides.",
-        "body": "Process playbooks became usable across teams."
+        "body": "Process playbooks became usable across teams.",
+        "link": "Discuss this scenario"
       }
     ]
   },
@@ -194,6 +201,34 @@
       "Fewer support tickets and repeat questions",
       "Faster onboarding and clearer handoffs",
       "Higher adoption of tools and processes"
+    ],
+    "metrics": [
+      {
+        "value": "30–40%",
+        "label": "Shorter onboarding ramp time"
+      },
+      {
+        "value": "2x",
+        "label": "Faster access to trusted answers"
+      },
+      {
+        "value": "5–8",
+        "label": "Hours saved per team per month"
+      }
+    ],
+    "testimonials": [
+      {
+        "quote": "“The content finally feels calm and navigable. Our team found what they needed without asking for help.”",
+        "meta": "Ops lead, education nonprofit"
+      },
+      {
+        "quote": "“We went from confused onboarding to a clear 4-week path. New hires are productive sooner.”",
+        "meta": "People partner, SaaS startup"
+      },
+      {
+        "quote": "“Shorter training, better retention, and less rework. That clarity made all the difference.”",
+        "meta": "Program manager, public sector"
+      }
     ],
     "note": "Have a specific goal? Tell me—I'll suggest the simplest path."
   },
@@ -241,6 +276,12 @@
       "submit": "Get my recommendation",
       "note": "I reply within 2 business days.",
       "privacy": "Your details are only used to reply. No spam, ever.",
+      "helpers": {
+        "name": "So I know who I’m speaking with.",
+        "email": "We’ll only use this to reply.",
+        "organization": "Helpful for tailoring the recommendation.",
+        "message": "Share what success should look like."
+      },
       "placeholders": {
         "name": "Jane Doe",
         "email": "you@company.com",

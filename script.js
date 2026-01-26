@@ -249,6 +249,8 @@ const init = async () => {
   if (contactForm) {
     const statusMessage = contactForm.querySelector(".form-status");
     const fields = Array.from(contactForm.querySelectorAll("input, textarea"));
+    const submitButton = contactForm.querySelector("button[type='submit']");
+    const defaultSubmitText = submitButton ? submitButton.textContent : "";
 
     const getErrorMessage = (field) => {
       if (field.validity.valueMissing) {
@@ -309,8 +311,13 @@ const init = async () => {
       if (!validateForm()) return;
 
       if (statusMessage) {
+        statusMessage.classList.remove("is-success", "is-error");
         statusMessage.textContent = t("form.status.sending");
         statusMessage.hidden = false;
+      }
+      if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.textContent = t("form.status.sending");
       }
 
       try {
@@ -326,13 +333,21 @@ const init = async () => {
           contactForm.reset();
           if (statusMessage) {
             statusMessage.textContent = t("form.status.success");
+            statusMessage.classList.add("is-success");
           }
         } else if (statusMessage) {
           statusMessage.textContent = t("form.status.error");
+          statusMessage.classList.add("is-error");
         }
       } catch (error) {
         if (statusMessage) {
           statusMessage.textContent = t("form.status.network");
+          statusMessage.classList.add("is-error");
+        }
+      } finally {
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.textContent = defaultSubmitText;
         }
       }
     });
