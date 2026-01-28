@@ -10,6 +10,9 @@ const createMenuController = ({ toggle, menu, openLabel, closeLabel }) => {
   if (!toggle || !menu) return null;
   let isOpen = false;
   let previousFocus = null;
+  let closeHandler = null;
+  let openHandler = null;
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   const updateLabel = () => {
     if (openLabel && closeLabel) {
@@ -22,12 +25,31 @@ const createMenuController = ({ toggle, menu, openLabel, closeLabel }) => {
   };
 
   const setState = (nextState) => {
+    if (isOpen === nextState) return;
     isOpen = nextState;
     toggle.setAttribute("aria-expanded", String(isOpen));
-    menu.hidden = !isOpen;
     updateLabel();
 
     if (isOpen) {
+      if (closeHandler) {
+        menu.removeEventListener("transitionend", closeHandler);
+        closeHandler = null;
+      }
+      menu.hidden = false;
+      menu.classList.add("is-open");
+      const targetHeight = menu.scrollHeight;
+      menu.style.maxHeight = `${targetHeight}px`;
+      if (!prefersReducedMotion) {
+        openHandler = (event) => {
+          if (event.propertyName !== "max-height") return;
+          menu.style.maxHeight = "none";
+          menu.removeEventListener("transitionend", openHandler);
+          openHandler = null;
+        };
+        menu.addEventListener("transitionend", openHandler);
+      } else {
+        menu.style.maxHeight = "none";
+      }
       previousFocus = document.activeElement;
       const focusable = menu.querySelectorAll(focusableSelector);
       if (focusable.length) {
@@ -35,6 +57,30 @@ const createMenuController = ({ toggle, menu, openLabel, closeLabel }) => {
       }
       document.addEventListener("keydown", handleKeydown);
     } else {
+      if (openHandler) {
+        menu.removeEventListener("transitionend", openHandler);
+        openHandler = null;
+      }
+      if (prefersReducedMotion) {
+        menu.classList.remove("is-open");
+        menu.hidden = true;
+        menu.style.maxHeight = "";
+      } else {
+        const currentHeight = menu.scrollHeight;
+        menu.style.maxHeight = `${currentHeight}px`;
+        requestAnimationFrame(() => {
+          menu.classList.remove("is-open");
+          menu.style.maxHeight = "0px";
+        });
+        closeHandler = (event) => {
+          if (event.propertyName !== "max-height") return;
+          menu.hidden = true;
+          menu.style.maxHeight = "";
+          menu.removeEventListener("transitionend", closeHandler);
+          closeHandler = null;
+        };
+        menu.addEventListener("transitionend", closeHandler);
+      }
       document.removeEventListener("keydown", handleKeydown);
       if (previousFocus && typeof previousFocus.focus === "function") {
         previousFocus.focus();
