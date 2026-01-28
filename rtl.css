@@ -2,6 +2,39 @@
   text-align: right;
 }
 
+[dir="rtl"] html,
+[dir="rtl"] body {
+  overflow-x: hidden;
+}
+
+[dir="rtl"] body {
+  word-break: normal;
+  overflow-wrap: anywhere;
+}
+
+[dir="rtl"] [data-i18n] {
+  white-space: pre-line;
+}
+
+[dir="rtl"] .btn,
+[dir="rtl"] .nav-links a,
+[dir="rtl"] .card-link,
+[dir="rtl"] .hero-link,
+[dir="rtl"] .example-link,
+[dir="rtl"] .proof-cta,
+[dir="rtl"] .floating-cta {
+  white-space: normal;
+}
+
+[dir="rtl"] section,
+[dir="rtl"] .container,
+[dir="rtl"] .card,
+[dir="rtl"] .hero-copy,
+[dir="rtl"] .section-heading,
+[dir="rtl"] .cta-strip-inner {
+  max-width: 100%;
+}
+
 [dir="rtl"] .hero-link::after {
   content: "←";
 }
