@@ -28,6 +28,7 @@
   "hero": {
     "badge": "Clarity-first training for small teams",
     "title": "Training should be clear, not confusing.",
+    "subtitle": "Share a few details and I’ll outline a clear, realistic next step for your team.",
     "lead": "I help small organizations turn messy knowledge into calm, usable training—so people understand it, use it, and stop getting stuck.",
     "ctaPrimary": "Request a clarity call",
     "ctaSecondaryAlt": "See example outcomes",
@@ -36,6 +37,14 @@
     "ctaSecondary": "Browse services",
     "trustLine": "Practical, human, and ready to put to work.",
     "graphicAlt": "Abstract diagram showing connected steps and clarity.",
+    "highlights": {
+      "aria": "Quick highlights",
+      "items": [
+        "15-minute clarity call",
+        "No obligation to proceed",
+        "Recommendations tailored to your team"
+      ]
+    },
     "flow": {
       "aria": "Clarity path",
       "steps": [

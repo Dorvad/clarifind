@@ -3,7 +3,7 @@
   --bg: #f6f7fb;
   --surface: #ffffff;
   --text: #0b1224;
-  --muted: #334155;
+  --muted: #1f2937;
   --border: #d8e1ee;
   --accent: #2d63e2;
   --accent-soft: #e6edff;
@@ -178,6 +178,10 @@ svg {
   padding: 6px;
   gap: 4px;
   flex-direction: column;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
 }
 
 .menu-toggle span {
@@ -237,6 +241,12 @@ svg {
   margin-bottom: var(--space-3);
 }
 
+.hero-subtitle {
+  margin: -8px 0 var(--space-2);
+  font-size: 1rem;
+  color: var(--text);
+}
+
 .accent-text {
   color: var(--accent);
 }
@@ -251,6 +261,35 @@ svg {
   flex-wrap: wrap;
   gap: var(--space-2);
   margin: var(--space-4) 0 var(--space-2);
+}
+
+.hero-highlights {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
+  margin: var(--space-2) 0 var(--space-2);
+}
+
+.hero-highlights li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  font-size: 0.9rem;
+  color: var(--text);
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.06);
+}
+
+.hero-highlights svg {
+  width: 18px;
+  height: 18px;
+  color: var(--accent);
+  flex-shrink: 0;
 }
 
 .hero-flow {
@@ -1463,6 +1502,7 @@ svg {
   font-weight: 600;
   border: 1px solid transparent;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  min-height: 44px;
 }
 
 .btn-primary {
@@ -1579,6 +1619,8 @@ svg {
   border-radius: 999px;
   color: var(--muted);
   cursor: pointer;
+  min-width: 44px;
+  min-height: 44px;
 }
 
 .lang-toggle__btn[aria-pressed="true"] {
