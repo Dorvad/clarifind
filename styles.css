@@ -1,16 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap");
+
 :root {
   color-scheme: light;
-  --bg: #f6f7fb;
+  --bg: #f5f3ee;
   --surface: #ffffff;
-  --text: #0b1224;
-  --muted: #1f2937;
-  --border: #d8e1ee;
-  --accent: #2d63e2;
-  --accent-soft: #e6edff;
-  --accent-warm: #f97316;
-  --accent-mint: #14b8a6;
-  --accent-lilac: #a855f7;
-  --shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+  --text: #0a0f1e;
+  --muted: #4a5568;
+  --border: rgba(10, 15, 30, 0.12);
+  --accent: #4ae3a0;
+  --accent-soft: rgba(74, 227, 160, 0.15);
+  --accent-warm: #ff6b4a;
+  --accent-mint: #4ae3a0;
+  --accent-lilac: #7c6aff;
+  --shadow: 0 16px 32px rgba(10, 15, 30, 0.1);
   --radius: 18px;
   --max-width: 1120px;
   --text-width: 720px;
@@ -30,8 +32,8 @@
 
 body {
   margin: 0;
-  font-family: "Inter", "Heebo", "Assistant", system-ui, -apple-system, sans-serif;
-  background: radial-gradient(circle at top, #ffffff 0%, #f4f7ff 45%, #f8f4ff 100%);
+  font-family: "DM Sans", "Heebo", "Assistant", system-ui, -apple-system, sans-serif;
+  background: var(--bg);
   color: var(--text);
   line-height: 1.6;
 }
@@ -54,7 +56,7 @@ a {
 }
 
 a:hover {
-  color: var(--accent);
+  color: var(--accent-warm);
 }
 
 img {
@@ -118,7 +120,7 @@ svg {
 .site-header {
   position: sticky;
   top: 0;
-  background: rgba(248, 249, 255, 0.92);
+  background: rgba(245, 243, 238, 0.92);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
   z-index: 20;
@@ -140,6 +142,7 @@ svg {
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
+  font-family: "Syne", sans-serif;
   font-weight: 600;
 }
 
@@ -153,7 +156,9 @@ svg {
   display: flex;
   align-items: center;
   gap: var(--space-3);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+  font-family: "Syne", sans-serif;
+  letter-spacing: 0.02em;
 }
 
 .nav-links a {
@@ -166,14 +171,14 @@ svg {
 }
 
 .site-header .btn-primary {
-  background: #1e4ed8;
+  background: var(--text);
   color: #ffffff;
-  box-shadow: 0 10px 20px rgba(30, 78, 216, 0.25);
+  box-shadow: 0 10px 20px rgba(10, 15, 30, 0.2);
 }
 
 .site-header .btn-primary:hover {
-  background: #1a46c2;
-  color: #cfe0ff;
+  background: var(--accent-warm);
+  color: #ffffff;
 }
 
 .menu-toggle {
@@ -374,9 +379,9 @@ svg {
 
 .projectCard {
   background: #ffffff;
-  border: 1px solid rgba(15, 23, 42, 0.12);
+  border: 1px solid var(--border);
   border-radius: 20px;
-  box-shadow: 0 16px 30px rgba(15, 23, 42, 0.08);
+  box-shadow: var(--shadow);
   display: grid;
   grid-template-rows: auto 1fr;
   overflow: hidden;
@@ -385,7 +390,7 @@ svg {
 .projectCard__media {
   aspect-ratio: 16 / 10;
   overflow: hidden;
-  background: #eef3ff;
+  background: #ede9e0;
 }
 
 .projectCard__image {
@@ -464,8 +469,8 @@ svg {
   margin: 0 0 var(--space-2);
   padding: 5px 12px;
   border-radius: 999px;
-  background: #e8f0ff;
-  color: #1d4ed8;
+  background: rgba(255, 107, 74, 0.12);
+  color: var(--accent-warm);
   font-size: 0.78rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -480,8 +485,8 @@ svg {
 }
 
 .projectHero__meta span {
-  background: #f8fafc;
-  border: 1px solid rgba(15, 23, 42, 0.12);
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid var(--border);
   border-radius: 999px;
   padding: 5px 12px;
   font-size: 0.82rem;
@@ -791,8 +796,8 @@ svg {
 
 .badge {
   display: inline-block;
-  background: var(--accent-soft);
-  color: var(--accent);
+  background: rgba(124, 106, 255, 0.16);
+  color: var(--accent-lilac);
   font-weight: 500;
   padding: 6px 14px;
   border-radius: 999px;
@@ -824,7 +829,7 @@ svg {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   font-size: 0.75rem;
-  color: var(--accent);
+  color: var(--accent-warm);
   margin-bottom: var(--space-1);
   font-weight: 600;
 }
@@ -840,7 +845,7 @@ svg {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: var(--space-4);
-  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+  box-shadow: var(--shadow);
 }
 
 .card h3 {
@@ -855,9 +860,9 @@ svg {
   letter-spacing: 0.08em;
   padding: 6px 12px;
   border-radius: 999px;
-  color: #1e3a8a;
-  background: rgba(45, 99, 226, 0.12);
-  border: 1px solid rgba(45, 99, 226, 0.2);
+  color: var(--text);
+  background: rgba(74, 227, 160, 0.16);
+  border: 1px solid rgba(74, 227, 160, 0.38);
   margin: 4px 0 var(--space-2);
 }
 
@@ -953,14 +958,14 @@ svg {
   display: grid;
   place-items: center;
   margin-bottom: var(--space-3);
-  background: linear-gradient(135deg, rgba(47, 111, 237, 0.12), rgba(47, 111, 237, 0.28));
-  border: 1px solid rgba(47, 111, 237, 0.2);
+  background: linear-gradient(135deg, rgba(74, 227, 160, 0.18), rgba(124, 106, 255, 0.2));
+  border: 1px solid rgba(124, 106, 255, 0.25);
 }
 
 .card-graphic svg {
   width: 32px;
   height: 32px;
-  stroke: var(--accent);
+  stroke: var(--text);
   stroke-width: 2;
   fill: none;
 }
@@ -1859,13 +1864,14 @@ svg {
 }
 
 .btn-primary {
-  background: var(--accent);
+  background: var(--text);
   color: #fff;
-  box-shadow: 0 10px 20px rgba(47, 111, 237, 0.2);
+  box-shadow: 0 10px 20px rgba(10, 15, 30, 0.2);
 }
 
 .btn-primary:hover {
   color: #fff;
+  background: var(--accent-warm);
   transform: translateY(-1px);
 }
 
@@ -1877,18 +1883,19 @@ svg {
 }
 
 .btn-secondary {
-  border: 1px solid rgba(45, 99, 226, 0.6);
-  color: var(--accent);
+  border: 1px solid var(--border);
+  color: var(--text);
   background: #ffffff;
 }
 
 .btn-secondary:hover {
-  background: rgba(47, 111, 237, 0.08);
+  background: rgba(10, 15, 30, 0.06);
 }
 
 .site-footer {
   border-top: 1px solid var(--border);
   padding: var(--space-4) 0;
+  background: #ede9e0;
 }
 
 .footer-grid {
@@ -1909,12 +1916,12 @@ svg {
   position: fixed;
   bottom: 20px;
   inset-inline-end: 20px;
-  background: var(--accent);
+  background: var(--text);
   color: #fff;
   padding: 12px 18px;
   border-radius: 999px;
   font-weight: 600;
-  box-shadow: 0 12px 24px rgba(47, 111, 237, 0.3);
+  box-shadow: 0 12px 24px rgba(10, 15, 30, 0.28);
   display: none;
   z-index: 30;
 }
@@ -1936,7 +1943,7 @@ svg {
 }
 
 :focus-visible {
-  outline: 3px solid #1d4ed8;
+  outline: 3px solid var(--accent-warm);
   outline-offset: 3px;
 }
 
