@@ -24,50 +24,35 @@
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
 
-  <header class="header">
+  <header class="site-header" id="top">
     <div class="container nav">
-      <a class="brand" href="../index.html" aria-label="Clarifind home">
-        <img class="brand__logo" src="../assets/logo.svg" alt="Clarifind logo" />
-        <div class="brand__text">
-          <div class="brand__name">Clarifind</div>
-          <div class="brand__tag">Learning Solutions</div>
-        </div>
+      <a class="brand" href="../#top" aria-label="Clarifind home">
+        <img class="brand-logo" src="../assets/Clarifind logo 1.png" alt="Clarifind logo" loading="lazy" />
       </a>
 
-      <nav class="menu" aria-label="Primary">
-        <a href="../index.html#services">Services</a>
-        <a href="../index.html#process">Process</a>
-        <a href="../index.html#work">Use Cases</a>
-        <a href="../index.html#projects">Projects</a>
-        <a href="../index.html#about">About</a>
-        <a class="btn btn--small" href="../index.html#contact">Talk to me</a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="../#services">Services</a>
+        <a href="../#how">How it works</a>
+        <a href="../#examples">Examples</a>
+        <a href="../#contact">Contact</a>
+        <a class="btn btn-primary" href="../#contact">Request a clarity call</a>
       </nav>
 
-      <div class="nav__actions">
-        <button class="toggle toggle--switch" id="themeToggle" type="button" aria-pressed="false">
-          <span class="toggle__label">Dark mode</span>
-          <span class="toggle__track" aria-hidden="true"><span class="toggle__thumb"></span></span>
-        </button>
-        <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobileMenu">
+        <span class="sr-only">Open menu</span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
 
-    <div class="mobileMenu" id="mobileMenu" hidden>
-      <div class="container mobileMenu__inner">
-        <a href="../index.html#services">Services</a>
-        <a href="../index.html#process">Process</a>
-        <a href="../index.html#work">Use Cases</a>
-        <a href="../index.html#projects">Projects</a>
-        <a href="../index.html#about">About</a>
-        <a class="btn" href="../index.html#contact">Talk to me</a>
-        <div class="mobileMenu__controls">
-          <button class="toggle toggle--switch" id="themeToggleMobile" type="button" aria-pressed="false">
-            <span class="toggle__label">Dark mode</span>
-            <span class="toggle__track" aria-hidden="true"><span class="toggle__thumb"></span></span>
-          </button>
-        </div>
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <div class="container">
+        <a href="../#services">Services</a>
+        <a href="../#how">How it works</a>
+        <a href="../#examples">Examples</a>
+        <a href="../#contact">Contact</a>
+        <a class="btn btn-primary" href="../#contact">Request a clarity call</a>
       </div>
     </div>
   </header>
@@ -87,7 +72,7 @@
             <span>Facilitation</span>
           </div>
           <div class="projectHero__actions">
-            <a class="btn btn--ghost" href="../index.html#projects">Back to projects</a>
+            <a class="btn btn--ghost" href="../#examples">Back to projects</a>
           </div>
         </div>
         <div class="projectHero__media">
@@ -124,8 +109,8 @@
     <div class="container footer__inner">
       <div>© <span id="year"></span> Clarifind. All rights reserved.</div>
       <div class="footer__links">
-        <a href="../index.html#services">Services</a>
-        <a href="../index.html#contact">Contact</a>
+        <a href="../#services">Services</a>
+        <a href="../#contact">Contact</a>
         <a href="../accessibility.html">Accessibility Statement / הצהרת נגישות</a>
       </div>
     </div>
