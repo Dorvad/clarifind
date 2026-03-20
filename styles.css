@@ -385,10 +385,18 @@ p:last-child { margin-bottom: 0; }
 }
 
 .site-header .btn-primary {
-  background: #1e40af;
-  box-shadow: 0 4px 12px rgba(30, 64, 175, 0.3);
+  background: #1e3a8a;
+  color: #ffffff;
+  border-color: #1e3a8a;
+  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.34);
 }
-.site-header .btn-primary:hover { background: #1e3a8a; }
+
+.site-header .btn-primary:hover,
+.site-header .btn-primary:focus-visible {
+  background: #172554;
+  border-color: #172554;
+  color: #ffffff;
+}
 
 /* ── Hero ────────────────────────────────────────────────────── */
 .hero {
