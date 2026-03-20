@@ -550,6 +550,21 @@
       background: rgba(255,107,74,0.1); padding: 0.2rem 0.55rem; border-radius: 100px;
     }
 
+    body.rtl .quest-line {
+      left: auto;
+      right: 40px;
+    }
+
+    body.rtl .quest-step {
+      flex-direction: row-reverse;
+      text-align: right;
+    }
+
+    body.rtl .quest-node-badge {
+      right: auto;
+      left: -6px;
+    }
+
     /* ─── Examples / Portfolio ──────────────────────────────────── */
     #examples { background: var(--paper); }
     .examples-grid {
@@ -828,8 +843,8 @@
       </nav>
       <!-- Desktop lang toggle -->
       <div class="lang-toggle" id="desktopLangToggle">
-        <button class="lang-toggle-btn active" data-lang="en" id="desktopLangEn">EN</button>
-        <button class="lang-toggle-btn" data-lang="he" id="desktopLangHe">עב</button>
+        <button type="button" class="lang-toggle-btn active" data-lang="en" id="desktopLangEn">EN</button>
+        <button type="button" class="lang-toggle-btn" data-lang="he" id="desktopLangHe">עב</button>
       </div>
       <button class="menu-toggle" type="button" id="menuToggle" aria-expanded="false" aria-controls="mobileMenu">
         <span class="sr-only" id="menuToggleLabel">Open menu</span>
@@ -844,8 +859,8 @@
       <a class="menu-link mobile-cta" href="#contact" data-i18n-mob="nav.cta">Get in touch</a>
       <div class="mobile-lang">
         <span data-i18n-mob="nav.languageLabel">Language</span>
-        <button class="mobile-lang-btn active" data-lang="en" id="mobileLangEn">EN</button>
-        <button class="mobile-lang-btn" data-lang="he" id="mobileLangHe">עברית</button>
+        <button type="button" class="mobile-lang-btn active" data-lang="en" id="mobileLangEn">EN</button>
+        <button type="button" class="mobile-lang-btn" data-lang="he" id="mobileLangHe">עברית</button>
       </div>
     </div>
   </header>
