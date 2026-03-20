@@ -35,16 +35,23 @@
   max-width: 100%;
 }
 
-[dir="rtl"] .hero-link::after {
+[dir="rtl"] .hero-link::after,
+[dir="rtl"] .example-link::after,
+[dir="rtl"] .proof-cta::after {
   content: "←";
 }
 
-[dir="rtl"] .example-link::after {
-  content: "←";
+[dir="rtl"] .proof-cta:hover::after,
+[dir="rtl"] .proof-cta:focus-visible::after {
+  transform: translateX(-4px);
 }
 
 [dir="rtl"] .example-visual__arrow {
   transform: scaleX(-1);
+}
+
+[dir="rtl"] .mobile-menu .lang-toggle {
+  align-self: flex-end;
 }
 
 [dir="rtl"] .receipt-list li,
@@ -53,10 +60,15 @@
 }
 
 [dir="rtl"] .hero-visual::after,
-[dir="rtl"] .service-card::after {
+[dir="rtl"] .service-card::after,
+[dir="rtl"] .example-card::after {
   background: radial-gradient(circle at top left, rgba(47, 111, 237, 0.15), transparent 60%);
 }
 
 [dir="rtl"] .service-card::after {
   background: radial-gradient(circle at top left, rgba(47, 111, 237, 0.12), transparent 55%);
+}
+
+[dir="rtl"] .example-card::after {
+  background: radial-gradient(circle at top left, rgba(45, 99, 226, 0.12), transparent 60%);
 }

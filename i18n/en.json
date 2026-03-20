@@ -1,9 +1,9 @@
 {
   "meta": {
     "title": "Clarifind | Clear training & learning for small teams",
-    "description": "Clarity-first digital training and learning design for small organizations. Get a straightforward recommendation and next steps.",
+    "description": "Clear, practical learning design for small teams. Tell me what is messy, and I will give you a simple next step.",
     "ogTitle": "Clarifind | Clear training & learning for small teams",
-    "ogDescription": "Clarity-first digital training and learning design for small organizations. Get a straightforward recommendation and next steps."
+    "ogDescription": "Clear, practical learning design for small teams. Tell me what is messy, and I will give you a simple next step."
   },
   "nav": {
     "skip": "Skip to main content",
@@ -27,12 +27,12 @@
   },
   "hero": {
     "badge": "Clarity-first training for small teams",
-    "title": "Training should be clear, not confusing.",
-    "subtitle": "Share a few details and I’ll outline a clear, realistic next step for your team.",
-    "lead": "I help small organizations turn messy knowledge into calm, usable training—so people understand it, use it, and stop getting stuck.",
+    "title": "Training should feel clear and useful.",
+    "subtitle": "Share a bit of context and I’ll suggest a practical next step your team can actually use.",
+    "lead": "I help small organizations turn messy knowledge into clear training people can understand, use, and trust.",
     "ctaPrimary": "Request a clarity call",
-    "ctaSecondaryAlt": "See example outcomes",
-    "microcopy": "15 minutes, no obligation. I reply within 2 business days.",
+    "ctaSecondaryAlt": "See real examples",
+    "microcopy": "15 minutes. No pressure. I reply within 2 business days.",
     "name": "Dor Vadai",
     "ctaSecondary": "Browse services",
     "trustLine": "Practical, human, and ready to put to work.",
@@ -55,12 +55,12 @@
     }
   },
   "sectionDivider": {
-    "tagline": "Structured learning, delivered calmly."
+    "tagline": "Calm structure. Clear learning."
   },
   "services": {
     "eyebrow": "Services",
-    "heading": "Learning solutions that feel clear and doable.",
-    "lead": "Choose what fits your goal. I handle structure, content, and delivery so your team can learn faster and apply it immediately.",
+    "heading": "Learning support your team can use right away.",
+    "lead": "Pick what you need. I’ll shape the structure, content, and delivery so your team can learn faster without the overload.",
     "outcomesLabel": "Outcomes:",
     "outputsLabel": "Typical outputs:",
     "learnMore": "Learn more",
@@ -128,8 +128,8 @@
     }
   },
   "ctaBlock": {
-    "title": "Not sure where to start?",
-    "body": "Describe your situation and I’ll suggest a clear, realistic next step.",
+    "title": "Not sure what to fix first?",
+    "body": "Tell me what feels messy, and I’ll recommend the clearest next move.",
     "note": "15 minutes, no obligation.",
     "cta": "See example outcomes",
     "ariaServices": "Services call to action",
@@ -137,22 +137,22 @@
   },
   "how": {
     "eyebrow": "How it works",
-    "heading": "A clear, calm process.",
+    "heading": "Simple process. Clear progress.",
     "steps": [
       {
         "eyebrow": "Align",
-        "title": "Short kickoff",
-        "body": "We align on your goal, audience, and what “done” looks like."
+        "title": "Quick kickoff",
+        "body": "We align on your goal, who this is for, and what success should look like."
       },
       {
         "eyebrow": "Create",
-        "title": "Build the essentials",
-        "body": "I design the content and flow, then refine with quick feedback."
+        "title": "Build what matters",
+        "body": "I design the core flow and content, then refine it with short feedback loops."
       },
       {
         "eyebrow": "Launch",
-        "title": "Deliver and support",
-        "body": "You get polished materials and guidance to roll them out smoothly."
+        "title": "Launch with confidence",
+        "body": "You get polished materials and practical rollout support."
       }
     ],
     "receipt": {
@@ -173,8 +173,8 @@
   },
   "examples": {
     "eyebrow": "Examples",
-    "heading": "Examples of problems I help solve",
-    "lead": "Examples are anonymized. Ask for relevant references if you want to see something similar to your situation.",
+    "heading": "Real examples of the problems I help solve",
+    "lead": "All examples are anonymized. If you want, I can share a similar case when we talk.",
     "strip": {
       "aria": "Example focus areas",
       "items": [
@@ -237,8 +237,8 @@
   },
   "proof": {
     "eyebrow": "Proof",
-    "heading": "Trust, without the fluff.",
-    "lead": "I’ll happily share relevant references when we talk. Here are the kinds of results these projects typically aim for:",
+    "heading": "Proof without buzzwords.",
+    "lead": "Happy to share relevant references when we talk. Typical goals include:",
     "items": [
       "Fewer support tickets and repeat questions",
       "Faster onboarding and clearer handoffs",
@@ -279,16 +279,16 @@
     "heading": "About me",
     "intro": "Hi, I’m Dor.",
     "paragraphs": [
-      "I design clear, human-centered learning and digital experiences that help people actually understand things — not just get through them. My background combines UX, instructional design, and hands-on content development, with years of experience building training programs, digital learning products, and interactive tools for real users, under real constraints.",
-      "I’ve led and developed learning experiences for educational organizations, nonprofits, and public institutions — from concept and structure, through content, UX, and delivery. I’m especially focused on clarity, usability, and making complex ideas feel simple, grounded, and useful.",
-      "Clarifind is where I bring that approach to clients who want learning solutions that are thoughtful, practical, and built to work — not just to look good."
+      "I design digital learning experiences that help people understand things quickly—not just click through content.",
+      "My background blends UX, learning design, and practical content strategy, with hands-on work across training programs, products, and knowledge tools.",
+      "I started Clarifind to help small teams build learning that is clear, useful, and realistic for everyday work."
     ],
     "skills": "UX • Learning Design • Digital Training • Content Systems"
   },
   "pricing": {
     "eyebrow": "Pricing & flexibility",
-    "heading": "Approachable, transparent, and sized for small teams.",
-    "lead": "You will always get a clear scope and a straightforward recommendation before any work starts. I keep projects flexible so they can meet real-world budgets and timelines.",
+    "heading": "Clear, flexible pricing for small teams.",
+    "lead": "Before we start, you get a clear scope and plan. Engagements stay flexible to match real timelines and budgets.",
     "smallTeams": {
       "title": "Small teams welcome",
       "body": "Clarifind specializes in right-sized projects that stay light, clear, and realistic for busy teams.",
@@ -306,8 +306,8 @@
     "lightbulbAlt": "Light bulb illustration."
   },
   "contact": {
-    "heading": "Ready to make learning feel clearer?",
-    "lead": "Share a few details and I’ll reply with a straightforward recommendation and next steps.",
+    "heading": "Ready to make learning clearer?",
+    "lead": "Share a few details and I’ll reply with a practical recommendation and next step.",
     "form": {
       "fullName": "Full name",
       "email": "Email",
