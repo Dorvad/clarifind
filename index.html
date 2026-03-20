@@ -144,7 +144,7 @@
       z-index: 98; padding: 5.5rem 2rem 2.5rem;
       flex-direction: column; gap: 0;
       display: flex;
-      
+      clip-path: inset(0 0 100% 0);
       pointer-events: none;
       overflow-y: auto;
     }
@@ -1682,6 +1682,7 @@
   gsap.set(bar2, { transformOrigin: 'center center', scaleX: 1, opacity: 1, width: '70%' });
   gsap.set(bar3, { transformOrigin: 'center center', y: 0, rotation: 0, width: '45%', scaleX: 1, opacity: 1 });
   gsap.set(mobileMenu, { clipPath: 'inset(0 0 100% 0)', pointerEvents: 'none' });
+  mobileMenu.setAttribute('inert', '');
   gsap.set(Array.from(menuLinks), { opacity: 0, y: 24 });
   gsap.set(mobileLangDiv, { opacity: 0, y: 14 });
 
@@ -1689,6 +1690,11 @@
     menuOpen = !menuOpen;
     menuToggle.setAttribute('aria-expanded', String(menuOpen));
     mobileMenu.setAttribute('aria-hidden', String(!menuOpen));
+    if (menuOpen) {
+      mobileMenu.removeAttribute('inert');
+    } else {
+      mobileMenu.setAttribute('inert', '');
+    }
     header.classList.toggle('menu-open', menuOpen);
     document.body.style.overflow = menuOpen ? 'hidden' : '';
     if (menuTl) menuTl.kill();
@@ -1701,6 +1707,7 @@
     menuOpen = false;
     menuToggle.setAttribute('aria-expanded', 'false');
     mobileMenu.setAttribute('aria-hidden', 'true');
+    mobileMenu.setAttribute('inert', '');
     header.classList.remove('menu-open');
     document.body.style.overflow = '';
     if (menuTl) menuTl.kill();
@@ -2155,88 +2162,6 @@
     btn.addEventListener('click', () => { setLang(btn.dataset.lang); closeMobileMenu(); });
   });
 
-  // ─── Mobile menu ─────────────────────────────────────────────
-  const menuToggle = document.getElementById('menuToggle');
-  const mobileMenu = document.getElementById('mobileMenu');
-  menuToggle.addEventListener('click', () => {
-    const isOpen = mobileMenu.classList.contains('open');
-    mobileMenu.classList.toggle('open');
-    header.classList.toggle('menu-open', !isOpen);
-    menuToggle.setAttribute('aria-expanded', String(!isOpen));
-    mobileMenu.setAttribute('aria-hidden', String(isOpen));
-    document.body.style.overflow = isOpen ? '' : 'hidden';
-  });
-  function closeMobileMenu() {
-    mobileMenu.classList.remove('open');
-    header.classList.remove('menu-open');
-    menuToggle.setAttribute('aria-expanded', 'false');
-    mobileMenu.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-  }
-  // Close on nav link click
-  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMobileMenu));
-  // Close on Escape
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMobileMenu(); });
-
-  // ─── Contact form ─────────────────────────────────────────────
-  const contactForm = document.getElementById('contactForm');
-  const formStatus = document.getElementById('formStatus');
-  const submitBtn = document.getElementById('submitBtn');
-
-  contactForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    submitBtn.innerHTML = '<span id="submit-btn-text">Sending...</span> <span class="arrow" style="opacity:0">↗</span>';
-    submitBtn.disabled = true;
-    try {
-      const res = await fetch(contactForm.action, {
-        method: 'POST', body: new FormData(contactForm),
-        headers: { 'Accept': 'application/json' }
-      });
-      if (res.ok) {
-        formStatus.textContent = '✓ Sent! I\'ll be in touch within 2 business days.';
-        formStatus.className = 'form-status success';
-        contactForm.reset();
-        addXP(50);
-        showToast('🚀 Message sent · +50 XP!');
-      } else {
-        throw new Error();
-      }
-    } catch {
-      formStatus.textContent = 'Something went wrong. Try emailing me directly at Dor1612@gmail.com.';
-      formStatus.className = 'form-status error';
-    }
-    submitBtn.innerHTML = '<span id="submit-btn-text">Send it over</span> <span class="arrow">↗</span>';
-    submitBtn.disabled = false;
-  });
-
-  // ─── Particle canvas (subtle) ────────────────────────────────
-  const canvas = document.getElementById('particle-canvas');
-  const ctx = canvas.getContext('2d');
-  canvas.width = window.innerWidth; canvas.height = window.innerHeight;
-  window.addEventListener('resize', () => { canvas.width = window.innerWidth; canvas.height = window.innerHeight; });
-
-  const particles = Array.from({length: 50}, () => ({
-    x: Math.random() * canvas.width, y: Math.random() * canvas.height,
-    r: Math.random() * 1.5 + 0.3,
-    vx: (Math.random() - 0.5) * 0.3, vy: (Math.random() - 0.5) * 0.3,
-    a: Math.random() * 0.4 + 0.1
-  }));
-
-  function animateParticles() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    particles.forEach(p => {
-      p.x += p.vx; p.y += p.vy;
-      if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
-      if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
-      ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI*2);
-      ctx.fillStyle = `rgba(74,227,160,${p.a})`; ctx.fill();
-    });
-    requestAnimationFrame(animateParticles);
-  }
-  animateParticles();
-
-  // ─── Initial XP for visiting ─────────────────────────────────
-  setTimeout(() => addXP(10), 1500);
 
   </script>
 </body>
