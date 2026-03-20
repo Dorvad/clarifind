@@ -84,6 +84,12 @@ svg {
   border-bottom: 1px solid rgba(216, 225, 238, 0.6);
 }
 
+.section--alt {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(236, 244, 255, 0.88));
+  border-top: 1px solid rgba(216, 225, 238, 0.6);
+  border-bottom: 1px solid rgba(216, 225, 238, 0.6);
+}
+
 .section-divider {
   border-top: 1px solid var(--border);
 }
@@ -447,6 +453,11 @@ svg {
   margin: 0 0 var(--space-3);
 }
 
+.projectHero__copy h1,
+.projectHero__copy p {
+  max-width: 32ch;
+}
+
 .pill {
   display: inline-flex;
   align-items: center;
@@ -799,6 +810,14 @@ svg {
 
 .section-lead {
   color: var(--muted);
+}
+
+.proof-list {
+  margin: 0;
+  padding-inline-start: var(--space-3);
+  color: var(--muted);
+  display: grid;
+  gap: 10px;
 }
 
 .eyebrow {
