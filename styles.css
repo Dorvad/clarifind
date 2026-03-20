@@ -2112,6 +2112,42 @@ svg {
     padding: var(--space-6) 0;
   }
 
+  .section-heading,
+  .section__header {
+    text-align: center;
+    margin-inline: auto;
+  }
+
+  .section-heading .section-lead,
+  .section__header p,
+  .text-narrow {
+    margin-inline: auto;
+  }
+
+  .projectHero__copy {
+    text-align: center;
+    margin-inline: auto;
+  }
+
+  .projectHero__copy h1,
+  .projectHero__copy p {
+    margin-inline: auto;
+  }
+
+  .projectHero__meta,
+  .projectHero__actions {
+    justify-content: center;
+  }
+
+  .projectGallery__item figcaption {
+    text-align: center;
+  }
+
+  .footer,
+  .site-footer {
+    text-align: center;
+  }
+
   .hero-actions,
   .cta-actions {
     flex-direction: column;
@@ -2138,7 +2174,7 @@ svg {
 
   .footer__inner {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .hero-visual {
