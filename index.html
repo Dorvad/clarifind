@@ -503,7 +503,7 @@
     #how { background: var(--paper-warm); }
     .quest-map { position: relative; max-width: 700px; margin: 0 auto; padding: 1rem 0; }
     .quest-line {
-      position: absolute; left: 40px; top: 40px; bottom: 40px; width: 2px;
+      position: absolute; inset-inline-start: 40px; top: 40px; bottom: 40px; width: 2px;
       background: linear-gradient(to bottom, var(--accent), var(--accent3), var(--accent2));
       border-radius: 2px;
     }
@@ -530,7 +530,7 @@
     .quest-node--3 { box-shadow: 0 0 0 2px var(--accent2), 0 8px 24px rgba(10,15,30,0.1); }
     .quest-node--4 { box-shadow: 0 0 0 2px var(--gold), 0 8px 24px rgba(10,15,30,0.1); }
     .quest-node-badge {
-      position: absolute; top: -6px; right: -6px;
+      position: absolute; top: -6px; inset-inline-end: -6px;
       width: 22px; height: 22px; border-radius: 50%;
       background: var(--accent); color: var(--ink);
       font-family: var(--f-display); font-size: 0.65rem; font-weight: 900;
@@ -550,19 +550,22 @@
       background: rgba(255,107,74,0.1); padding: 0.2rem 0.55rem; border-radius: 100px;
     }
 
+    html[dir="rtl"] .quest-line,
     body.rtl .quest-line {
-      left: auto;
-      right: 40px;
+      inset-inline-start: auto;
+      inset-inline-end: 40px;
     }
 
+    html[dir="rtl"] .quest-step,
     body.rtl .quest-step {
       flex-direction: row-reverse;
       text-align: right;
     }
 
+    html[dir="rtl"] .quest-node-badge,
     body.rtl .quest-node-badge {
-      right: auto;
-      left: -6px;
+      inset-inline-end: auto;
+      inset-inline-start: -6px;
     }
 
     /* ─── Examples / Portfolio ──────────────────────────────────── */
