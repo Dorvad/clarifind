@@ -1,3 +1,30 @@
+/* ═══════════════════════════════════════════════════════════════
+   CLARIFIND — RTL (Hebrew) Overrides
+   Applied when html[dir="rtl"] is set (he/index.html)
+   Uses logical CSS properties wherever possible in main styles.css
+   This file handles remaining directional exceptions + Hebrew font.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Hebrew Typography ───────────────────────────────────────── */
+[dir="rtl"] body {
+  font-family: 'Heebo', 'Assistant', 'DM Sans', system-ui, -apple-system, sans-serif;
+}
+
+/* Load Heebo for RTL — note: the <head> already loads DM Sans.
+   Hebrew pages should add Heebo to their font link.
+   This rule ensures graceful fallback regardless. */
+
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] h4,
+[dir="rtl"] .badge,
+[dir="rtl"] .eyebrow {
+  font-family: 'Heebo', 'Assistant', system-ui, sans-serif;
+  letter-spacing: 0;  /* Hebrew doesn't need letter-spacing */
+}
+
+/* ── Text Direction ──────────────────────────────────────────── */
 [dir="rtl"] body {
   text-align: right;
 }
@@ -7,68 +34,157 @@
   overflow-x: hidden;
 }
 
-[dir="rtl"] body {
-  word-break: normal;
-  overflow-wrap: anywhere;
-}
-
+/* Allow soft breaks in Hebrew text inside i18n spans */
 [dir="rtl"] [data-i18n] {
   white-space: pre-line;
 }
 
+/* Override pre-line for inline elements that should flow normally */
 [dir="rtl"] .btn,
 [dir="rtl"] .nav-links a,
 [dir="rtl"] .card-link,
 [dir="rtl"] .hero-link,
 [dir="rtl"] .example-link,
 [dir="rtl"] .proof-cta,
-[dir="rtl"] .floating-cta {
+[dir="rtl"] .floating-cta,
+[dir="rtl"] .service-chip,
+[dir="rtl"] .badge,
+[dir="rtl"] .eyebrow,
+[dir="rtl"] .example-tag,
+[dir="rtl"] .example-metric,
+[dir="rtl"] .examples-strip__item {
   white-space: normal;
 }
 
-[dir="rtl"] section,
-[dir="rtl"] .container,
-[dir="rtl"] .card,
-[dir="rtl"] .hero-copy,
-[dir="rtl"] .section-heading,
-[dir="rtl"] .cta-strip-inner {
-  max-width: 100%;
+/* ── Arrows & Direction Markers ──────────────────────────────── */
+[dir="rtl"] .hero-link::after  { content: "←"; }
+[dir="rtl"] .example-link::after { content: "←"; }
+[dir="rtl"] .card-link::after  { content: "←"; }
+[dir="rtl"] .proof-cta::after  { content: "←"; }
+
+/* Hero flow arrows */
+[dir="rtl"] .hero-flow__arrow  { transform: scaleX(-1); display: inline-block; }
+
+/* Example visual arrow */
+[dir="rtl"] .example-visual__arrow { transform: scaleX(-1); }
+
+/* Step card: slide direction on hover */
+[dir="rtl"] .step-card:hover { transform: translateX(-4px); }
+
+/* ── Radial Gradient Direction Fixes ────────────────────────── */
+[dir="rtl"] .hero-visual::before {
+  background: radial-gradient(circle at top left, rgba(37, 99, 235, 0.08), transparent 55%);
 }
 
-[dir="rtl"] .hero-link::after,
-[dir="rtl"] .example-link::after,
-[dir="rtl"] .proof-cta::after {
-  content: "←";
+[dir="rtl"] .service-card::after {
+  background: radial-gradient(circle at top left, rgba(37, 99, 235, 0.08), transparent 55%);
 }
 
-[dir="rtl"] .proof-cta:hover::after,
-[dir="rtl"] .proof-cta:focus-visible::after {
-  transform: translateX(-4px);
+[dir="rtl"] .example-card::after {
+  background: radial-gradient(circle at top left, rgba(37, 99, 235, 0.1), transparent 55%);
 }
 
-[dir="rtl"] .example-visual__arrow {
-  transform: scaleX(-1);
-}
-
-[dir="rtl"] .mobile-menu .lang-toggle {
-  align-self: flex-end;
-}
-
+/* ── Receipt RTL ─────────────────────────────────────────────── */
 [dir="rtl"] .receipt-list li,
 [dir="rtl"] .receipt-total {
   flex-direction: row-reverse;
 }
 
-[dir="rtl"] .hero-visual::after,
-[dir="rtl"] .service-card::after,
-[dir="rtl"] .example-card::after {
-  background: radial-gradient(circle at top left, rgba(47, 111, 237, 0.15), transparent 60%);
+/* ── Navigation RTL ──────────────────────────────────────────── */
+/* lang-toggle is always LTR (EN | עב) — no change needed, handled by direction:ltr in main CSS */
+
+/* Mobile menu links in RTL */
+[dir="rtl"] .mobile-menu a,
+[dir="rtl"] .mobileMenu a {
+  text-align: right;
 }
 
-[dir="rtl"] .service-card::after {
-  background: radial-gradient(circle at top left, rgba(47, 111, 237, 0.12), transparent 55%);
+/* ── Forms RTL ───────────────────────────────────────────────── */
+[dir="rtl"] .contact-form input,
+[dir="rtl"] .contact-form textarea {
+  text-align: right;
 }
 
-[dir="rtl"] .example-card::after {
-  background: radial-gradient(circle at top left, rgba(45, 99, 226, 0.12), transparent 60%);
+[dir="rtl"] .form-field label {
+  justify-content: flex-end;
+}
+
+/* ── Hero highlights RTL ─────────────────────────────────────── */
+[dir="rtl"] .hero-highlights li {
+  flex-direction: row-reverse;
+}
+
+/* ── About section RTL ───────────────────────────────────────── */
+[dir="rtl"] .about-copy {
+  text-align: right;
+}
+
+/* ── Floating CTA position (already handled by inset-inline-end in main) */
+
+/* ── Proof outcomes ──────────────────────────────────────────── */
+[dir="rtl"] .proof-outcome {
+  grid-template-columns: 1fr auto;  /* icon on the left in RTL (visual right) */
+  direction: rtl;
+}
+
+/* ── Section headings: keep centered regardless of dir ───────── */
+[dir="rtl"] .section-heading {
+  text-align: center;
+}
+
+[dir="rtl"] .section-heading .section-lead,
+[dir="rtl"] .section-heading .eyebrow,
+[dir="rtl"] .section-heading h2 {
+  text-align: center;
+}
+
+/* ── Prose sections: right-aligned ──────────────────────────── */
+[dir="rtl"] .about-grid .about-copy p,
+[dir="rtl"] .cta-strip-inner p,
+[dir="rtl"] .step-card p,
+[dir="rtl"] .service-card p,
+[dir="rtl"] .example-card p,
+[dir="rtl"] .proof-testimonial p,
+[dir="rtl"] .pricing-card p {
+  text-align: right;
+}
+
+/* ── CTA strip: RTL layout ───────────────────────────────────── */
+@media (min-width: 641px) {
+  [dir="rtl"] .cta-strip-inner {
+    text-align: right;
+  }
+  [dir="rtl"] .cta-strip-inner h2,
+  [dir="rtl"] .cta-strip-inner p {
+    text-align: right;
+  }
+}
+
+/* ── Hero copy: RTL alignment ────────────────────────────────── */
+@media (min-width: 901px) {
+  [dir="rtl"] .hero-copy {
+    text-align: right;
+  }
+  [dir="rtl"] .hero-copy h1 { text-align: right; }
+  [dir="rtl"] .hero-highlights { justify-content: flex-start; }
+  [dir="rtl"] .hero-flow { justify-content: flex-start; }
+  [dir="rtl"] .hero-actions { justify-content: flex-start; }
+  [dir="rtl"] .hero-meta { justify-content: flex-start; }
+  [dir="rtl"] .badge { margin-inline-start: 0; margin-inline-end: auto; }
+}
+
+/* ── ul / ol list direction ──────────────────────────────────── */
+[dir="rtl"] .card ul,
+[dir="rtl"] .card-outcomes,
+[dir="rtl"] .pricing-card ul,
+[dir="rtl"] .receipt-list {
+  text-align: right;
+}
+
+/* ── Reduced motion respects RTL too ─────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  [dir="rtl"] .hero-flow__arrow,
+  [dir="rtl"] .example-visual__arrow {
+    animation: none;
+  }
 }
