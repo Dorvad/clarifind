@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clarifind — Learning Design, UX & Digital Products</title>
+  <meta name="description" content="Clarifind designs learning experiences and digital tools that make complex things simple and usable. UX, learning design, and AI-enhanced training systems." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Clarifind — Learning Design, UX & Digital Products" />
+  <meta property="og:description" content="I design learning experiences and digital tools that make complex things simple and usable." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yourdomain.com" />
+  <!-- Replace og:image with your actual image path -->
+  <meta property="og:image" content="assets/images/og-image.png" />
+
+  <!-- Favicon (replace with your real favicon) -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+
+  <!-- Fonts: Syne (display) + DM Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
+
+  <!-- GSAP from CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       HEADER / NAV
+  ============================================================ -->
+  <header class="site-header" id="site-header" role="banner">
+    <div class="header-inner">
+      <a href="#hero" class="brand-mark" aria-label="Clarifind — back to top">
+        <span class="brand-icon" aria-hidden="true">
+          <!-- Inline SVG logo mark -->
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="14" cy="14" r="12" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="14" cy="14" r="5" fill="currentColor" opacity="0.2"/>
+            <circle cx="14" cy="14" r="2.5" fill="currentColor"/>
+            <line x1="14" y1="2" x2="14" y2="8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="22.5" y1="5.5" x2="18.5" y2="9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="26" y1="14" x2="20" y2="14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="brand-name">Clarifind</span>
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="#what-i-do">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#approach">Approach</a></li>
+          <li><a href="#contact" class="nav-cta">Let's talk</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============================================================
+         HERO SECTION
+    ============================================================ -->
+    <section class="hero" id="hero" aria-label="Introduction">
+      <div class="hero-bg" aria-hidden="true">
+        <canvas id="hero-canvas"></canvas>
+        <div class="hero-gradient-orb orb-1"></div>
+        <div class="hero-gradient-orb orb-2"></div>
+      </div>
+
+      <div class="hero-content">
+        <div class="hero-badge" aria-hidden="true">
+          <span class="badge-dot"></span>
+          <span>Learning Design · UX · AI Tools</span>
+        </div>
+
+        <h1 class="hero-headline">
+          <span class="line line-1">I make complex</span>
+          <span class="line line-2">things <em>clear</em></span>
+          <span class="line line-3">and usable.</span>
+        </h1>
+
+        <p class="hero-sub">
+          I combine UX, learning design, and product thinking to build solutions people actually use — from training programs to interactive platforms and AI-based tools.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Start a conversation</a>
+          <a href="#projects" class="btn btn-ghost">See my work</a>
+        </div>
+
+        <div class="hero-scroll-hint" aria-hidden="true">
+          <div class="scroll-line"></div>
+          <span>Scroll to explore</span>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="signal-graphic">
+          <svg viewBox="0 0 420 420" fill="none" xmlns="http://www.w3.org/2000/svg" class="signal-svg">
+            <!-- Outer rings -->
+            <circle cx="210" cy="210" r="180" stroke="currentColor" stroke-width="0.5" opacity="0.12"/>
+            <circle cx="210" cy="210" r="140" stroke="currentColor" stroke-width="0.5" opacity="0.18"/>
+            <circle cx="210" cy="210" r="100" stroke="currentColor" stroke-width="0.5" opacity="0.24"/>
+            <circle cx="210" cy="210" r="60" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+            <!-- Core -->
+            <circle cx="210" cy="210" r="20" fill="currentColor" opacity="0.12" class="pulse-ring"/>
+            <circle cx="210" cy="210" r="8" fill="currentColor" opacity="0.6"/>
+            <!-- Constellation nodes -->
+            <circle cx="210" cy="30" r="4" fill="currentColor" opacity="0.5" class="node"/>
+            <circle cx="360" cy="130" r="3" fill="currentColor" opacity="0.4" class="node"/>
+            <circle cx="360" cy="290" r="5" fill="currentColor" opacity="0.5" class="node"/>
+            <circle cx="210" cy="390" r="3" fill="currentColor" opacity="0.35" class="node"/>
+            <circle cx="60" cy="290" r="4" fill="currentColor" opacity="0.45" class="node"/>
+            <circle cx="60" cy="130" r="3" fill="currentColor" opacity="0.4" class="node"/>
+            <!-- Secondary nodes -->
+            <circle cx="300" cy="70" r="2.5" fill="currentColor" opacity="0.35" class="node"/>
+            <circle cx="380" cy="210" r="2.5" fill="currentColor" opacity="0.3" class="node"/>
+            <circle cx="300" cy="350" r="2.5" fill="currentColor" opacity="0.35" class="node"/>
+            <circle cx="120" cy="350" r="2.5" fill="currentColor" opacity="0.3" class="node"/>
+            <circle cx="40" cy="210" r="2.5" fill="currentColor" opacity="0.3" class="node"/>
+            <circle cx="120" cy="70" r="2.5" fill="currentColor" opacity="0.35" class="node"/>
+            <!-- Path lines from center -->
+            <line x1="210" y1="210" x2="210" y2="30" stroke="currentColor" stroke-width="0.5" opacity="0.2" class="path-line"/>
+            <line x1="210" y1="210" x2="360" y2="130" stroke="currentColor" stroke-width="0.5" opacity="0.2" class="path-line"/>
+            <line x1="210" y1="210" x2="360" y2="290" stroke="currentColor" stroke-width="0.5" opacity="0.2" class="path-line"/>
+            <line x1="210" y1="210" x2="210" y2="390" stroke="currentColor" stroke-width="0.5" opacity="0.2" class="path-line"/>
+            <line x1="210" y1="210" x2="60" y2="290" stroke="currentColor" stroke-width="0.5" opacity="0.2" class="path-line"/>
+            <line x1="210" y1="210" x2="60" y2="130" stroke="currentColor" stroke-width="0.5" opacity="0.2" class="path-line"/>
+            <!-- Cross-connections -->
+            <line x1="210" y1="30" x2="360" y2="130" stroke="currentColor" stroke-width="0.5" opacity="0.12"/>
+            <line x1="360" y1="130" x2="360" y2="290" stroke="currentColor" stroke-width="0.5" opacity="0.12"/>
+            <line x1="360" y1="290" x2="210" y2="390" stroke="currentColor" stroke-width="0.5" opacity="0.12"/>
+            <line x1="210" y1="390" x2="60" y2="290" stroke="currentColor" stroke-width="0.5" opacity="0.12"/>
+            <line x1="60" y1="290" x2="60" y2="130" stroke="currentColor" stroke-width="0.5" opacity="0.12"/>
+            <line x1="60" y1="130" x2="210" y2="30" stroke="currentColor" stroke-width="0.5" opacity="0.12"/>
+            <!-- Animated signal pulse -->
+            <circle cx="210" cy="210" r="30" stroke="currentColor" stroke-width="1" opacity="0" class="pulse-anim"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         WHAT I DO / SERVICES
+    ============================================================ -->
+    <section class="services" id="what-i-do" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label" aria-hidden="true">01 — What I do</div>
+          <h2 id="services-heading" class="section-title">Design that works in real life</h2>
+          <p class="section-intro">I help organizations build learning experiences and digital tools people actually want to use — not just checkbox solutions.</p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Card 1 -->
+          <article class="service-card" data-index="0">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 40 40" fill="none">
+                <rect x="4" y="8" width="32" height="22" rx="3" stroke="currentColor" stroke-width="1.5"/>
+                <line x1="4" y1="34" x2="36" y2="34" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="16" y1="34" x2="16" y2="30" stroke="currentColor" stroke-width="1.5"/>
+                <line x1="24" y1="34" x2="24" y2="30" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M13 18 L17 22 L27 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>Digital Learning Products</h3>
+            <p>I design and build digital learning platforms — structured, mobile-friendly, and built around how people actually learn. From architecture to final experience.</p>
+            <div class="card-tag">Product design</div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="service-card" data-index="1">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 40 40" fill="none">
+                <circle cx="20" cy="16" r="8" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M8 32 C8 26 11 22 20 22 C29 22 32 26 32 32" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <circle cx="20" cy="16" r="3" fill="currentColor" opacity="0.3"/>
+              </svg>
+            </div>
+            <h3>UX & Usability Improvement</h3>
+            <p>I look at existing systems, find what makes them confusing or frustrating, and redesign them to be clear, intuitive, and genuinely useful for the people who rely on them daily.</p>
+            <div class="card-tag">UX research · Design</div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="service-card" data-index="2">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 40 40" fill="none">
+                <path d="M6 30 L14 18 L20 24 L28 12 L34 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="6" cy="30" r="2" fill="currentColor" opacity="0.5"/>
+                <circle cx="14" cy="18" r="2" fill="currentColor" opacity="0.5"/>
+                <circle cx="20" cy="24" r="2" fill="currentColor" opacity="0.5"/>
+                <circle cx="28" cy="12" r="2" fill="currentColor" opacity="0.5"/>
+                <circle cx="34" cy="18" r="2" fill="currentColor" opacity="0.5"/>
+              </svg>
+            </div>
+            <h3>Training Design</h3>
+            <p>I structure training programs that are coherent, motivating, and grounded in practice. Learning objectives, content flow, facilitation guides — built to land.</p>
+            <div class="card-tag">Instructional design</div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="service-card" data-index="3">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 40 40" fill="none">
+                <rect x="8" y="6" width="24" height="28" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M14 14 Q20 20 26 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <circle cx="16" cy="22" r="1.5" fill="currentColor" opacity="0.6"/>
+                <circle cx="20" cy="22" r="1.5" fill="currentColor" opacity="0.6"/>
+                <circle cx="24" cy="22" r="1.5" fill="currentColor" opacity="0.6"/>
+                <path d="M14 28 L26 28" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>AI-Based Learning & Simulation</h3>
+            <p>I design AI-driven training experiences — conversation simulations, adaptive feedback, and practice-first learning — that close the gap between theory and real-life skill.</p>
+            <div class="card-tag">AI · Interaction design</div>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="service-card" data-index="4">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 40 40" fill="none">
+                <path d="M8 12 L20 6 L32 12 L32 28 L20 34 L8 28 Z" stroke="currentColor" stroke-width="1.5"/>
+                <line x1="20" y1="6" x2="20" y2="34" stroke="currentColor" stroke-width="0.75" opacity="0.4"/>
+                <line x1="8" y1="12" x2="32" y2="28" stroke="currentColor" stroke-width="0.75" opacity="0.4"/>
+                <line x1="32" y1="12" x2="8" y2="28" stroke="currentColor" stroke-width="0.75" opacity="0.4"/>
+                <circle cx="20" cy="20" r="3" fill="currentColor" opacity="0.4"/>
+              </svg>
+            </div>
+            <h3>Content Strategy for Learning</h3>
+            <p>I help teams figure out what to say, how to say it, and how to sequence it — so content becomes a coherent journey rather than a pile of information.</p>
+            <div class="card-tag">Strategy · Content design</div>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="service-card" data-index="5">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 40 40" fill="none">
+                <rect x="6" y="6" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                <rect x="22" y="6" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                <rect x="6" y="22" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                <rect x="22" y="22" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                <circle cx="20" cy="20" r="3" fill="currentColor" opacity="0.5"/>
+              </svg>
+            </div>
+            <h3>Practical Systems for Real Users</h3>
+            <p>I design tools and systems grounded in real-world conditions — not ideal scenarios. The result is something teams actually adopt, rather than work around.</p>
+            <div class="card-tag">Systems design · Operations</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SELECTED PROJECTS
+    ============================================================ -->
+    <section class="projects" id="projects" aria-labelledby="projects-heading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label" aria-hidden="true">02 — Selected work</div>
+          <h2 id="projects-heading" class="section-title">What I've built</h2>
+          <p class="section-intro">A selection of projects across learning design, UX, and digital products.</p>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- Project 1 — Full width featured -->
+          <article class="project-card project-featured" data-project="0" role="button" tabindex="0" aria-expanded="false" aria-label="Digital Learning Platform for Emissaries — click to expand">
+            <div class="project-card-inner">
+              <div class="project-visual pv-1" aria-hidden="true">
+                <div class="project-graphic">
+                  <div class="pg-platform">
+                    <div class="pg-screen">
+                      <div class="pg-bar"></div>
+                      <div class="pg-bar short"></div>
+                      <div class="pg-bar medium"></div>
+                      <div class="pg-dots"><span></span><span></span><span></span></div>
+                    </div>
+                    <div class="pg-phone">
+                      <div class="pg-bar"></div>
+                      <div class="pg-bar short"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="project-info">
+                <div class="project-meta">
+                  <span class="project-number">01</span>
+                  <span class="project-tag">Digital Platform · UX</span>
+                </div>
+                <h3>Digital Learning Platform for Emissaries</h3>
+                <p class="project-summary">Designed a mobile-friendly platform that helps emissaries quickly find what they need while working in the field. One clear place for content, tools, and updates.</p>
+                <div class="project-expand-area" aria-hidden="true">
+                  <p>The platform consolidates previously scattered resources into a single, structured experience. The design prioritizes fast navigation, clarity under pressure, and low cognitive load — because emissaries are often working in high-demand environments and don't have time to search.</p>
+                  <div class="project-result">
+                    <div class="result-icon">→</div>
+                    <span>Faster access to information and smoother day-to-day work for hundreds of users.</span>
+                  </div>
+                </div>
+                <button class="project-toggle" aria-hidden="true">
+                  <span class="toggle-text">See more</span>
+                  <span class="toggle-icon">↓</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card" data-project="1" role="button" tabindex="0" aria-expanded="false" aria-label="AI Training Simulations — click to expand">
+            <div class="project-card-inner">
+              <div class="project-visual pv-2" aria-hidden="true">
+                <div class="project-graphic ai-chat">
+                  <div class="chat-bubble user"><span></span><span></span></div>
+                  <div class="chat-bubble ai"><span></span><span></span><span></span></div>
+                  <div class="chat-bubble user short"><span></span></div>
+                  <div class="ai-indicator"><div class="ai-dot"></div><div class="ai-dot"></div><div class="ai-dot"></div></div>
+                </div>
+              </div>
+              <div class="project-info">
+                <div class="project-meta">
+                  <span class="project-number">02</span>
+                  <span class="project-tag">AI · Learning</span>
+                </div>
+                <h3>AI Training Simulations</h3>
+                <p class="project-summary">Designed AI-based training that lets participants practice real-life situations through guided conversations. From theory to practice — simply and interactively.</p>
+                <div class="project-expand-area" aria-hidden="true">
+                  <p>The simulation puts learners inside realistic scenarios where they have to respond, make decisions, and receive contextual feedback. Instead of passively reading about situations, participants actually practice them — in a safe, repeatable environment.</p>
+                  <div class="project-result">
+                    <div class="result-icon">→</div>
+                    <span>Planned for scale across large training groups.</span>
+                  </div>
+                </div>
+                <button class="project-toggle" aria-hidden="true">
+                  <span class="toggle-text">See more</span>
+                  <span class="toggle-icon">↓</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card" data-project="2" role="button" tabindex="0" aria-expanded="false" aria-label="VR Learning Experience — click to expand">
+            <div class="project-card-inner">
+              <div class="project-visual pv-3" aria-hidden="true">
+                <div class="project-graphic vr-graphic">
+                  <div class="vr-headset">
+                    <div class="vr-lens left"></div>
+                    <div class="vr-lens right"></div>
+                  </div>
+                  <div class="vr-rays">
+                    <div class="vr-ray"></div>
+                    <div class="vr-ray"></div>
+                    <div class="vr-ray"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="project-info">
+                <div class="project-meta">
+                  <span class="project-number">03</span>
+                  <span class="project-tag">VR · Experience Design</span>
+                </div>
+                <h3>VR Learning Experience</h3>
+                <p class="project-summary">Added clear guidance, storytelling, and structure to a VR experience — turning a confusing journey into a smooth, engaging one users can actually follow.</p>
+                <div class="project-expand-area" aria-hidden="true">
+                  <p>The original experience had compelling content but lacked the scaffolding to carry users through it effectively. I introduced narrative structure, orientation cues, and interaction design that made the VR environment feel intentional and learnable rather than overwhelming.</p>
+                  <div class="project-result">
+                    <div class="result-icon">→</div>
+                    <span>A confusing experience became a smooth, meaningful journey.</span>
+                  </div>
+                </div>
+                <button class="project-toggle" aria-hidden="true">
+                  <span class="toggle-text">See more</span>
+                  <span class="toggle-icon">↓</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project-card" data-project="3" role="button" tabindex="0" aria-expanded="false" aria-label="Escape Room Systems — click to expand">
+            <div class="project-card-inner">
+              <div class="project-visual pv-4" aria-hidden="true">
+                <div class="project-graphic ops-graphic">
+                  <div class="ops-grid">
+                    <div class="ops-cell filled"></div>
+                    <div class="ops-cell"></div>
+                    <div class="ops-cell filled"></div>
+                    <div class="ops-cell filled"></div>
+                    <div class="ops-cell"></div>
+                    <div class="ops-cell filled"></div>
+                    <div class="ops-cell filled"></div>
+                    <div class="ops-cell filled"></div>
+                    <div class="ops-cell"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="project-info">
+                <div class="project-meta">
+                  <span class="project-number">04</span>
+                  <span class="project-tag">Systems · Operations</span>
+                </div>
+                <h3>Escape Room Systems</h3>
+                <p class="project-summary">Built internal tools for an escape room business — a staff knowledge portal and shift management system. Simplified operations and improved team coordination.</p>
+                <div class="project-expand-area" aria-hidden="true">
+                  <p>The tools were designed from the inside out — based on real operational needs, real friction points, and the way the team actually works. The result is a small but coherent system that reduced mistakes and made daily coordination less stressful.</p>
+                  <div class="project-result">
+                    <div class="result-icon">→</div>
+                    <span>Leaner operations, fewer errors, better team alignment.</span>
+                  </div>
+                </div>
+                <button class="project-toggle" aria-hidden="true">
+                  <span class="toggle-text">See more</span>
+                  <span class="toggle-icon">↓</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5 — Clarifind itself -->
+          <article class="project-card project-meta-card" data-project="4" role="button" tabindex="0" aria-expanded="false" aria-label="Clarifind — click to expand">
+            <div class="project-card-inner">
+              <div class="project-visual pv-5" aria-hidden="true">
+                <div class="project-graphic clarifind-graphic">
+                  <div class="cf-orbit">
+                    <div class="cf-node n1"></div>
+                    <div class="cf-node n2"></div>
+                    <div class="cf-node n3"></div>
+                    <div class="cf-center"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="project-info">
+                <div class="project-meta">
+                  <span class="project-number">05</span>
+                  <span class="project-tag">Ongoing · Studio</span>
+                </div>
+                <h3>Clarifind</h3>
+                <p class="project-summary">An ongoing project where I build and test new ideas in learning, UX, and AI. Small apps, tools, and experiments — exploring better ways to design learning experiences.</p>
+                <div class="project-expand-area" aria-hidden="true">
+                  <p>Clarifind is both a brand and a practice — a place where ideas get tested before they become full products. Some experiments stay small, some grow into something real. The common thread is always the same: can we make this clearer? Can we make this easier to use?</p>
+                  <div class="project-result">
+                    <div class="result-icon">→</div>
+                    <span>Where curiosity meets craft.</span>
+                  </div>
+                </div>
+                <button class="project-toggle" aria-hidden="true">
+                  <span class="toggle-text">See more</span>
+                  <span class="toggle-icon">↓</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         EXPERIENCE / HIGHLIGHTS
+    ============================================================ -->
+    <section class="experience" id="experience" aria-labelledby="experience-heading">
+      <div class="container">
+        <div class="experience-layout">
+          <div class="experience-left">
+            <div class="section-label" aria-hidden="true">03 — Experience</div>
+            <h2 id="experience-heading" class="section-title">Where I've been,<br/>what I've built.</h2>
+            <p>I work across the full lifecycle — from initial idea and content strategy to final product. Most of my projects involve both design and execution, independently.</p>
+
+            <div class="stats-row">
+              <div class="stat-item">
+                <div class="stat-number" data-target="7" aria-label="Seven-plus years">7+</div>
+                <div class="stat-label">Years in learning design & digital products</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number" data-target="500" aria-label="Hundreds of">100s</div>
+                <div class="stat-label">Training participants reached</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number" data-target="5" aria-label="Five-plus">5+</div>
+                <div class="stat-label">Independent digital tools built</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="experience-right">
+            <div class="milestones">
+
+              <div class="milestone" data-index="0">
+                <div class="milestone-marker" aria-hidden="true">
+                  <div class="marker-dot"></div>
+                  <div class="marker-line"></div>
+                </div>
+                <div class="milestone-content">
+                  <div class="milestone-badge">Leadership</div>
+                  <h3>Led digital learning development</h3>
+                  <p>Directed digital learning in a large international organization — overseeing content, tools, and training design at scale.</p>
+                </div>
+              </div>
+
+              <div class="milestone" data-index="1">
+                <div class="milestone-marker" aria-hidden="true">
+                  <div class="marker-dot"></div>
+                  <div class="marker-line"></div>
+                </div>
+                <div class="milestone-content">
+                  <div class="milestone-badge">Scale</div>
+                  <h3>Training systems used by hundreds</h3>
+                  <p>Designed, built, and launched training programs used by large participant groups — including digital-first and blended formats.</p>
+                </div>
+              </div>
+
+              <div class="milestone" data-index="2">
+                <div class="milestone-marker" aria-hidden="true">
+                  <div class="marker-dot"></div>
+                  <div class="marker-line"></div>
+                </div>
+                <div class="milestone-content">
+                  <div class="milestone-badge">Innovation</div>
+                  <h3>Introduced AI to learning processes</h3>
+                  <p>Designed and launched AI-based learning solutions in organizational settings — bringing simulation and adaptive practice to real training contexts.</p>
+                </div>
+              </div>
+
+              <div class="milestone" data-index="3">
+                <div class="milestone-marker" aria-hidden="true">
+                  <div class="marker-dot"></div>
+                  <div class="marker-line"></div>
+                </div>
+                <div class="milestone-content">
+                  <div class="milestone-badge">Independence</div>
+                  <h3>Built multiple digital products solo</h3>
+                  <p>Designed, built, and shipped multiple independent tools — from idea and UX to working product — without an engineering team.</p>
+                </div>
+              </div>
+
+              <div class="milestone" data-index="4">
+                <div class="milestone-marker" aria-hidden="true">
+                  <div class="marker-dot"></div>
+                </div>
+                <div class="milestone-content">
+                  <div class="milestone-badge">Grounded</div>
+                  <h3>Simple solutions for real environments</h3>
+                  <p>Every project is grounded in how things actually work — not ideal conditions. Practical, adoptable, and built to last.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         HOW WE WORK / BUSINESS MODEL
+    ============================================================ -->
+    <section class="how-we-work" id="how-we-work" aria-labelledby="work-heading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label" aria-hidden="true">04 — Collaboration</div>
+          <h2 id="work-heading" class="section-title">How we can work together</h2>
+          <p class="section-intro">Flexible engagement models that fit where you actually are — not just what sounds good on paper.</p>
+        </div>
+
+        <div class="work-modes">
+          <div class="work-mode" data-index="0">
+            <div class="mode-number" aria-hidden="true">A</div>
+            <div class="mode-content">
+              <h3>Full project</h3>
+              <p>We go from idea to final product together. I help shape the strategy, design the experience, and bring it to life — end to end.</p>
+              <ul class="mode-scope">
+                <li>Discovery & scoping</li>
+                <li>UX & content design</li>
+                <li>Build & delivery</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="work-mode" data-index="1">
+            <div class="mode-number" aria-hidden="true">B</div>
+            <div class="mode-content">
+              <h3>Specific task</h3>
+              <p>You have a system, platform, or training program that needs a targeted improvement. I come in, identify what's not working, and fix it.</p>
+              <ul class="mode-scope">
+                <li>UX audit & redesign</li>
+                <li>Content improvement</li>
+                <li>Feature design</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="work-mode" data-index="2">
+            <div class="mode-number" aria-hidden="true">C</div>
+            <div class="mode-content">
+              <h3>Consulting & strategy</h3>
+              <p>You want a thinking partner to help frame a challenge, evaluate options, or develop a learning or product strategy — before committing to execution.</p>
+              <ul class="mode-scope">
+                <li>Strategy sessions</li>
+                <li>Product direction</li>
+                <li>Learning design advisory</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="work-note">
+          <p>The goal is always the same: create something <strong>clear, useful, and easy to use</strong>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         APPROACH / PHILOSOPHY
+    ============================================================ -->
+    <section class="approach" id="approach" aria-labelledby="approach-heading">
+      <div class="container">
+        <div class="approach-layout">
+          <div class="approach-visual" aria-hidden="true">
+            <div class="clarity-graphic">
+              <div class="cg-chaos">
+                <div class="cg-node scattered n1"></div>
+                <div class="cg-node scattered n2"></div>
+                <div class="cg-node scattered n3"></div>
+                <div class="cg-node scattered n4"></div>
+                <div class="cg-node scattered n5"></div>
+                <div class="cg-node scattered n6"></div>
+              </div>
+              <div class="cg-arrow" aria-hidden="true">
+                <svg viewBox="0 0 60 20" fill="none">
+                  <line x1="4" y1="10" x2="52" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  <polyline points="42,4 52,10 42,16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="cg-order">
+                <div class="cg-node ordered n1"></div>
+                <div class="cg-node ordered n2"></div>
+                <div class="cg-node ordered n3"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="approach-content">
+            <div class="section-label" aria-hidden="true">05 — Philosophy</div>
+            <h2 id="approach-heading" class="section-title">Most systems don't fail because of bad content.</h2>
+            <p class="approach-lead">They fail because they're hard to use.</p>
+
+            <div class="principles">
+              <div class="principle">
+                <div class="principle-marker" aria-hidden="true">01</div>
+                <div class="principle-text">
+                  <h3>Make things clear</h3>
+                  <p>Reduce noise, sharpen structure, and help users understand what they're looking at — immediately.</p>
+                </div>
+              </div>
+              <div class="principle">
+                <div class="principle-marker" aria-hidden="true">02</div>
+                <div class="principle-text">
+                  <h3>Design for real situations</h3>
+                  <p>Not ideal conditions. Real environments, real users, real constraints — that's the only design that sticks.</p>
+                </div>
+              </div>
+              <div class="principle">
+                <div class="principle-marker" aria-hidden="true">03</div>
+                <div class="principle-text">
+                  <h3>Turn ideas into tools</h3>
+                  <p>Good thinking has to become something people can actually hold and use. Ideas aren't done until they work.</p>
+                </div>
+              </div>
+            </div>
+
+            <blockquote class="approach-quote">
+              "Clarity is what makes things work."
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CONTACT / CTA
+    ============================================================ -->
+    <section class="contact" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="contact-inner">
+          <div class="contact-bg-graphic" aria-hidden="true">
+            <svg viewBox="0 0 600 400" fill="none" preserveAspectRatio="xMidYMid slice">
+              <circle cx="300" cy="200" r="300" stroke="currentColor" stroke-width="0.5" opacity="0.08"/>
+              <circle cx="300" cy="200" r="220" stroke="currentColor" stroke-width="0.5" opacity="0.1"/>
+              <circle cx="300" cy="200" r="140" stroke="currentColor" stroke-width="0.5" opacity="0.14"/>
+              <circle cx="300" cy="200" r="60" stroke="currentColor" stroke-width="1" opacity="0.2"/>
+            </svg>
+          </div>
+
+          <div class="contact-content">
+            <div class="section-label centered" aria-hidden="true">06 — Contact</div>
+            <h2 id="contact-heading" class="section-title centered">Have a project, idea,<br/>or challenge in mind?</h2>
+            <p class="contact-sub">Let's build something clear, useful, and genuinely effective.</p>
+
+            <div class="contact-links">
+              <!-- Replace href with your actual email -->
+              <a href="mailto:hello@clarifind.com" class="contact-link email" aria-label="Send email to Clarifind">
+                <span class="contact-link-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="1.5"/><polyline points="2,4 12,13 22,4" stroke="currentColor" stroke-width="1.5"/></svg>
+                </span>
+                <span>hello@clarifind.com</span>
+              </a>
+
+              <!-- Replace href with your actual LinkedIn URL -->
+              <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" class="contact-link linkedin" aria-label="LinkedIn profile">
+                <span class="contact-link-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="4" stroke="currentColor" stroke-width="1.5"/><line x1="7" y1="10" x2="7" y2="17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="7" y1="7" x2="7" y2="7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M11 17 V13 C11 11.3 12 10 14 10 C16 10 17 11 17 13 V17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="11" y1="10" x2="11" y2="17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </span>
+                <span>LinkedIn</span>
+              </a>
+
+              <!-- Replace href with your actual GitHub URL (optional — remove if not needed) -->
+              <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" class="contact-link github" aria-label="GitHub profile">
+                <span class="contact-link-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.483 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .268.18.58.688.482C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                <span>GitHub</span>
+              </a>
+            </div>
+
+            <div class="contact-cta">
+              <a href="mailto:hello@clarifind.com" class="btn btn-primary btn-large">Start a conversation →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="#hero" class="brand-mark" aria-label="Clarifind — back to top">
+            <span class="brand-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 28 28" fill="none">
+                <circle cx="14" cy="14" r="12" stroke="currentColor" stroke-width="1.5"/>
+                <circle cx="14" cy="14" r="2.5" fill="currentColor"/>
+                <line x1="14" y1="2" x2="14" y2="8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="22.5" y1="5.5" x2="18.5" y2="9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="26" y1="14" x2="20" y2="14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="brand-name">Clarifind</span>
+          </a>
+          <p class="footer-tagline">Clarity is what makes things work.</p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="#what-i-do">Services</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#approach">Approach</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="footer-legal">
+          <p>© <span id="footer-year"></span> Clarifind. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
